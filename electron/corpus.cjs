@@ -40,10 +40,27 @@ const ANATOMY_SAFEGUARD = [
   { cat: '人体解剖', label: '颈脖', terms: ['脖子', '颈脖', '颈部'], en: 'neck' },
 ]
 
+// 二次元术语与简称保底表。
+// 小模型对这类词基本不可用：实测「卓尔」会被解释成"汉语词汇，意思是卓越"，
+// 「门」原样返回，「菊花」甚至翻成 daffodil（水仙）。词库没有的词必须内建。
+const ANIME_SAFEGUARD = [
+  { cat: '幻想种族与生物', label: '卓尔', terms: ['卓尔', '卓尔精灵', '黑暗精灵'], en: 'dark elf, drow, greyish purple skin, white hair, pointed ears' },
+  { cat: '幻想种族与生物', label: '提夫林', terms: ['提夫林'], en: 'tiefling, demon horns, demon tail, colored skin, pointed ears' },
+  { cat: '幻想种族与生物', label: '精灵耳', terms: ['精灵耳'], en: 'pointed ears' },
+  { cat: '服饰与穿搭细节', label: '白色过膝袜', terms: ['白色过膝袜'], en: 'white thighhighs' },
+  { cat: '服饰与穿搭细节', label: '黑色过膝袜', terms: ['黑色过膝袜'], en: 'black thighhighs' },
+  { cat: '服饰与穿搭细节', label: '死库水', terms: ['死库水'], en: 'school swimsuit' },
+  { cat: '服饰与穿搭细节', label: '机能风', terms: ['机能风'], en: 'techwear, cyberpunk jacket, tactical straps' },
+  { cat: '人物与外貌特征', label: '猫耳', terms: ['猫耳'], en: 'cat ears' },
+  { cat: '人体解剖', label: '凸点', terms: ['凸点'], en: 'covered nipples' },
+  { cat: '人体解剖', label: '私处', terms: ['私处'], en: 'genitals' },
+  { cat: '人体解剖', label: '腿环', terms: ['腿环'], en: 'thigh strap' },
+]
+
 function mergeAnatomySafeguard(lib) {
   // 无条件放在最前面。词库里可能有同名词条但意思完全不同
   // （比如「菊花」在花卉分类里是 chrysanthemum），保底表要先命中。
-  return ANATOMY_SAFEGUARD.concat(lib)
+  return ANATOMY_SAFEGUARD.concat(ANIME_SAFEGUARD, lib)
 }
 
 let _cachedLib = null

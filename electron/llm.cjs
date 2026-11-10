@@ -126,11 +126,12 @@ function sanitizeCompiledTags(raw) {
   const text = String(raw || '')
     .replace(/\*\*/g, ' ')
     .replace(/[“”"`]/g, ' ')
-  const junk = /\brule\b|color binding|material luster|hand anatomy|compiled|chinese input|following|specified|e\.g\.|->|=>|never use|no\/without|the color is|visual prompt|comma-separated|tags? only|reply with|^\s*\d+[.)]\s/i
+  // 模型把自己的思考过程也写出来时，这些词会大量出现
+  const junk = /\brules?\b|color binding|material luster|hand anatomy|compiled|chinese input|following|specified|e\.g\.|->|=>|never use|no\/without|the color is|visual prompt|comma-separated|tags? only|reply with|i'?ll|i will|let me|identify|according to|putting it|^\s*(first|next|then|finally)\b|subject count|^\s*\d+[.)]\s/i
   const out = []
   for (const part of text.split(/[,，\n]/)) {
     const t = part.trim().replace(/^[-\s]+/, '').replace(/\.+$/, '')
-    if (!t || t.length > 90) continue
+    if (!t || t.length > 60) continue
     if (/[:;]/.test(t)) continue
     if (junk.test(t)) continue
     // 首字母大写的单个词基本是句子残渣，booru tag 都是小写
@@ -883,7 +884,15 @@ class LocalModelEngine {
       // 先对剩余未知中文自造词做确定性词根拆解，减少小模型瞎翻概率
       const { extraEn: rootDecomposedEn, leftover: finalUnknownCn } = decomposeUnknownCn(remainingCn)
 
-      let modelRaw = [...translatorScan.hits.map((x) => x.en), ...rootDecomposedEn].filter(Boolean).join(', ')
+      // matchSlangGlossary 已经裁定过的词，第二检索器不要再翻一遍。
+      // 「菊花」会同时命中人类的 anus 和花卉的 chrysanthemum，
+      // 两边都拼进来就会输出 "anus, chrysanthemum"。
+      const settledTerms = new Set(hits.map((h) => String(h.matchedTerm || '').trim()))
+      const scanEn = translatorScan.hits
+        .filter((x) => !settledTerms.has(String(x.zh || '').trim()))
+        .map((x) => x.en)
+
+      let modelRaw = [...scanEn, ...rootDecomposedEn].filter(Boolean).join(', ')
       // 当词根拆解后仍有自由中文词句时，用小模型编译剩余部分。
       // 规则必须走 system，且写得短。之前十条规则全塞进 user 消息，
       // 7B 级小模型会把规则当正文复述，输出里就会出现
@@ -937,247 +946,6 @@ class LocalModelEngine {
     return this._rawStreamChat(rawMsgs, onDelta, opts)
   }
 
-  /**
-   * 核心参数自适应引擎：在生图前与底图重绘前，按底模架构、LoRA 挂载情况与画面复杂度给出参数建议
-   * 规则与输出结构见 CORE_PARAM_RULES，纯规则实现（不依赖本地模型也能给出稳定结果）
-   */
-  async decideCoreParams(payload = {}) {
-    const stage = String(payload.stage || 'pre_generation') === 'post_base_inpaint' ? 'post_base_inpaint' : 'pre_generation'
-    const userPrompt = String(payload.user_prompt || payload.userPrompt || '').trim()
-    const baseDisplay = String(payload.base_model || payload.base_model_name || '').trim()
-    const baseName = baseDisplay.toLowerCase()
-    const declaredArch = String(payload.base_model_architecture || '').toLowerCase()
-    const rawLoras = Array.isArray(payload.active_loras)
-      ? payload.active_loras
-      : Array.isArray(payload.loras)
-        ? payload.loras.map((n) => ({ name: n }))
-        : []
-    const loras = rawLoras
-      .map((l) => (typeof l === 'string' ? { name: l } : l || {}))
-      .filter((l) => l.name)
-      .map((l) => ({
-        name: String(l.name),
-        type: String(l.type || l.kind || '').toLowerCase(),
-        triggerWords: String(l.trigger_words || l.triggerWords || '').trim(),
-        maxWeight: Number(l.max_weight || l.maxWeight) || null,
-      }))
-    const st = payload.style_transition && typeof payload.style_transition === 'object' ? payload.style_transition : null
-
-    // ---- 规则一：先定架构，再取基准 ----
-    let arch = 'SD1.5_Architecture'
-    if (/moss/.test(declaredArch) || /moss/.test(baseName)) arch = 'MOSS_Image'
-    if (/flux|schnell|dev\.safetensors/.test(declaredArch) || /flux/.test(baseName)) arch = 'Flux_Architecture'
-    else if (/pony/.test(declaredArch) || /pony/.test(baseName)) arch = 'Pony_SDXL_Architecture'
-    else if (/sdxl|xl/.test(declaredArch) || /xl|sdxl/.test(baseName)) arch = 'SDXL_Architecture'
-
-    let steps = 26
-    let cfg = 7.5
-    let sampler = 'dpmpp_2m'
-    let scheduler = 'karras'
-    if (arch === 'MOSS_Image') {
-      steps = 50
-      cfg = 3.0
-      sampler = 'euler'
-      scheduler = 'sgm_uniform'
-    } else if (arch === 'Flux_Architecture') {
-      steps = 22
-      cfg = 1.0
-      sampler = 'euler'
-      scheduler = 'simple'
-    } else if (arch === 'Pony_SDXL_Architecture') {
-      steps = 28
-      cfg = 6.0
-      sampler = 'euler_ancestral'
-      scheduler = 'karras'
-    } else if (arch === 'SDXL_Architecture') {
-      steps = 27
-      cfg = 6.5
-      sampler = 'dpmpp_2m'
-      scheduler = 'karras'
-    } else {
-      steps = 26
-      cfg = 7.5
-      sampler = 'dpmpp_2m'
-      scheduler = 'karras'
-    }
-
-    // 复杂度微调，仍然落在各自安全区间内
-    const complex = /多人|群像|双人|三人|战斗|大场面|复杂光影|机械|机甲|细节繁复|many people|group|crowd|battle|intricate|mechanical|complex lighting/i.test(userPrompt)
-    const simpleShot = /单人特写|头像|半身|特写|portrait|close-?up|headshot|single person/i.test(userPrompt)
-    if (complex) steps += arch === 'Flux_Architecture' ? 2 : 4
-    else if (simpleShot) steps -= 2
-    if (arch === 'MOSS_Image') steps = Math.max(30, Math.min(60, steps))
-    else if (arch === 'Flux_Architecture') steps = Math.max(20, Math.min(24, steps))
-    else if (arch === 'Pony_SDXL_Architecture') steps = Math.max(26, Math.min(30, steps))
-    else if (arch === 'SDXL_Architecture') steps = Math.max(25, Math.min(30, steps))
-    else steps = Math.max(24, Math.min(28, steps))
-    if (arch === 'Pony_SDXL_Architecture') cfg = Math.min(6.5, Math.max(5.5, cfg))
-    else if (arch === 'SDXL_Architecture') cfg = Math.min(7.0, Math.max(6.0, cfg))
-    else if (arch === 'SD1.5_Architecture') cfg = Math.min(8.5, Math.max(7.0, cfg))
-
-    // ---- 规则二：LoRA 防炸炉与权重衰减 ----
-    const loraWeights = {}
-    const forcedPos = []
-    const forcedNeg = []
-    let loraLog = ''
-    if (loras.length === 1) {
-      const l = loras[0]
-      const isStyle = /style|画风|风格|concept|art|light|光/.test(`${l.type} ${l.name}`)
-      let w = isStyle ? 0.62 : 0.78
-      if (l.maxWeight) w = Math.min(w, l.maxWeight)
-      loraWeights[l.name] = Number(w.toFixed(2))
-      loraLog = `单个 LoRA 定为 ${loraWeights[l.name]}`
-    } else if (loras.length >= 2) {
-      const weights = loras.map((l, i) => {
-        const w = i === 0 ? 0.65 : 0.4
-        return l.maxWeight ? Math.min(w, l.maxWeight) : w
-      })
-      const sum = weights.reduce((a, b) => a + b, 0)
-      const scale = sum > 1.3 ? 1.3 / sum : 1
-      loras.forEach((l, i) => {
-        loraWeights[l.name] = Number((weights[i] * scale).toFixed(2))
-      })
-      loraLog = `${loras.length} 个 LoRA 权重压到合计 ${Math.min(sum, 1.3).toFixed(2)}`
-    }
-    for (const l of loras) {
-      if (l.triggerWords) forcedPos.push(l.triggerWords)
-    }
-
-    // ---- 规则三：风格跨度矩阵 ----
-    const toStyle = String((st && (st.to || st.target)) || '').toLowerCase()
-    const fromStyle = String((st && (st.from || st.source)) || '').toLowerCase()
-    const crossStyle = Boolean(st && st.is_cross_style) || Boolean(toStyle)
-    const toRealistic = /real|photo|ue5|3d|写实|真实/.test(toStyle)
-    const toAnime = /anime|2d|manga|illustration|插画|二次元|手绘|lineart|ink|watercolor/.test(toStyle)
-
-    let denoise = 1.0
-    let styleLog = ''
-    if (stage === 'post_base_inpaint' || crossStyle) {
-      const heavy = /换姿势|换动作|换背景|大幅|重画|彻底|完全重绘|change pose|new background/i.test(userPrompt)
-      const medium = /换衣服|服装|表情|配饰|细节|修改|调整|outfit|expression|accessor/i.test(userPrompt)
-      if (toRealistic) {
-        denoise = 0.64
-        styleLog = '大跨度转写实，重绘拉到 0.64'
-        forcedPos.push('photorealistic', 'unreal engine 5 render', 'cinematic lighting', 'detailed skin texture', 'ray traced reflections')
-        forcedNeg.push('lineart', 'flat shading', 'cel shading', 'anime style', 'cartoon', 'sketch')
-      } else if (toAnime) {
-        denoise = 0.56
-        styleLog = '逆向转二次元，重绘 0.56'
-        forcedPos.push('anime illustration', 'clean lineart', 'cel shading', 'flat color')
-        forcedNeg.push('photorealistic', 'raw photo', '3d render', 'skin pores', 'film grain')
-      } else if (heavy) {
-        denoise = 0.68
-        styleLog = '重度重绘 0.68'
-      } else if (medium) {
-        denoise = 0.46
-        styleLog = '中度修改 0.46'
-      } else if (stage === 'post_base_inpaint') {
-        denoise = 0.3
-        styleLog = '轻度细化 0.30'
-      } else {
-        denoise = 0.3
-        styleLog = '同系微调 0.30'
-      }
-      denoise = Math.max(0.25, Math.min(0.75, denoise))
-    }
-
-    const archName = {
-      'MOSS_Image': 'MOSS-Image',
-      'Flux_Architecture': 'Flux',
-      'Pony_SDXL_Architecture': 'Pony SDXL',
-      'SDXL_Architecture': 'SDXL',
-      'SD1.5_Architecture': 'SD1.5',
-    }[arch]
-
-    const analysisBits = [`${archName} 基准`]
-    if (loras.length) analysisBits.push(loraLog)
-    if (stage === 'post_base_inpaint' || crossStyle) analysisBits.push(styleLog)
-    const analysis = analysisBits.join('，').slice(0, 40)
-
-    // ---- 规则四：底模与画风适配检查（不合适就给出可执行建议，而不是硬画） ----
-    const styleOfModel = (n) => {
-      const z = String(n || '').toLowerCase()
-      if (!z) return 'unknown'
-      if (/anime|animagine|anything|pony|counterfeit|meina|pastel|toon|manga|illustration|niji|ghibli|orange.?mix|abyss|waifu|holo|2d/.test(z)) return 'anime'
-      if (/realvis|epicrealism|juggernaut|cyberrealistic|absolute.?reality|leosam|photoreal|photo ?real|raw ?photo|chillout|majic|korean.?doll|realistic|flux/.test(z)) return 'realistic'
-      if (/sdxl|sd ?xl|sd15|sd ?1\.5|base/.test(z)) return 'universal'
-      return 'unknown'
-    }
-    const checkpoints = Array.isArray(payload.available_checkpoints) ? payload.available_checkpoints.map((x) => String(x || '')).filter(Boolean) : []
-    const promptText = userPrompt.toLowerCase()
-    let targetStyle = ''
-    if (toRealistic) targetStyle = 'realistic'
-    else if (toAnime) targetStyle = 'anime'
-    else if (/写实|真实照片|真人|photo|photorealistic|realistic|photograph/.test(promptText)) targetStyle = 'realistic'
-    else if (/二次元|动漫|漫画|anime|manga|插画|illustration|cel ?shad/.test(promptText)) targetStyle = 'anime'
-
-    const modelStyle = styleOfModel(baseName)
-    const styleWord = { anime: '二次元', realistic: '写实' }
-    let compatibility = { ok: true, severity: 'none', message: '', suggestions: [] }
-    if (targetStyle && modelStyle !== 'unknown' && modelStyle !== 'universal' && modelStyle !== targetStyle) {
-      const want = styleWord[targetStyle]
-      const have = styleWord[modelStyle]
-      const candidates = checkpoints.filter((n) => styleOfModel(n) === targetStyle).slice(0, 3)
-      const suggestions = []
-      if (candidates.length) {
-        suggestions.push({
-          id: 'switch_model',
-          label: `换成 ${candidates[0]}`,
-          detail: `本机已装的${want}底模，用它出${want}才稳`,
-          action: { type: 'checkpoint', value: candidates[0] },
-        })
-        for (const extra of candidates.slice(1)) {
-          suggestions.push({
-            id: 'switch_model',
-            label: `换成 ${extra}`,
-            detail: `另一个${want}底模备选`,
-            action: { type: 'checkpoint', value: extra },
-          })
-        }
-      } else {
-        suggestions.push({
-          id: 'download_model',
-          label: '去模型库下写实底模',
-          detail: `本机没装${want}底模，动漫底模怎么调都出${have}，建议先下 RealVisXL 或 Juggernaut XL`,
-          action: { type: 'open_models' },
-        })
-      }
-      suggestions.push({
-        id: 'keep',
-        label: '仍用当前底模继续',
-        detail: `参数会按${have}底模调，成图大概率还是${have}`,
-        action: { type: 'keep' },
-      })
-      compatibility = {
-        ok: false,
-        severity: 'warn',
-        message: `当前底模「${baseDisplay || '未选'}」偏${have}，你要的是${want}画风。底模决定画面底子，只调参数改不回来。`,
-        suggestions,
-      }
-    }
-    let ui = `检测到${archName}底模`
-    if (loras.length) ui += `并挂载 ${loras.length} 个 LoRA`
-    ui += `，已把步数设为 ${steps}、CFG 设为 ${cfg}、采样器 ${sampler}`
-    if (stage === 'post_base_inpaint' || crossStyle) ui += `，重绘幅度 ${denoise}`
-    ui += '。'
-
-    return {
-      analysis_log: analysis,
-      optimized_params: {
-        steps,
-        cfg: Number(cfg.toFixed(1)),
-        sampler_name: sampler,
-        scheduler,
-        denoise,
-        lora_weights: loraWeights,
-      },
-      forced_positive_tags: forcedPos.filter(Boolean).join(', '),
-      forced_negative_tags: forcedNeg.filter(Boolean).join(', '),
-      ui_notification: ui.slice(0, 80),
-      arch,
-      compatibility,
-    }
-  }
   /**
    * AI 导演智能体：根据用户原始生图意图与是否存在云端 API 底图，动态计算并输出本地 ComfyUI 精修控制参数
    */
