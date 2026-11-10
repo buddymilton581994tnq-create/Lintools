@@ -14,7 +14,7 @@ AI 绘画提示词工具箱。Electron + React + Vite，内置本地大模型把
 | `dist/` | 线上运行的构建产物 |
 | `public/` | 静态资源，字体和打赏图 |
 | `ai-params/` | 本地模型调教参数 |
-| `runtime/llama-runtime.zip` | llama.cpp 运行时，首次启动解压 |
+| `runtime-zip/llama-runtime.zip` | llama.cpp 运行时，首次启动解压 |
 
 ## 源码版本说明
 
