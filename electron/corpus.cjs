@@ -55,6 +55,28 @@ const ANIME_SAFEGUARD = [
   { cat: '人体解剖', label: '凸点', terms: ['凸点'], en: 'covered nipples' },
   { cat: '人体解剖', label: '私处', terms: ['私处'], en: 'genitals' },
   { cat: '人体解剖', label: '腿环', terms: ['腿环'], en: 'thigh strap' },
+  // 常见描述词：danbooru 中文表里也没有，或译名对不上
+  { cat: '人体解剖', label: '睫毛', terms: ['睫毛'], en: 'eyelashes' },
+  { cat: '人体解剖', label: '腰', terms: ['腰部', '细腰'], en: 'waist' },
+  { cat: '发型发饰', label: '空气刘海', terms: ['空气刘海'], en: 'see-through bangs' },
+  { cat: '发型发饰', label: '丸子头', terms: ['丸子头'], en: 'single hair bun' },
+  { cat: '发型发饰', label: '双丸子头', terms: ['双丸子头', '双丸子'], en: 'twin buns' },
+  { cat: '服饰与穿搭细节', label: 'JK制服', terms: ['jk制服'], en: 'serafuku, school uniform' },
+  { cat: '服饰与穿搭细节', label: '渔网袜', terms: ['渔网袜'], en: 'fishnet pantyhose' },
+  { cat: '表情与肢体动作', label: '歪头', terms: ['歪头'], en: 'head tilt' },
+  { cat: '场景与环境道具', label: '雪地', terms: ['雪地'], en: 'snow, snowy ground' },
+  { cat: '场景与环境道具', label: '废墟', terms: ['废墟'], en: 'ruins' },
+  { cat: '场景与环境道具', label: '沙漠', terms: ['沙漠'], en: 'desert' },
+  { cat: '光线色调与画风构图扩充', label: '夕阳', terms: ['夕阳'], en: 'sunset' },
+  { cat: '光线色调与画风构图扩充', label: '逆光', terms: ['逆光'], en: 'backlighting' },
+  { cat: '光线色调与画风构图扩充', label: '侧光', terms: ['侧光'], en: 'side lighting' },
+  { cat: '光线色调与画风构图扩充', label: '轮廓光', terms: ['轮廓光'], en: 'rim lighting' },
+  { cat: '光线色调与画风构图扩充', label: '丁达尔效应', terms: ['丁达尔效应', '耶稣光'], en: 'god rays, volumetric lighting' },
+  { cat: '构图与镜头视角', label: '广角', terms: ['广角'], en: 'wide angle' },
+  { cat: '构图与镜头视角', label: '鱼眼', terms: ['鱼眼'], en: 'fisheye' },
+  { cat: '构图与镜头视角', label: '仰视', terms: ['仰视'], en: 'from below' },
+  { cat: '构图与镜头视角', label: '俯视', terms: ['俯视'], en: 'from above' },
+  { cat: '构图与镜头视角', label: '背面', terms: ['背面'], en: 'from behind' },
 ]
 
 function mergeAnatomySafeguard(lib) {

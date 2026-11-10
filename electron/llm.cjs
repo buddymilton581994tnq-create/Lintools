@@ -44,6 +44,23 @@ const PROMPT_COMPILER_RULES_SPEC = `
 
 const MIRRORS = ['https://hf-mirror.com', 'https://huggingface.co']
 
+/**
+ * 编译准则优先读同目录的 prompt-compiler-rules.md。
+ * 那份文档可以随时改写，不用动代码；读不到时回落到内置常量。
+ */
+function loadCompilerRulesSpec() {
+  try {
+    const p = path.join(__dirname, 'prompt-compiler-rules.md')
+    if (fs.existsSync(p)) {
+      const raw = fs.readFileSync(p, 'utf8')
+      if (raw && raw.trim().length > 200) return raw
+    }
+  } catch {
+    /* 用常量兜底 */
+  }
+  return PROMPT_COMPILER_RULES_SPEC
+}
+
 function urlsFor(repo, file) {
   return MIRRORS.map((base) => `${base}/${repo}/resolve/main/${file}`)
 }
@@ -372,7 +389,7 @@ class LocalModelEngine {
       for (const rt of rulesTargets) {
         try {
           if (fs.existsSync(path.dirname(rt))) {
-            fs.writeFileSync(rt, PROMPT_COMPILER_RULES_SPEC, 'utf8')
+            fs.writeFileSync(rt, loadCompilerRulesSpec(), 'utf8')
           }
         } catch {
           /* ignore */
@@ -904,6 +921,8 @@ class LocalModelEngine {
           'Turn the Chinese description into English booru tags joined by ", ".',
           'Order: quality/style, subject, action, face/hair/outfit, environment, lighting.',
           'Bind each color to the part it belongs to. Name the material. Describe hand contact.',
+          'For body parts use anatomical terms: nipples, areolae, breasts, cleavage, anus, ass, thighs, calves, soles, navel, collarbone, armpits.',
+          'Never translate a Chinese word character by character, and never turn a body part into a daily object.',
           'Convert negations into positive descriptions.',
           'Never output Chinese, explanations, rule text, or numbering.',
           'Reply with the tag line only.',
