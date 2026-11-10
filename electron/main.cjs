@@ -451,6 +451,33 @@ function createWindow() {
 // 关闭询问：卡片画在软件自己的界面里，这里只负责收答案
 // ---------------------------------------------------------------------------
 
+// 关闭时的下载询问走界面自绘弹窗，原生 dialog 是白底方角，和深色界面不搭
+let downloadCloseResolve = null
+
+function askDownloadCloseUI(pending) {
+  return new Promise((resolve) => {
+    let settled = false
+    const finish = (v) => {
+      if (settled) return
+      settled = true
+      downloadCloseResolve = null
+      resolve(v)
+    }
+    downloadCloseResolve = finish
+    try {
+      send('app:download-close-ask', {
+        modelName: pending.modelName || pending.modelId,
+        gb: (pending.bytesOnDisk / 1024 ** 3).toFixed(2),
+      })
+    } catch {
+      finish(1)
+      return
+    }
+    // 界面没响应时兜底：按保留下载进度处理
+    setTimeout(() => finish(1), 30000)
+  })
+}
+
 async function handleCloseRequest() {
   // 模型正在下载：退出前让用户决定进度怎么处理
   let pending = null
@@ -462,22 +489,7 @@ async function handleCloseRequest() {
   if (pending) {
     let response = 1
     try {
-      const picked = await dialog.showMessageBox(win, {
-        type: 'warning',
-        title: '模型正在下载',
-        message: '本地模型还没下完',
-        detail: [
-          `模型：${pending.modelName || pending.modelId}`,
-          `已下载：${(pending.bytesOnDisk / 1024 ** 3).toFixed(2)} GB`,
-          '',
-          '保留下载进度的话，下次打开会从断点继续，不用从头再来。',
-        ].join('\n'),
-        buttons: ['取消', '保留下载进度并退出', '删除下载任务并退出'],
-        defaultId: 1,
-        cancelId: 0,
-        noLink: true,
-      })
-      response = picked.response
+      response = await askDownloadCloseUI(pending)
     } catch {
       /* 弹窗失败按保留处理 */
     }
@@ -629,6 +641,11 @@ function registerIpc() {
     if (remember && (action === 'tray' || action === 'quit')) writeSettings({ closeAction: action })
     if (action === 'tray') hideToTray()
     else if (action === 'quit') quitApp()
+  })
+
+  // 下载中关窗口：界面自绘弹窗把选择送回来（0 取消 / 1 保留进度 / 2 删除）
+  ipcMain.handle('app:download-close-answer', (_e, choice) => {
+    if (typeof downloadCloseResolve === 'function') downloadCloseResolve(Number(choice) || 0)
   })
 
   // ComfyUI 与硬件探测

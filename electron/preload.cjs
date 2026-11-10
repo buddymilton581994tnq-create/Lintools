@@ -304,6 +304,140 @@ function showTierConfirm(model) {
   })
 }
 
+/**
+ * 下载中关窗口的三选一。样式跟档位确认框一套。
+ * 返回 0 取消 / 1 保留下载进度 / 2 删除下载任务
+ */
+function showDownloadCloseDialog(data) {
+  return new Promise((resolve) => {
+    const mask = document.createElement('div')
+    mask.style.cssText = [
+      'position:fixed',
+      'inset:0',
+      'z-index:2147483000',
+      'display:flex',
+      'align-items:center',
+      'justify-content:center',
+      'background:rgba(3,6,8,0.72)',
+      'backdrop-filter:blur(3px)',
+      'opacity:0',
+      'transition:opacity .16s ease',
+      'font:13px/1.6 system-ui,-apple-system,"Microsoft YaHei",sans-serif',
+    ].join(';')
+
+    const card = document.createElement('div')
+    card.style.cssText = [
+      'width:420px',
+      'padding:20px 20px 16px',
+      'border-radius:14px',
+      'border:1px solid rgba(45,212,191,0.32)',
+      'background:linear-gradient(160deg,#121c1e 0%,#0a1012 100%)',
+      'box-shadow:0 24px 64px rgba(0,0,0,0.75),inset 0 1px 0 rgba(255,255,255,0.04)',
+      'transform:translateY(6px) scale(.985)',
+      'transition:transform .18s cubic-bezier(.2,.8,.3,1)',
+    ].join(';')
+
+    const head = document.createElement('div')
+    head.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:14px;'
+    const dot = document.createElement('span')
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#f0b429;box-shadow:0 0 8px rgba(240,180,41,.8);'
+    const title = document.createElement('span')
+    title.textContent = '模型还没下完'
+    title.style.cssText = 'font-size:14px;font-weight:600;color:#e6f2f1;letter-spacing:.3px;'
+    head.appendChild(dot)
+    head.appendChild(title)
+
+    const body = document.createElement('div')
+    body.style.cssText = 'margin-bottom:18px;'
+    const nameLine = document.createElement('div')
+    nameLine.textContent = data.modelName || '本地模型'
+    nameLine.style.cssText = 'font-size:14px;font-weight:600;color:#7fe8d4;margin-bottom:6px;'
+    const progLine = document.createElement('div')
+    progLine.textContent = `已下载 ${data.gb || '0'} GB`
+    progLine.style.cssText = 'font-size:12px;color:#9fb3b3;margin-bottom:10px;'
+    const tip = document.createElement('div')
+    tip.textContent = '保留下载进度的话，下次打开会从断点继续，不用从头再来。'
+    tip.style.cssText = 'font-size:12px;color:#7d9090;line-height:1.6;'
+    body.appendChild(nameLine)
+    body.appendChild(progLine)
+    body.appendChild(tip)
+
+    const row = document.createElement('div')
+    row.style.cssText = 'display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;'
+
+    const mkBtn = (text, kind) => {
+      const b = document.createElement('button')
+      b.textContent = text
+      const bg = kind === 'primary' ? 'rgba(45,212,191,0.16)' : kind === 'danger' ? 'rgba(239,68,68,0.14)' : 'transparent'
+      const bd = kind === 'primary' ? 'rgba(45,212,191,0.55)' : kind === 'danger' ? 'rgba(239,68,68,0.5)' : 'rgba(120,140,140,0.3)'
+      const fg = kind === 'primary' ? '#7fe8d4' : kind === 'danger' ? '#f2a2a2' : '#9fb3b3'
+      b.style.cssText = [
+        'padding:7px 16px',
+        'border-radius:8px',
+        `border:1px solid ${bd}`,
+        `background:${bg}`,
+        `color:${fg}`,
+        'font-size:12.5px',
+        kind === 'primary' ? 'font-weight:600' : 'font-weight:400',
+        'cursor:pointer',
+        'transition:all .15s',
+      ].join(';')
+      b.addEventListener('mouseenter', () => {
+        b.style.background = kind === 'primary' ? 'rgba(45,212,191,0.26)' : kind === 'danger' ? 'rgba(239,68,68,0.22)' : 'rgba(255,255,255,0.06)'
+      })
+      b.addEventListener('mouseleave', () => {
+        b.style.background = bg
+      })
+      return b
+    }
+
+    const cancel = mkBtn('取消', 'ghost')
+    const keep = mkBtn('保留下载进度并退出', 'primary')
+    const drop = mkBtn('删除下载任务并退出', 'danger')
+
+    const close = (val) => {
+      mask.style.opacity = '0'
+      card.style.transform = 'translateY(6px) scale(.985)'
+      setTimeout(() => mask.remove(), 160)
+      document.removeEventListener('keydown', onKey)
+      resolve(val)
+    }
+    const onKey = (e) => {
+      if (e.key === 'Escape') close(0)
+    }
+
+    cancel.addEventListener('click', () => close(0))
+    keep.addEventListener('click', () => close(1))
+    drop.addEventListener('click', () => close(2))
+    document.addEventListener('keydown', onKey)
+
+    row.appendChild(cancel)
+    row.appendChild(keep)
+    row.appendChild(drop)
+    card.appendChild(head)
+    card.appendChild(body)
+    card.appendChild(row)
+    mask.appendChild(card)
+
+    document.body.appendChild(mask)
+    requestAnimationFrame(() => {
+      mask.style.opacity = '1'
+      card.style.transform = 'translateY(0) scale(1)'
+    })
+    keep.focus()
+  })
+}
+
+// 主进程在关闭窗口时发来询问
+ipcRenderer.on('app:download-close-ask', async (_e, data) => {
+  const choice = await showDownloadCloseDialog(data || {})
+  try {
+    await ipcRenderer.invoke('app:download-close-answer', choice)
+  } catch {
+    /* ignore */
+  }
+})
+
 async function mountTierSwitcher() {
   if (document.getElementById('lt-tier-switcher')) return true
   let status = null
