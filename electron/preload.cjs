@@ -213,15 +213,20 @@ function showTierConfirm(model) {
     body.style.cssText = 'margin-bottom:18px;'
     const nameLine = document.createElement('div')
     nameLine.textContent = model.short || model.name || model.id
-    nameLine.style.cssText = 'font-size:15px;font-weight:600;color:#7fe8d4;margin-bottom:4px;'
+    nameLine.style.cssText = 'font-size:15px;font-weight:600;color:#7fe8d4;margin-bottom:2px;'
+    // 档位名之外把具体模型名也写出来，用户能确认自己换的是哪个模型
+    const modelLine = document.createElement('div')
+    modelLine.textContent = model.name || ''
+    modelLine.style.cssText = 'font-size:12.5px;color:#c2d4d3;margin-bottom:8px;letter-spacing:.2px;'
     const specLine = document.createElement('div')
     const gb = model.bytes ? (model.bytes / 1024 ** 3).toFixed(1) : ''
-    specLine.textContent = [model.label, gb ? gb + ' GB' : '', model.vramHint].filter(Boolean).join(' · ')
+    specLine.textContent = [gb ? gb + ' GB' : '', model.vramHint].filter(Boolean).join(' · ')
     specLine.style.cssText = 'font-size:11.5px;color:#6d8080;margin-bottom:10px;'
     const tip = document.createElement('div')
     tip.textContent = model.installed ? '本地已下载，切换会立即生效。' : '本地还没有这个模型，确认后开始下载，中途可以在设置里取消。'
     tip.style.cssText = 'font-size:12px;color:#9fb3b3;line-height:1.55;'
     body.appendChild(nameLine)
+    if (model.name) body.appendChild(modelLine)
     body.appendChild(specLine)
     body.appendChild(tip)
 
