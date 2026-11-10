@@ -83,23 +83,6 @@ const MODELS = [
       },
     ],
   },
-  {
-    id: 'qwen3-8b',
-    name: '千问 Qwen3 8B',
-    short: '千问 8B',
-    label: '千问 8B 模型（约 4.7GB）',
-    note: '理解与推理更强，推荐 8GB 以上显存；首次下载时间较长',
-    bytes: Math.round(4.68 * 1024 ** 3),
-    template: 'native',
-    ctxSize: 6144,
-    vramHint: '建议 8GB 显存',
-    files: [
-      {
-        file: 'ds4f-qwen3-8b-q4_k_m.gguf',
-        urls: urlsFor('Qwen/Qwen3-8B-GGUF', 'Qwen3-8B-Q4_K_M.gguf'),
-      },
-    ],
-  },
 ]
 
 const RUNTIME_TAG = 'b12189'
@@ -774,7 +757,7 @@ class LocalModelEngine {
       '0',
       '--no-webui',
     ]
-    // DeepSeek 蒸馏版会自己吐思考块，得用压制模板；千问 8B 用 GGUF 内嵌的 ChatML 模板
+    // DeepSeek 蒸馏版会自己吐思考块，得用压制模板
     if (m.template !== 'native') {
       const tplFile = this._ensureNoThinkTemplate()
       if (tplFile) args.push('--chat-template-file', tplFile)

@@ -64,6 +64,35 @@ const ANIME_SAFEGUARD = [
   { cat: '服饰与穿搭细节', label: 'JK制服', terms: ['jk制服'], en: 'serafuku, school uniform' },
   { cat: '服饰与穿搭细节', label: '渔网袜', terms: ['渔网袜'], en: 'fishnet pantyhose' },
   { cat: '表情与肢体动作', label: '歪头', terms: ['歪头'], en: 'head tilt' },
+  // 动作词：词库只有静态姿势，这些手部与位移动作基本全缺
+  { cat: '表情与肢体动作', label: '举剑', terms: ['举剑', '举刀', '举枪'], en: 'holding sword up, raised weapon' },
+  { cat: '表情与肢体动作', label: '挥剑', terms: ['挥剑', '挥刀', '斩击'], en: 'swinging sword, sword slash' },
+  { cat: '表情与肢体动作', label: '拔剑', terms: ['拔剑', '拔刀'], en: 'drawing sword' },
+  { cat: '表情与肢体动作', label: '持剑', terms: ['持剑', '握剑', '拿着剑'], en: 'holding sword, gripping sword hilt' },
+  { cat: '表情与肢体动作', label: '冲锋', terms: ['冲锋', '冲刺', '冲过来'], en: 'charging forward, dynamic action pose' },
+  { cat: '表情与肢体动作', label: '奔跑', terms: ['奔跑', '跑动'], en: 'running' },
+  { cat: '表情与肢体动作', label: '跳跃', terms: ['跳跃', '跳起'], en: 'jumping' },
+  { cat: '表情与肢体动作', label: '跪地', terms: ['跪地', '跪倒'], en: 'kneeling on ground' },
+  { cat: '表情与肢体动作', label: '蹲着', terms: ['蹲着', '蹲下'], en: 'squatting' },
+  { cat: '表情与肢体动作', label: '倒地', terms: ['倒地', '倒下'], en: 'lying on ground, collapsed' },
+  { cat: '表情与肢体动作', label: '仰卧', terms: ['仰卧', '仰躺'], en: 'lying on back' },
+  { cat: '表情与肢体动作', label: '俯卧', terms: ['俯卧', '俯身'], en: 'lying prone' },
+  { cat: '表情与肢体动作', label: '转身', terms: ['转身'], en: 'turning around' },
+  { cat: '表情与肢体动作', label: '侧身', terms: ['侧身'], en: 'from side, side view' },
+  { cat: '表情与肢体动作', label: '拥抱', terms: ['拥抱', '抱住'], en: 'hugging' },
+  { cat: '表情与肢体动作', label: '牵手', terms: ['牵手', '十指相扣'], en: 'holding hands, interlocked fingers' },
+  { cat: '表情与肢体动作', label: '比心', terms: ['比心', '爱心手势'], en: 'heart hands' },
+  { cat: '表情与肢体动作', label: '招手', terms: ['招手', '挥手'], en: 'waving' },
+  { cat: '表情与肢体动作', label: '敬礼', terms: ['敬礼'], en: 'saluting' },
+  { cat: '表情与肢体动作', label: '遮脸', terms: ['遮脸', '挡住脸'], en: 'covering face' },
+  { cat: '表情与肢体动作', label: '抚脸', terms: ['抚脸', '摸脸'], en: 'hand on own cheek' },
+  { cat: '表情与肢体动作', label: '遮胸', terms: ['遮胸', '挡胸'], en: 'covering breasts, arm across chest' },
+  { cat: '表情与肢体动作', label: '叉腰', terms: ['叉腰', '双手叉腰'], en: 'hands on hips' },
+  { cat: '表情与肢体动作', label: '合十', terms: ['合十', '双手合十'], en: 'hands pressed together in prayer' },
+  { cat: '表情与肢体动作', label: '抱膝', terms: ['抱膝', '抱住膝盖'], en: 'hugging own knees' },
+  { cat: '表情与肢体动作', label: '仰头', terms: ['仰头', '抬头'], en: 'head up, looking up' },
+  { cat: '表情与肢体动作', label: '低头', terms: ['低头'], en: 'head down, looking down' },
+  { cat: '表情与肢体动作', label: '回头', terms: ['回头', '回眸'], en: 'looking back, turning around' },
   { cat: '场景与环境道具', label: '雪地', terms: ['雪地'], en: 'snow, snowy ground' },
   { cat: '场景与环境道具', label: '废墟', terms: ['废墟'], en: 'ruins' },
   { cat: '场景与环境道具', label: '沙漠', terms: ['沙漠'], en: 'desert' },
@@ -82,8 +111,40 @@ const ANIME_SAFEGUARD = [
 function mergeAnatomySafeguard(lib) {
   // 无条件放在最前面。词库里可能有同名词条但意思完全不同
   // （比如「菊花」在花卉分类里是 chrysanthemum），保底表要先命中。
-  return ANATOMY_SAFEGUARD.concat(ANIME_SAFEGUARD, lib)
+  return ANATOMY_SAFEGUARD.concat(ANIME_SAFEGUARD, COLOR_PART_SAFEGUARD, lib)
 }
+
+// 颜色 + 部位 的组合词。
+// 词库只收固定短语，「黑色长发」「红瞳」这类现拼的组合必然落空，
+// 落了空就会丢给模型自由发挥。这里按 13 色 × 10 部位预生成，约 130 条。
+const COLOR_PART_SAFEGUARD = (() => {
+  const colors = [
+    ['黑', 'black'], ['白', 'white'], ['红', 'red'], ['蓝', 'blue'],
+    ['绿', 'green'], ['紫', 'purple'], ['粉', 'pink'], ['橙', 'orange'],
+    ['黄', 'yellow'], ['棕', 'brown'], ['灰', 'grey'], ['银', 'silver'],
+  ]
+  const parts = [
+    ['长发', 'long hair'], ['短发', 'short hair'], ['卷发', 'curly hair'],
+    ['头发', 'hair'], ['双马尾', 'twintails'], ['眼睛', 'eyes'],
+    ['眼瞳', 'eyes'], ['瞳孔', 'eyes'], ['眉毛', 'eyebrows'], ['皮肤', 'skin'],
+  ]
+  // 中文里「红瞳」「红色瞳孔」两种写法都要能命中
+  const prefixes = ['%s', '%s色']
+  const out = []
+  for (const [cc, ce] of colors) {
+    for (const [pc, pe] of parts) {
+      for (const p of prefixes) {
+        const term = p.replace('%s', cc) + pc
+        out.push({ cat: '颜色与部位', label: `${cc}${pc}`, terms: [term], en: `${ce} ${pe}` })
+      }
+    }
+  }
+  // 金发是 blonde，不是 gold hair
+  out.push({ cat: '颜色与部位', label: '金发', terms: ['金发', '金色头发'], en: 'blonde hair' })
+  out.push({ cat: '颜色与部位', label: '银发', terms: ['银发', '银色头发'], en: 'silver hair' })
+  out.push({ cat: '颜色与部位', label: '红瞳', terms: ['红瞳', '红色瞳孔', '血色瞳孔'], en: 'red eyes' })
+  return out
+})()
 
 let _cachedLib = null
 let _cachedAt = 0
