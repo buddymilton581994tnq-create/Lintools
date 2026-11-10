@@ -85496,5 +85496,637 @@
    "短发动漫少女"
   ],
   "en": "short-haired anime girl"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "泰勒斯威夫特",
+  "terms": [
+   "泰勒斯威夫特",
+   "泰勒·斯威夫特",
+   "霉霉"
+  ],
+  "en": "taylor swift, blonde hair, red lips, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "比莉艾利什",
+  "terms": [
+   "比莉艾利什",
+   "比莉·艾利什",
+   "碧梨",
+   "比利艾莉什",
+   "比利·艾莉什"
+  ],
+  "en": "billie eilish, green hair, baggy clothes, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "艾薇儿",
+  "terms": [
+   "艾薇儿",
+   "艾薇儿拉维尼",
+   "艾薇儿·拉维尼"
+  ],
+  "en": "avril lavigne, blonde hair, pop punk, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "爱莉安娜格兰德",
+  "terms": [
+   "爱莉安娜格兰德",
+   "爱莉安娜·格兰德",
+   "A妹"
+  ],
+  "en": "ariana grande, high ponytail, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "赛琳娜戈麦斯",
+  "terms": [
+   "赛琳娜戈麦斯",
+   "赛琳娜·戈麦斯"
+  ],
+  "en": "selena gomez, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "杜阿利帕",
+  "terms": [
+   "杜阿利帕",
+   "杜阿·利帕"
+  ],
+  "en": "dua lipa, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "奥利维亚罗德里戈",
+  "terms": [
+   "奥利维亚罗德里戈",
+   "奥利维亚·罗德里戈"
+  ],
+  "en": "olivia rodrigo, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "凯蒂佩里",
+  "terms": [
+   "凯蒂佩里",
+   "凯蒂·佩里",
+   "水果姐"
+  ],
+  "en": "katy perry, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "嘎嘎小姐",
+  "terms": [
+   "嘎嘎小姐",
+   "Lady Gaga",
+   "蕾蒂嘎嘎"
+  ],
+  "en": "lady gaga, pop singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "碧昂丝",
+  "terms": [
+   "碧昂丝",
+   "碧昂斯"
+  ],
+  "en": "beyonce, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "蕾哈娜",
+  "terms": [
+   "蕾哈娜"
+  ],
+  "en": "rihanna, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "拉娜德雷",
+  "terms": [
+   "拉娜德雷",
+   "拉娜·德雷"
+  ],
+  "en": "lana del rey, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "萨布丽娜卡彭特",
+  "terms": [
+   "萨布丽娜卡彭特",
+   "萨布丽娜·卡彭特"
+  ],
+  "en": "sabrina carpenter, blonde hair, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "查莉XCX",
+  "terms": [
+   "查莉XCX",
+   "Charli XCX"
+  ],
+  "en": "charli xcx, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "麦莉赛勒斯",
+  "terms": [
+   "麦莉赛勒斯",
+   "麦莉·赛勒斯"
+  ],
+  "en": "miley cyrus, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "贾斯汀比伯",
+  "terms": [
+   "贾斯汀比伯",
+   "贾斯汀·比伯"
+  ],
+  "en": "justin bieber, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "艾德希兰",
+  "terms": [
+   "艾德希兰",
+   "艾德·希兰",
+   "黄老板"
+  ],
+  "en": "ed sheeran, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "哈利斯泰尔斯",
+  "terms": [
+   "哈利斯泰尔斯",
+   "哈利·斯泰尔斯"
+  ],
+  "en": "harry styles, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "布鲁诺马尔斯",
+  "terms": [
+   "布鲁诺马尔斯",
+   "布鲁诺·马尔斯"
+  ],
+  "en": "bruno mars, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "盆栽",
+  "terms": [
+   "The Weeknd"
+  ],
+  "en": "the weeknd, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "德雷克",
+  "terms": [
+   "德雷克",
+   "Drake说唱"
+  ],
+  "en": "drake, rapper"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "波兹马龙",
+  "terms": [
+   "波兹马龙",
+   "Post Malone"
+  ],
+  "en": "post malone, rapper"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "防弹少年团",
+  "terms": [
+   "防弹少年团",
+   "BTS",
+   "弹爹"
+  ],
+  "en": "bts, k-pop boy group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "粉墨",
+  "terms": [
+   "粉墨",
+   "BLACKPINK",
+   "blackpink"
+  ],
+  "en": "blackpink, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "TWICE",
+  "terms": [
+   "TWICE",
+   "兔瓦斯"
+  ],
+  "en": "twice, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "NewJeans",
+  "terms": [
+   "NewJeans",
+   "牛紧斯"
+  ],
+  "en": "newjeans, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "aespa",
+  "terms": [
+   "aespa",
+   "爱撕帕"
+  ],
+  "en": "aespa, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "IVE",
+  "terms": [
+   "IVE",
+   "艾芙"
+  ],
+  "en": "ive, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "LE SSERAFIM",
+  "terms": [
+   "LE SSERAFIM",
+   "勒塞拉芬"
+  ],
+  "en": "le sserafim, k-pop girl group"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "柳智敏",
+  "terms": [
+   "柳智敏",
+   "Karina"
+  ],
+  "en": "karina, aespa, long black hair"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "金智妮",
+  "terms": [
+   "金智妮",
+   "Jennie"
+  ],
+  "en": "jennie, blackpink, cat eyes"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "Lisa",
+  "terms": [
+   "Lisa",
+   "丽萨"
+  ],
+  "en": "lisa, blackpink, bangs"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "周杰伦",
+  "terms": [
+   "周杰伦",
+   "杰伦"
+  ],
+  "en": "jay chou, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "邓紫棋",
+  "terms": [
+   "邓紫棋"
+  ],
+  "en": "g.e.m., singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "林俊杰",
+  "terms": [
+   "林俊杰",
+   "JJ林俊杰"
+  ],
+  "en": "jj lin, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "王力宏",
+  "terms": [
+   "王力宏"
+  ],
+  "en": "wang leehom, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "蔡依林",
+  "terms": [
+   "蔡依林",
+   "Jolin"
+  ],
+  "en": "jolin tsai, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "孙燕姿",
+  "terms": [
+   "孙燕姿"
+  ],
+  "en": "stefanie sun, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "陈奕迅",
+  "terms": [
+   "陈奕迅",
+   "Eason"
+  ],
+  "en": "eason chan, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "张惠妹",
+  "terms": [
+   "张惠妹",
+   "阿妹"
+  ],
+  "en": "a-mei, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "李荣浩",
+  "terms": [
+   "李荣浩"
+  ],
+  "en": "li ronghao, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "华晨宇",
+  "terms": [
+   "华晨宇"
+  ],
+  "en": "hua chenyu, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "薛之谦",
+  "terms": [
+   "薛之谦"
+  ],
+  "en": "joker xue, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "毛不易",
+  "terms": [
+   "毛不易"
+  ],
+  "en": "mao buyi, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "五月天",
+  "terms": [
+   "五月天",
+   "阿信"
+  ],
+  "en": "mayday, taiwanese rock band"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "张学友",
+  "terms": [
+   "张学友"
+  ],
+  "en": "jacky cheung, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "刘德华",
+  "terms": [
+   "刘德华"
+  ],
+  "en": "andy lau, actor"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "郭富城",
+  "terms": [
+   "郭富城"
+  ],
+  "en": "aaron kwok, actor"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "王菲",
+  "terms": [
+   "王菲"
+  ],
+  "en": "faye wong, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "莫文蔚",
+  "terms": [
+   "莫文蔚"
+  ],
+  "en": "karen mok, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "那英",
+  "terms": [
+   "那英"
+  ],
+  "en": "na ying, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "汪峰",
+  "terms": [
+   "汪峰"
+  ],
+  "en": "wang feng, singer"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "刘亦菲",
+  "terms": [
+   "刘亦菲"
+  ],
+  "en": "liu yifei, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "杨幂",
+  "terms": [
+   "杨幂"
+  ],
+  "en": "yang mi, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "赵丽颖",
+  "terms": [
+   "赵丽颖"
+  ],
+  "en": "zhao liying, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "迪丽热巴",
+  "terms": [
+   "迪丽热巴"
+  ],
+  "en": "dilraba, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "杨颖",
+  "terms": [
+   "杨颖",
+   "Angelababy"
+  ],
+  "en": "angelababy, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "汤唯",
+  "terms": [
+   "汤唯"
+  ],
+  "en": "tang wei, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "舒淇",
+  "terms": [
+   "舒淇"
+  ],
+  "en": "shu qi, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "周迅",
+  "terms": [
+   "周迅"
+  ],
+  "en": "zhou xun, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "章子怡",
+  "terms": [
+   "章子怡"
+  ],
+  "en": "zhang ziyi, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "巩俐",
+  "terms": [
+   "巩俐"
+  ],
+  "en": "gong li, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "范冰冰",
+  "terms": [
+   "范冰冰"
+  ],
+  "en": "fan bingbing, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "李冰冰",
+  "terms": [
+   "李冰冰"
+  ],
+  "en": "li bingbing, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "斯嘉丽约翰逊",
+  "terms": [
+   "斯嘉丽约翰逊",
+   "斯嘉丽·约翰逊",
+   "寡姐"
+  ],
+  "en": "scarlett johansson, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "安吉丽娜朱莉",
+  "terms": [
+   "安吉丽娜朱莉",
+   "安吉丽娜·朱莉"
+  ],
+  "en": "angelina jolie, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "艾玛沃森",
+  "terms": [
+   "艾玛沃森",
+   "艾玛·沃森"
+  ],
+  "en": "emma watson, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "玛格特罗比",
+  "terms": [
+   "玛格特罗比",
+   "玛格特·罗比"
+  ],
+  "en": "margot robbie, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "赞达亚",
+  "terms": [
+   "赞达亚"
+  ],
+  "en": "zendaya, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "安妮海瑟薇",
+  "terms": [
+   "安妮海瑟薇",
+   "安妮·海瑟薇"
+  ],
+  "en": "anne hathaway, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "奥黛丽赫本",
+  "terms": [
+   "奥黛丽赫本",
+   "奥黛丽·赫本"
+  ],
+  "en": "audrey hepburn, actress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "玛丽莲梦露",
+  "terms": [
+   "玛丽莲梦露",
+   "玛丽莲·梦露"
+  ],
+  "en": "marilyn monroe, actress"
  }
 ]

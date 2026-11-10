@@ -656,6 +656,16 @@ function registerIpc() {
   ipcMain.handle('ai:chat', async (_e, payload) => {
     const { requestId, messages, temperature, maxTokens } = payload || {}
     try {
+      // API 生图模式下外部模型自己能读中文，本地翻译纯属浪费，
+      // 还会为了一个用不上的结果把本地大模型拉起来占显存。
+      const st = readSettings()
+      const apiMode = !(st.localModel && st.localModel.enabled)
+      const sysMsg = (messages || []).find((m) => m && m.role === 'system')
+      const sysText = String((sysMsg && sysMsg.content) || '')
+      const isTranslateTask = /danbooru|translate|tag compiler|booru tag/i.test(sysText)
+      if (apiMode && isTranslateTask) {
+        return { ok: true, text: '', skipped: true }
+      }
       const text = await engine.chat(
         messages || [],
         (delta) => send('ai:delta', { requestId, ...delta }),
