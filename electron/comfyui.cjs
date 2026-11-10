@@ -213,6 +213,12 @@ function injectWorkflowParams(workflowJson, customParams = {}) {
       if (customParams.cfg !== undefined && Number.isFinite(Number(customParams.cfg))) {
         node.inputs.cfg = Number(customParams.cfg)
       }
+      if (customParams.sampler && typeof node.inputs.sampler_name === 'string') {
+        node.inputs.sampler_name = String(customParams.sampler)
+      }
+      if (customParams.scheduler && typeof node.inputs.scheduler === 'string') {
+        node.inputs.scheduler = String(customParams.scheduler)
+      }
       if (Array.isArray(node.inputs.positive) && node.inputs.positive[0] !== undefined) {
         posNodeIds.add(String(node.inputs.positive[0]))
       }
@@ -225,6 +231,9 @@ function injectWorkflowParams(workflowJson, customParams = {}) {
       }
       if (customParams.steps !== undefined && Number.isFinite(Number(customParams.steps))) {
         node.inputs.steps = Math.round(Number(customParams.steps))
+      }
+      if (customParams.scheduler && typeof node.inputs.scheduler === 'string') {
+        node.inputs.scheduler = String(customParams.scheduler)
       }
     } else if (ct === 'BasicGuider' && Array.isArray(node.inputs.conditioning)) {
       posNodeIds.add(String(node.inputs.conditioning[0]))

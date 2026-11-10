@@ -305,7 +305,8 @@ class Archiver {
     log(`第 ${attempts} 次启动`)
     const pend = await this.applyPending(log)
     if (pend.restored) return { attempts, restored: true, id: pend.id }
-    if (attempts >= 2 && st.autoRestore !== false) {
+    // 自动回滚改为显式开启，避免悄悄把改过的文件整份盖回去
+    if (attempts >= 2 && st.autoRestore === true) {
       const list = this.list()
       if (list.length) {
         const zip = path.join(this.root, list[0].id, list[0].file || 'app.zip')

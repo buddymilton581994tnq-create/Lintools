@@ -3,11 +3,13 @@ const { app, BrowserWindow, Tray, Menu, shell, ipcMain, nativeImage, dialog } = 
 const path = require('path')
 const fs = require('fs')
 const { spawn } = require('child_process')
-const { LocalModelEngine } = require('./llm.cjs')
+const { LocalModelEngine, recommendTier } = require('./llm.cjs')
 const comfy = require('./comfyui.cjs')
 const res = require('./resilience.cjs')
 const { Archiver } = require('./archive.cjs')
 const { LoraTrainer } = require('./train.cjs')
+const { LocalModelManager } = require('./localmodel.cjs')
+const { MossInfer } = require('./mossinfer.cjs')
 
 let engine = null
 let comfyEngine = null
@@ -164,6 +166,67 @@ function createEngine() {
     onLog: () => {},
   })
   return engine
+}
+
+/**
+ * 首次启动：装包不带模型，让用户按自己机器选一档。
+ * 检测显存和内存给出推荐，但选择权在用户手上，随时可以在设置里换。
+ */
+async function ensureModelTier() {
+  const s = readSettings()
+  if (s.modelTier) return
+  let hw = {}
+  try {
+    hw = await res.probeEnvironment()
+  } catch {
+    /* 探测失败就按最低配推 */
+  }
+  const gpus = Array.isArray(hw.gpus) ? hw.gpus : []
+  const best = gpus.reduce((a, b) => (b.vramGb > (a ? a.vramGb : 0) ? b : a), null)
+  const vram = best ? Number(best.vramGb) || 0 : 0
+  const ram = Number(hw.totalRamGb) || 0
+  const recTier = recommendTier(vram, ram)
+  const idx = { low: 0, mid: 1, high: 2 }[recTier] ?? 0
+
+  const mark = (t) => (t === recTier ? '   ← 推荐' : '')
+  const detail = [
+    `检测到：${best ? best.name : '未检测到独立显卡'}，显存 ${vram}GB，内存 ${ram}GB`,
+    '',
+    '安装包不自带模型，首次使用会按你选的档位下载，之后可以随时在设置里更换。',
+    '',
+    `低配 1.5B    约 1.0 GB   2GB 显存即可${mark('low')}`,
+    `中配 7B      约 4.5 GB   建议 8GB 显存${mark('mid')}`,
+    `高配 14B     约 9.0 GB   建议 12GB 显存${mark('high')}`,
+    '',
+    '档位越高，词库没覆盖的句子翻译越准，但下载更大、占用更多。',
+  ].join('\n')
+
+  let response = idx
+  try {
+    const picked = await dialog.showMessageBox(win, {
+      type: 'question',
+      title: '选择本地模型档位',
+      message: '请选择本地模型规格',
+      detail,
+      buttons: ['低配 1.5B', '中配 7B', '高配 14B'],
+      defaultId: idx,
+      cancelId: idx,
+      noLink: true,
+    })
+    response = picked.response
+  } catch {
+    /* 弹窗失败就用推荐档位 */
+  }
+
+  const ids = ['ds4f-mini', 'ds4f-7b', 'ds4f-14b']
+  const tiers = ['low', 'mid', 'high']
+  const pick = Math.max(0, Math.min(2, Number(response) || 0))
+  writeSettings({ modelTier: tiers[pick], modelId: ids[pick] })
+  try {
+    if (engine) engine.writeConfig({ modelId: ids[pick] })
+  } catch {
+    /* ignore */
+  }
 }
 
 /** 启动时就拉模型，拉起来（或兜底超时）才放主窗口出来 */
@@ -544,6 +607,89 @@ function registerIpc() {
     try {
       const decision = await engine.decideComfyDirectorParams(payload || {})
       return { ok: true, decision }
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  // ---- 本地模型（MOSS-Image）----
+  const localModels = new LocalModelManager(
+    () => (comfyEngine && comfyEngine.comfyRoot) || '',
+    (p) => send('local:progress', p),
+  )
+  // ---- 原生推理引擎（MossInfer，不依赖 ComfyUI）----
+  const mossInfer = new MossInfer(
+    app.getPath('userData'),
+    (p) => send('local:install-progress', p),
+    (p) => send('local:gen-progress', p),
+  )
+  ipcMain.handle('moss:status', () => {
+    try {
+      return { ok: true, ...mossInfer.status() }
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('moss:install', async () => {
+    try {
+      return await mossInfer.install()
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('moss:cancel-install', () => mossInfer.cancel())
+  ipcMain.handle('moss:generate', async (_e, cfg) => {
+    try {
+      const root = (comfyEngine && comfyEngine.comfyRoot) || ''
+      const abs = (name, kind) => {
+        if (!name) return ''
+        if (path.isAbsolute(String(name))) return String(name)
+        return root ? path.join(root, 'models', kind, String(name)) : String(name)
+      }
+      const args = { ...(cfg || {}) }
+      args.dit = abs(args.dit, 'diffusion_models')
+      args.te = abs(args.te, 'text_encoders')
+      args.vae = abs(args.vae, 'vae')
+      const r = await mossInfer.generate(args)
+      return { ok: true, ...r }
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('moss:cancel', () => mossInfer.cancel())
+  ipcMain.handle('local:status', () => {
+    try {
+      return { ok: true, installed: localModels.installed(), root: comfyEngine?.comfyRoot || '' }
+    } catch (e) {
+      return { ok: false, installed: [], error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('local:list-repo', async (_e, repo) => {
+    try {
+      return { ok: true, ...(await localModels.listRepo(repo)) }
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('local:download', async (_e, repo, precision) => {
+    try {
+      return await localModels.fetchAll(repo, precision)
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('local:cancel', () => localModels.cancel())
+  ipcMain.handle('local:save-config', (_e, cfg) => {
+    try {
+      writeSettings({ localModel: cfg || null })
+      return { ok: true }
+    } catch (e) {
+      return { ok: false, error: e instanceof Error ? e.message : String(e) }
+    }
+  })
+  ipcMain.handle('ai:core-params', async (_e, payload) => {
+    try {
+      const result = await engine.decideCoreParams(payload || {})
+      return { ok: true, result }
     } catch (e) {
       return { ok: false, error: e instanceof Error ? e.message : String(e) }
     }
@@ -1031,6 +1177,7 @@ app.whenReady().then(async () => {
     // ComfyUI 保持关闭，需用户进入工作流模式后手动点击启动
   })
 
+  await ensureModelTier()
   bootModel()
 
   app.on('activate', () => {
