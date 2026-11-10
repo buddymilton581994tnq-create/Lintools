@@ -1,0 +1,278 @@
+[
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "亚麻油画布",
+      "粗纹画布经纬肌理",
+      "清晰可见粗纹亚麻油画布底纹与油彩厚度"
+    ],
+    "label": "亚麻油画布",
+    "en": "visible coarse woven linen canvas texture underneath layered oil pigment"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "阿诗水彩纸",
+      "300g冷压粗纹棉浆纸",
+      "水彩毛边纸",
+      "凹凸手工棉浆水彩纸肌理与自然沉淀水痕"
+    ],
+    "label": "阿诗水彩纸",
+    "en": "textured 300gsm cold-press cotton watercolor paper grain with natural pigment granulation"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "撒金宣纸",
+      "仿古熟宣",
+      "宣纸纤维毛边",
+      "泛着温润微黄包浆与细碎金箔点的古典手工宣纸肌理"
+    ],
+    "label": "撒金宣纸",
+    "en": "aged ivory handmade Xuan rice paper speckled with tiny real gold leaf flakes"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "羊皮纸",
+      "古旧泛黄卷轴",
+      "火烧焦边旧纸张",
+      "边缘微卷带岁月污渍的古旧中世纪羊皮纸基底"
+    ],
+    "label": "羊皮纸",
+    "en": "weathered antique parchment vellum texture with deckled edges and subtle ink aging"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "刮刀厚涂",
+      "调色刀堆塑立体笔触",
+      "impasto",
+      "豪放立体的调色刀厚涂油彩刮痕与高光突起"
+    ],
+    "label": "刮刀厚涂",
+    "en": "sculptural palette-knife impasto paint ridges catching side light"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "干笔飞白",
+      "枯笔焦墨擦痕",
+      "苍劲有力的毛笔干擦飞白墨迹肌理"
+    ],
+    "label": "干笔飞白",
+    "en": "expressive dry-brush calligraphic feibai ink strokes showing raw bristle texture"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "排线素描",
+      "钢笔交叉排线",
+      "炭笔涂抹木炭条肌理",
+      "富有节奏感的古典钢笔交叉排线阴影与高光留白"
+    ],
+    "label": "排线素描",
+    "en": "rhythmic fine cross-hatching pen-and-ink shading on cream paper"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "粉彩棒",
+      "油画棒肌理",
+      "莫奈色粉颗粒感",
+      "浓郁柔和的软质色粉笔颗粒叠色肌理"
+    ],
+    "label": "粉彩棒",
+    "en": "velvety soft pastel chalk dust texture with rich layered color blending"
+  },
+  {
+    "cat": "画布纸张基底与手工笔触肌理",
+    "terms": [
+      "金箔贴金",
+      "银箔氧化肌理",
+      "沥粉堆金",
+      "闪烁金属漫反射光泽的手工裂纹纯金箔贴面"
+    ],
+    "label": "金箔贴金",
+    "en": "hand-applied irregular gold leaf gilding with delicate metallic crackle sheen"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "故宫红墙金瓦色",
+      "朱砂配琉璃黄",
+      "中国红配鎏金",
+      "庄重华贵的朱砂正红、明黄琉璃与墨黑描金宫廷配色"
+    ],
+    "label": "朱砂配琉璃黄",
+    "en": "imperial Chinese color palette of cinnabar vermilion, glazed golden amber, and deep ink black"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "宋代极简汝窑色",
+      "天青月白配竹青",
+      "东方清雅低饱和色",
+      "温润清雅的宋瓷天青、月白、苍筤竹绿极简东方色卡"
+    ],
+    "label": "宋代极简汝窑色",
+    "en": "Song-dynasty minimalist palette of Ru-kiln celadon sky blue, moon white, and muted bamboo sage"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "敦煌重彩配色",
+      "石青石绿配土红赭石泥金",
+      "浓郁古朴的敦煌石青、孔雀绿、朱膘土红与泥金撞色"
+    ],
+    "label": "敦煌重彩配色",
+    "en": "Dunhuang mural mineral palette combining lapis blue, malachite green, terracotta ochre, and aged gold"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "莫兰迪色系",
+      "高级灰豆沙粉雾霾蓝燕麦色",
+      "柔和静谧的低饱和度莫兰迪高级灰粉、雾霾蓝与暖燕麦色"
+    ],
+    "label": "莫兰迪色系",
+    "en": "muted Giorgio Morandi chalky pastel palette of dusty rose, slate blue, and warm oatmeal grey"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "多巴胺配色",
+      "高饱和明快糖果撞色",
+      "充满活力的高饱和柠檬黄、电光蓝与蜜桃粉多巴胺撞色"
+    ],
+    "label": "多巴胺配色",
+    "en": "vibrant high-saturation dopamine color blocking in sunny yellow, cobalt blue, and hot coral pink"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "美拉德色系",
+      "焦糖棕琥珀褐肉桂暖秋色",
+      "醇厚温暖的焦糖棕、浓缩咖啡褐与暖金琥珀秋冬美拉德配色"
+    ],
+    "label": "美拉德色系",
+    "en": "rich Maillard autumn palette of roasted caramel brown, espresso, cinnamon, and warm amber"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "薄荷曼波",
+      "清爽薄荷绿配奶油白嫩黄",
+      "清新透气的春日薄荷绿、嫩芽绿与柔和奶油白配色"
+    ],
+    "label": "薄荷曼波",
+    "en": "fresh Mint Mambo spring palette of airy pastel mint green, buttercream white, and pale lemon"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "黑金奢华配色",
+      "黑曜石配流光香槟金",
+      "深邃哑光黑曜石底色衬托璀璨流光香槟金高反差配色"
+    ],
+    "label": "黑金奢华配色",
+    "en": "opulent obsidian matte black contrasted with gleaming champagne gold highlights"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "粉黑甜酷配色",
+      "地雷系黑粉撞色",
+      "甜美樱花粉与酷感纯黑蕾丝高对比甜酷配色"
+    ],
+    "label": "粉黑甜酷配色",
+    "en": "sweet-edgy contrast color scheme of baby pastel pink and deep jet black"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "水色亚文化色卡",
+      "冰川浅蓝配纯白银灰",
+      "纯净透明感的冰川浅水蓝、纯白与冷银色亚文化配色"
+    ],
+    "label": "水色亚文化色卡",
+    "en": "translucent mizuiro subculture palette of icy baby blue, crisp white, and cool silver"
+  },
+  {
+    "cat": "精选大师配色方案与中国传统色卡",
+    "terms": [
+      "黑红哥特配色",
+      "深渊黑配暗夜血红与冷银",
+      "充满戏剧张力的深渊纯黑、丝绒暗血红与苍白冷月银配色"
+    ],
+    "label": "黑红哥特配色",
+    "en": "dramatic Gothic palette of abyssal black, deep crimson blood red, and pale moonlight silver"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "超清细节",
+      "8k分辨率",
+      "极致画质",
+      "大师之作",
+      "毫发毕现",
+      "8K超精细微观纹理大师级画质"
+    ],
+    "label": "超清细节",
+    "en": "masterpiece, ultra-detailed 8k resolution, razor-sharp micro-textures, refined craftsmanship"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "电影级调色",
+      "ACES色彩管理",
+      "宽容度胶片层次",
+      "好莱坞电影级HDR光影层次与细腻暗部细节"
+    ],
+    "label": "电影级调色",
+    "en": "cinematic HDR color grading, rich shadow latitude, smooth highlight roll-off"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "景深虚化",
+      "奶油散景",
+      "大光圈光斑虚化",
+      "焦点锐利背景化作柔和圆形奶油光斑浅景深"
+    ],
+    "label": "景深虚化",
+    "en": "tack-sharp focus on subject with creamy circular aperture bokeh background"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "动态模糊",
+      "速度感残影",
+      "快门拖影",
+      "极具冲击力的运动轨迹动态模糊残影"
+    ],
+    "label": "动态模糊",
+    "en": "kinetic motion blur streaks conveying high-speed movement while keeping focal face sharp"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "色差边缘",
+      "轻微紫边色散镜头感",
+      "chromatic aberration",
+      "真实光学镜头边缘细微迷幻RGB色散质感"
+    ],
+    "label": "色差边缘",
+    "en": "subtle optical chromatic aberration along high-contrast edges for authentic anime/cinema lens feel"
+  },
+  {
+    "cat": "光学画质增强与渲染精度控制词（用户主动提及时使用）",
+    "terms": [
+      "暗角",
+      "胶片自然四周压暗聚焦中心",
+      "柔和自然的光学镜头四周暗角突出画面视觉中心"
+    ],
+    "label": "暗角",
+    "en": "gentle natural optical lens vignette drawing focus toward center"
+  }
+]

@@ -1,0 +1,22 @@
+/* 霖易工具箱 — app-specific styles */
+
+/* thin scrollbars for the tech console look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.35);
+}
+
+select option {
+  background-color: #0a1212;
+  color: #d4d4d8;
+}

@@ -1,0 +1,991 @@
+[
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "少年偶像",
+      "清朗少年",
+      "阳光少年",
+      "偶像少年",
+      "清爽少年"
+    ],
+    "label": "清朗偶像少年",
+    "en": "bright charismatic young male idol, clean refined facial features, refreshing smile, tailored stage outfit"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "中性风",
+      "帅气女性",
+      "英气少女",
+      "少年感女生",
+      "冷峻中性"
+    ],
+    "label": "英气中性风少女",
+    "en": "androgynous cool beauty, sharp handsome facial contours, tailored unisex suit, confident poised gaze"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "正太",
+      "小男生",
+      "少年感",
+      "美少年"
+    ],
+    "label": "清秀美少年",
+    "en": "bishounen, cute youthful boy, delicate clean facial features, slender youthful frame"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "萝莉",
+      "小萝莉",
+      "合法萝莉",
+      "娇小少女"
+    ],
+    "label": "娇小萝莉",
+    "en": "petite cute girl, small delicate frame, doll-like adorable face, big expressive eyes"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "御姐",
+      "大姐姐",
+      "熟女",
+      "高冷御姐"
+    ],
+    "label": "成熟御姐",
+    "en": "onee-san, mature elegant woman, tall statuesque curvy figure, composed confident aura"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "温柔淑女",
+      "知性女性",
+      "温婉女子",
+      "大家闺秀"
+    ],
+    "label": "温婉知性淑女",
+    "en": "gentle refined lady, warm serene aura, loose side braid resting on shoulder, poised graceful gaze"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "古典黑纱淑女",
+      "维多利亚黑纱",
+      "哥特礼帽淑女",
+      "黑纱礼服女子",
+      "古典黑纱礼服淑女"
+    ],
+    "label": "古典黑纱淑女",
+    "en": "aristocratic lady in sheer black lace veil and Victorian dark gown, solemn melancholic expression"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "地雷系",
+      "地雷女",
+      "jirai"
+    ],
+    "label": "地雷系少女",
+    "en": "jirai kei girl, pastel pink and black frilly blouse, high-waisted suspender skirt, ribbon brooch, pinkish under-eye byojaku makeup"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "量产型",
+      "量产型穿搭",
+      "ryousangata"
+    ],
+    "label": "量产型少女",
+    "en": "ryousangata girly fashion, soft beige and pastel pink lace dress, pearl hairclips, sweet idol-fan aesthetic"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "天使界隈",
+      "水色界隈",
+      "蓝白亚文化"
+    ],
+    "label": "天使界隈",
+    "en": "tenshi kaiwai, mizuiro kaiwai, pale ice-blue and white oversized cyber jersey, wing hairpins, white loose leg warmers"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "亚文化",
+      "原宿风",
+      "涩谷系",
+      "subcul",
+      "街头亚文化"
+    ],
+    "label": "日系亚文化",
+    "en": "harajuku subculture street fashion, layered punk accessories, safety pins, striped arm warmers, platform boots"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "视觉系",
+      "v系",
+      "visual kei"
+    ],
+    "label": "视觉系摇滚",
+    "en": "visual kei musician aesthetic, dramatic spiked layered hair, heavy dark gothic eyeliner, studded leather coat"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "杀马特",
+      "千禧视觉",
+      "非主流"
+    ],
+    "label": "千禧视觉系",
+    "en": "2000s underground cyber goth punk hair, teased spiky colorful hair, heavy dark eyeliner, chains"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "辣妹",
+      "黑皮辣妹",
+      "ギャル",
+      "gyaru",
+      "黒ギャル"
+    ],
+    "label": "黑皮辣妹",
+    "en": "kuro gyaru, sun-kissed tanned skin, bleached blonde wavy hair, dramatic gyaru makeup, flashy manicured nails, loose school shirt"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "白辣妹",
+      "姫ギャル",
+      "公主辣妹"
+    ],
+    "label": "白皮甜辣妹",
+    "en": "shiro gyaru, hime gyaru, fair skin, voluminous curled blonde hair with ribbon bows, pink glamorous makeup"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "森女",
+      "森系",
+      "森女系"
+    ],
+    "label": "森系少女",
+    "en": "mori girl aesthetic, layered earthy linen and cotton dress, crochet lace shawl, dried wildflowers"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "病娇",
+      "黑化",
+      "坏掉"
+    ],
+    "label": "病娇神态",
+    "en": "yandere expression, obsessive sweet smile paired with empty unblinking eyes lacking highlights"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "傲娇",
+      "口嫌体正直"
+    ],
+    "label": "傲娇神态",
+    "en": "tsundere expression, blushing cheeks, averted gaze, slight pout, arms crossed"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "三无",
+      "三无少女",
+      "冰山少女",
+      "冷淡系"
+    ],
+    "label": "三无少女",
+    "en": "kuudere, stoic emotionless face, calm deadpan eyes, pale skin, quiet detached aura"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "电波系",
+      "电波女"
+    ],
+    "label": "电波系少女",
+    "en": "denpa girl, dreamy unfocused gaze, slightly messy hair, eccentric whimsical posture"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "鬼马少女",
+      "古灵精怪",
+      "俏皮少女",
+      "机灵少女",
+      "古灵精怪俏皮少女"
+    ],
+    "label": "鬼马少女",
+    "en": "playful witty girl, lively mischievous grin, bright expressive eyes, energetic posture"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "地味",
+      "地味女",
+      "不起眼",
+      "土气眼镜娘"
+    ],
+    "label": "地味眼镜娘",
+    "en": "jimi plain shy girl, thick round glasses, long dark bangs partially covering eyes, modest oversized cardigan"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "文学少女",
+      "书虫少女"
+    ],
+    "label": "文学少女",
+    "en": "bungaku shoujo, quiet bookish girl with braided pigtails, round wire-rim glasses, clutching a hardcover book"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "败犬",
+      "败犬女主"
+    ],
+    "label": "微泣败犬感",
+    "en": "bittersweet forced smile with teary eyes, windblown hair, wistful unrequited love mood"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "假小子",
+      "男孩子气",
+      "tomboy",
+      "短发运动少女"
+    ],
+    "label": "爽朗假小子",
+    "en": "energetic tomboy girl, short spiky layered hair, athletic toned build, confident bright grin"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "大和抚子",
+      "古典淑女"
+    ],
+    "label": "大和抚子",
+    "en": "yamato nadeshiko, graceful traditional Japanese beauty, long glossy black hair, serene dignified demeanor"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "中二病",
+      "邪王真眼"
+    ],
+    "label": "中二病少女",
+    "en": "chuunibyou pose, wearing one white medical eyepatch, bandages wrapped around forearm, dramatic hand over face"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "家里蹲",
+      "废宅少女",
+      "干物女"
+    ],
+    "label": "慵懒家里蹲",
+    "en": "neet hikikomori girl, messy bedhead hair, oversized faded t-shirt, dark circles under eyes, holding handheld console"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "社畜",
+      "疲惫OL",
+      "打工人"
+    ],
+    "label": "疲惫社畜",
+    "en": "exhausted office worker, slightly loosened necktie, tired half-lidded eyes with subtle dark circles, holding canned coffee"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "不良少女",
+      "太妹",
+      "スケバン",
+      "sukeban"
+    ],
+    "label": "昭和不良太妹",
+    "en": "retro Japanese sukeban delinquent girl, ankle-length pleated sailor skirt, rolled-up sleeves, wooden bokken sword, fierce glare"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "不良少年",
+      "暴走族",
+      "特攻服"
+    ],
+    "label": "暴走族特攻服",
+    "en": "bosozoku delinquent youth, embroidered long tokko-fuku coat, pompadour or bleached hair, intense rebellious gaze"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "都市丽人",
+      "时尚白领",
+      "摩登女性",
+      "干练女性",
+      "摩登都市时尚女性"
+    ],
+    "label": "都市丽人",
+    "en": "stylish modern metropolitan woman, chic designer casual wear, confident warm smile, vibrant eyes"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "白毛",
+      "银发控",
+      "白毛红瞳"
+    ],
+    "label": "白发红瞳",
+    "en": "platinum silver-white hair, glowing crimson red eyes, pale porcelain complexion"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "黑皮",
+      "小麦肤色",
+      "暗精灵肤色",
+      "褐色肌"
+    ],
+    "label": "健康褐色肌",
+    "en": "rich tanned caramel skin, glossy skin highlights, contrasting light hair"
+  },
+  {
+    "cat": "人物与亚文化",
+    "terms": [
+      "冷白皮",
+      "瓷白肌",
+      "苍白肤色"
+    ],
+    "label": "冷白瓷肌",
+    "en": "translucent pale porcelain skin, cool undertones, delicate subsurface scattering"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "猫娘",
+      "猫耳娘",
+      "nekomimi"
+    ],
+    "label": "猫耳娘",
+    "en": "nekomimi catgirl, fluffy twitching cat ears on head, slender swaying cat tail"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "狐娘",
+      "九尾狐",
+      "狐仙"
+    ],
+    "label": "九尾狐娘",
+    "en": "kitsune fox girl, plush pointed fox ears, multiple luxurious fluffy white-tipped fox tails"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "犬娘",
+      "狗娘",
+      "狼娘",
+      "戌"
+    ],
+    "label": "狼耳少女",
+    "en": "ookami wolf girl, perked furry wolf ears, thick bushy wolf tail"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "兔娘",
+      "兔耳娘",
+      "usagimimi"
+    ],
+    "label": "垂耳兔娘",
+    "en": "usagimimi bunny girl, long soft lop rabbit ears, fluffy cotton-ball tail"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "羊娘",
+      "绵羊娘",
+      "恶魔角羊娘"
+    ],
+    "label": "盘角绵羊娘",
+    "en": "sheep girl, curved ridged ram horns, fluffy wool-like wavy hair, droopy lamb ears"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "牧场兽耳娘",
+      "田园牛角娘",
+      "牧歌兽耳少女",
+      "田园牧歌牛角少女"
+    ],
+    "label": "牧场兽耳娘",
+    "en": "pastoral horned kemonomimi girl, small curved horns, furry animal ears with brass bell tag, country pinafore dress"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "龙娘",
+      "龙女",
+      "龙人族"
+    ],
+    "label": "龙角龙尾娘",
+    "en": "dragon girl, majestic crystalline dragon horns, scaled dragon tail, subtle iridescent cheek scales, slit dragon pupils"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "蛇娘",
+      "拉米亚",
+      "半人半蛇",
+      "美杜莎"
+    ],
+    "label": "拉米亚蛇女",
+    "en": "lamia monster girl, human upper torso seamlessly transitioning into a long coiled iridescent serpent tail"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "哈比",
+      "鸟身女妖",
+      "翼人",
+      "羽族"
+    ],
+    "label": "羽翼哈比娘",
+    "en": "harpy girl, large feathered wings emerging from back and arms, talon-like bird legs, floating feathers"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "人鱼",
+      "美人鱼",
+      "鲛人"
+    ],
+    "label": "深海鲛人鱼",
+    "en": "ethereal mermaid, shimmering bioluminescent fish tail with translucent flowing fins, pearl ornaments"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "蛛女",
+      "拉克涅",
+      "半人蜘蛛",
+      "arachne"
+    ],
+    "label": "阿拉克涅蛛女",
+    "en": "arachne monster girl, pale gothic beauty emerging from a glossy black giant spider thorax, silk threads"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "史莱姆娘",
+      "粘液娘"
+    ],
+    "label": "半透明史莱姆娘",
+    "en": "translucent gelatinous slime girl, glossy cyan liquid body with suspended air bubbles, dripping viscous edges"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "半人马",
+      "人马娘"
+    ],
+    "label": "半人马战士",
+    "en": "centaur warrior, heroic human upper body fused with a muscular equine horse body"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "精灵",
+      "高等精灵",
+      "森精灵",
+      "木精灵"
+    ],
+    "label": "高等森精灵",
+    "en": "high elf, long graceful pointed ears, ethereal ageless face, luminous eyes, slender silhouette"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "暗夜精灵",
+      "黑暗精灵",
+      "卓尔精灵",
+      "drow"
+    ],
+    "label": "卓尔暗精灵",
+    "en": "dark elf drow, obsidian purple-gray skin, stark white flowing hair, glowing ruby eyes, silver spiderweb filigree"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "吸血鬼",
+      "血族",
+      "真祖"
+    ],
+    "label": "血族贵族",
+    "en": "aristocratic vampire, aristocratically pale skin, sharp subtle fangs, glowing crimson eyes, gothic Victorian attire"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "暗夜魔族",
+      "夜魔贵族",
+      "深渊魔裔",
+      "魔族少女"
+    ],
+    "label": "暗夜魔族贵族",
+    "en": "noble night-demon character, curved obsidian horns, dark feathered bat wings, gothic aristocratic attire"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "天使",
+      "炽天使",
+      "六翼天使"
+    ],
+    "label": "六翼炽天使",
+    "en": "seraphim angel, six pairs of grand white feathered wings, glowing golden halo above head, divine radiance"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "堕天使",
+      "黑翼天使"
+    ],
+    "label": "黑翼堕天使",
+    "en": "fallen angel, tattered obsidian black feathered wings, cracked dark halo, melancholic divine gaze"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "福瑞",
+      "兽人",
+      "furry",
+      "anthro",
+      "毛绒兽人"
+    ],
+    "label": "拟人毛绒兽人",
+    "en": "anthropomorphic furry character, lush detailed fur coat, expressive animal muzzle and ears, digitigrade paws"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "骷髅",
+      "巫妖",
+      "亡灵法师",
+      "不死族"
+    ],
+    "label": "亡灵巫妖",
+    "en": "undead lich necromancer, weathered bone skull with glowing cyan soulfire in eye sockets, tattered arcane robes"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "人偶",
+      "球体关节人偶",
+      "bjd",
+      "少女人偶",
+      "发条人偶"
+    ],
+    "label": "球体关节人偶",
+    "en": "ball-jointed porcelain doll (BJD), visible spherical knee and elbow joints, glossy bisque porcelain skin, glass doll eyes"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "机娘",
+      "武装神姬",
+      "机械少女",
+      "仿生人",
+      "义体人"
+    ],
+    "label": "精密仿生机娘",
+    "en": "android mecha musume, porcelain human face paired with exposed carbon-fiber cybernetic limbs, glowing seams, mechanical joints"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "幽灵",
+      "怨灵",
+      "女鬼",
+      "灵体"
+    ],
+    "label": "半透明幽灵",
+    "en": "spectral translucent ghost girl, pale glowing ectoplasm edges, floating hair defying gravity, eerie wisps"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "克苏鲁",
+      "古神",
+      "不可名状",
+      "深潜者",
+      "触手怪"
+    ],
+    "label": "克苏鲁古神眷属",
+    "en": "Lovecraftian cosmic horror entity, non-Euclidean eldritch geometry, bioluminescent abyssal tentacles, multiple eerie eyes"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "妖精",
+      "花仙子",
+      "小精灵",
+      "pixie"
+    ],
+    "label": "荧光翼花仙子",
+    "en": "tiny woodland fairy pixie, iridescent dragonfly gossamer wings, glowing pollen dust"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "鬼族",
+      "日本鬼",
+      "青鬼",
+      "赤鬼",
+      "鬼娘"
+    ],
+    "label": "和风鬼族少女",
+    "en": "Japanese oni girl, sharp ivory horns on forehead, fierce tiger-skin pattern accents, traditional绳结"
+  },
+  {
+    "cat": "幻想种族与生物",
+    "terms": [
+      "天狗",
+      "鸦天狗"
+    ],
+    "label": "鸦天狗",
+    "en": "karasu tengu, black raven wings, traditional yamabushi attire, tengu mask tilted on side of head, feather fan"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "修女",
+      "圣洁修女",
+      "暗黑修女"
+    ],
+    "label": "教堂修女",
+    "en": "catholic nun habit, flowing black veil with crisp white coif and wimple, silver rosary cross"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "巫女",
+      "神社巫女"
+    ],
+    "label": "神社巫女",
+    "en": "Shinto miko priestess, white wide-sleeved kosode top, pleated crimson hakama, gohei wand"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "阴阳师",
+      "方士",
+      "道姑",
+      "道士"
+    ],
+    "label": "捉妖道士",
+    "en": "traditional Taoist exorcist priest, yin-yang taiji robe, paper talisman charms floating in air, bronze sword"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "女仆",
+      "古典女仆",
+      "维多利亚女仆",
+      "维多利亚长裙女仆"
+    ],
+    "label": "古典女仆",
+    "en": "Victorian parlormaid, ankle-length black dress, crisp starched white pinafore apron, lace mob cap"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "猫耳女仆",
+      "秋叶原女仆"
+    ],
+    "label": "萌系荷叶边女仆",
+    "en": "cute Akihabara frilly maid outfit, puffed short sleeves, heart-cutout apron, lace maid headband"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "执事",
+      "管家",
+      "英伦执事"
+    ],
+    "label": "燕尾服执事",
+    "en": "aristocratic English butler, impeccable black tailcoat suit, white gloves, pocket watch chain"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "女武神",
+      "瓦尔基里",
+      "圣骑士",
+      "姬骑士"
+    ],
+    "label": "银甲姬骑士",
+    "en": "female paladin valkyrie knight, engraved silver plate armor with gold filigree, winged tiara,cape"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "黑骑士",
+      "重甲战士",
+      "魂系骑士",
+      "魂系黑铁重甲骑士"
+    ],
+    "label": "黑骑士",
+    "en": "dark fantasy heavy plate armor knight, battle-scarred blackened steel helm with visor slit, tattered cloak"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "魔女",
+      "占星术士",
+      "炼金术士"
+    ],
+    "label": "尖顶帽魔女",
+    "en": "arcane witch, oversized crooked wide-brim witch hat, starry velvet cloak, glowing glass potion vials on belt"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "瘟疫医生",
+      "鸟嘴医生"
+    ],
+    "label": "中世纪鸟嘴医生",
+    "en": "medieval plague doctor, riveted leather beak mask with brass glass goggles, waxed dark overcoat, lantern"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "忍者",
+      "女忍",
+      "kunoichi"
+    ],
+    "label": "暗夜女忍",
+    "en": "shinobi kunoichi ninja, form-fitting dark mesh and cloth shinobi shozoku, kunai holster on thigh, flowing scarf"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "剑客",
+      "浪人",
+      "武士"
+    ],
+    "label": "佩刀浪人武士",
+    "en": "wandering ronin samurai, worn kimono hakama, straw amigasa hat, katana tucked in obi sash"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "狙击手",
+      "特工",
+      "战术少女"
+    ],
+    "label": "战术武装特工",
+    "en": "tactical female operative, modular plate carrier vest, headset mic, fingerless gloves, sniper rifle"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "赛博黑客",
+      "窜网使"
+    ],
+    "label": "赛博窜网黑客",
+    "en": "cyberpunk netrunner, neural datajack ports at neck, glowing holographic AR visor, cropped techwear jacket"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "宇航员",
+      "太空人"
+    ],
+    "label": "EVA宇航员",
+    "en": "astronaut in detailed pressurized EVA spacesuit, reflective gold-tinted helmet visor, NASA-style patches"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "赛车女郎",
+      "rq",
+      "race queen"
+    ],
+    "label": "高开叉赛车女郎",
+    "en": "motorsport race queen, glossy two-tone spandex high-cut outfit, sponsor logos, holding racing umbrella"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "护士",
+      "白衣护士"
+    ],
+    "label": "复古护士装",
+    "en": "fitted white nurse dress uniform, nurse cap, stethoscope"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "白大褂",
+      "疯狂科学家",
+      "研究员"
+    ],
+    "label": "白大褂研究员",
+    "en": "unbuttoned crisp white lab coat over turtleneck, ID lanyard, safety glasses"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "芭蕾舞者",
+      "芭蕾少女"
+    ],
+    "label": "天鹅湖芭蕾舞者",
+    "en": "classical ballerina, layered sheer white tulle tutu, satin pointe shoes with ribbons wrapped around ankles"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "歌剧名伶",
+      "花旦",
+      "青衣",
+      "京剧"
+    ],
+    "label": "京剧凤冠青衣",
+    "en": "Peking opera qingyi performer, elaborate kingfisher-feather點翠 phoenix crown, long pheasant plumes, water sleeves"
+  },
+  {
+    "cat": "职业与身份设定",
+    "terms": [
+      "地下偶像",
+      "打歌服",
+      "爱豆"
+    ],
+    "label": "闪亮舞台打歌服",
+    "en": "Japanese stage idol, sparkling sequined plaid frilly idol costume, asymmetric thigh ribbon, handheld mic"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "古典匀称体态",
+      "优雅身姿曲线",
+      "标准人像体态",
+      "古典优雅匀称体态"
+    ],
+    "label": "古典匀称体态",
+    "en": "classical balanced figure proportions, graceful waist-to-hip silhouette, poised posture"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "细腰",
+      "小蛮腰",
+      "蚂蚁腰",
+      "马甲线",
+      "腹肌"
+    ],
+    "label": "紧致马甲线细腰",
+    "en": "toned slender midriff, subtle defined abs line, delicate navel"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "腹肌",
+      "八块腹肌",
+      "肌肉线条",
+      "健美"
+    ],
+    "label": "精壮雕刻肌肉",
+    "en": "lean sculpted athletic musculature, defined pecs and six-pack abs, anatomical muscle definition"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "锁骨",
+      "天鹅颈",
+      "直角肩",
+      "精致锁骨与直角肩"
+    ],
+    "label": "天鹅颈",
+    "en": "delicate prominent collarbones, graceful swan-like neck, clean shoulder line"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "大长腿",
+      "漫画腿",
+      "细直腿"
+    ],
+    "label": "修长笔直双腿",
+    "en": "long slender legs, graceful calf and ankle contours"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "匀称腿部线条",
+      "修长小腿",
+      "健美腿型",
+      "流畅腿部轮廓",
+      "匀称修长腿部线条"
+    ],
+    "label": "匀称腿部线条",
+    "en": "well-proportioned graceful leg contours, smooth anatomical calf and ankle lines"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "白皙玉足",
+      "裸足",
+      "赤脚",
+      "脚趾"
+    ],
+    "label": "赤足细节",
+    "en": "barefoot, delicate slender toes, soft pink soles and ankles"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "纤细手指",
+      "骨节分明的手",
+      "美手"
+    ],
+    "label": "修长骨感手指",
+    "en": "slender graceful fingers, well-defined knuckles, neat natural fingernails"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "雀斑",
+      "晒伤妆",
+      "小雀斑"
+    ],
+    "label": "鼻梁细碎雀斑",
+    "en": "light dusting of cute natural freckles across nose bridge and cheeks"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "泪痣",
+      "美人痣",
+      "嘴角痣"
+    ],
+    "label": "眼下泪痣",
+    "en": "delicate tiny beauty mole just beneath the outer corner of one eye"
+  },
+  {
+    "cat": "身材与解剖细节",
+    "terms": [
+      "虎牙",
+      "小虎牙"
+    ],
+    "label": "可爱单侧小虎牙",
+    "en": "cute little fang tooth peeking out when smiling (yaeba)"
+  }
+]

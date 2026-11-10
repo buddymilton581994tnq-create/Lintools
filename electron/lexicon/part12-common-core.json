@@ -1,0 +1,1604 @@
+[
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "女孩",
+      "少女",
+      "女孩子",
+      "姑娘",
+      "女生",
+      "美少女",
+      "girl"
+    ],
+    "label": "少女",
+    "en": "1girl, young girl"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "女人",
+      "女性",
+      "成年女性",
+      "美女",
+      "女子",
+      "woman"
+    ],
+    "label": "年轻女性",
+    "en": "1girl, young woman"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "男孩",
+      "少年",
+      "男孩子",
+      "男生",
+      "美少年",
+      "boy"
+    ],
+    "label": "少年",
+    "en": "1boy, young boy"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "男人",
+      "男性",
+      "成年男性",
+      "青年",
+      "帅哥",
+      "man"
+    ],
+    "label": "年轻男性",
+    "en": "1boy, young man"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "一个",
+      "单人",
+      "独自",
+      "独处",
+      "solo"
+    ],
+    "label": "单人画面",
+    "en": "solo"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "两个女孩",
+      "双女",
+      "姐妹",
+      "百合",
+      "2girls"
+    ],
+    "label": "双人少女",
+    "en": "2girls"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "一男一女",
+      "情侣",
+      "男女"
+    ],
+    "label": "一男一女",
+    "en": "1girl, 1boy"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "学生",
+      "女学生",
+      "男学生",
+      "高中生"
+    ],
+    "label": "学生",
+    "en": "school student"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "偶像",
+      "歌姬",
+      "女团",
+      "爱豆"
+    ],
+    "label": "舞台偶像",
+    "en": "idol singer"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "公主",
+      "王女",
+      "皇女"
+    ],
+    "label": "公主",
+    "en": "princess"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "王子",
+      "皇子"
+    ],
+    "label": "王子",
+    "en": "prince"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "女王",
+      "女皇"
+    ],
+    "label": "女王",
+    "en": "queen"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "新娘",
+      "嫁衣少女"
+    ],
+    "label": "新娘",
+    "en": "bride"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "猫",
+      "小猫",
+      "猫咪",
+      "喵星人"
+    ],
+    "label": "猫咪",
+    "en": "cat, kitten"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "狗",
+      "小狗",
+      "修勾",
+      "汪星人"
+    ],
+    "label": "小狗",
+    "en": "dog, puppy"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "狐狸",
+      "小狐狸"
+    ],
+    "label": "狐狸",
+    "en": "fox"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "兔子",
+      "小白兔"
+    ],
+    "label": "兔子",
+    "en": "rabbit, bunny"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "鸟",
+      "小鸟",
+      "飞鸟",
+      "白鹭",
+      "麻雀"
+    ],
+    "label": "飞鸟",
+    "en": "bird"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "蝴蝶",
+      "彩蝶"
+    ],
+    "label": "蝴蝶",
+    "en": "butterfly"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "花",
+      "鲜花",
+      "花朵",
+      "繁花"
+    ],
+    "label": "繁花",
+    "en": "flowers, blooming blossoms"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "树",
+      "大树",
+      "树林",
+      "树木"
+    ],
+    "label": "树木",
+    "en": "trees, foliage"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "草地",
+      "草原",
+      "青草"
+    ],
+    "label": "青草地",
+    "en": "green grass meadow"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "大海",
+      "海洋",
+      "海水",
+      "海浪",
+      "海面"
+    ],
+    "label": "蔚蓝大海",
+    "en": "ocean, sea waves"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "湖泊",
+      "湖水",
+      "池塘",
+      "水面"
+    ],
+    "label": "静谧湖面",
+    "en": "tranquil lake water"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "天空",
+      "蓝天",
+      "白云",
+      "云朵",
+      "云海"
+    ],
+    "label": "云空",
+    "en": "sky, clouds"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "星星",
+      "星空",
+      "银河",
+      "繁星",
+      "夜空",
+      "璀璨星空"
+    ],
+    "label": "星星",
+    "en": "starry night sky, milky way"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "月亮",
+      "满月",
+      "弯月",
+      "新月",
+      "月色"
+    ],
+    "label": "明月",
+    "en": "moon, moonlight"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "太阳",
+      "阳光",
+      "日光",
+      "晴空"
+    ],
+    "label": "阳光",
+    "en": "sunlight, sunny sky"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "山",
+      "远山",
+      "群山",
+      "高山",
+      "山峰"
+    ],
+    "label": "群山",
+    "en": "mountains, mountain peaks"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "雪山",
+      "冰山"
+    ],
+    "label": "雪山",
+    "en": "snow-capped mountain"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "城市",
+      "都市",
+      "高楼",
+      "大厦",
+      "街景"
+    ],
+    "label": "都市街景",
+    "en": "cityscape, urban buildings"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "街道",
+      "马路",
+      "小巷",
+      "巷子",
+      "街角"
+    ],
+    "label": "街巷",
+    "en": "street, alleyway"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "房间",
+      "屋子",
+      "卧室",
+      "室内"
+    ],
+    "label": "室内房间",
+    "en": "indoor room, bedroom interior"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "窗户",
+      "窗边",
+      "窗台",
+      "落地窗"
+    ],
+    "label": "窗畔",
+    "en": "window, by the window"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "床",
+      "床铺",
+      "被子",
+      "枕头"
+    ],
+    "label": "柔软床榻",
+    "en": "bed, soft sheets and pillows"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "椅子",
+      "沙发",
+      "扶手椅",
+      "王座"
+    ],
+    "label": "座椅",
+    "en": "chair, sofa"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "书",
+      "书本",
+      "书籍",
+      "看书",
+      "读书"
+    ],
+    "label": "书本",
+    "en": "book, reading a book"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "伞",
+      "雨伞",
+      "撑伞",
+      "打伞"
+    ],
+    "label": "雨伞",
+    "en": "umbrella"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "剑",
+      "佩剑",
+      "长剑",
+      "宝剑"
+    ],
+    "label": "长剑",
+    "en": "sword"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "刀",
+      "长刀",
+      "太刀"
+    ],
+    "label": "长刀",
+    "en": "katana blade"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "镜子",
+      "镜面",
+      "照镜子"
+    ],
+    "label": "镜面反射",
+    "en": "mirror, reflection"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "水",
+      "水下",
+      "水中",
+      "落水"
+    ],
+    "label": "清澈水中",
+    "en": "water, underwater"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "火",
+      "火焰",
+      "火光",
+      "篝火"
+    ],
+    "label": "火光",
+    "en": "fire, flames"
+  },
+  {
+    "cat": "常见名词直译基底",
+    "terms": [
+      "风",
+      "微风",
+      "狂风",
+      "风吹"
+    ],
+    "label": "微风吹拂",
+    "en": "wind, breeze blowing"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "长发",
+      "披肩长发",
+      "及腰长发"
+    ],
+    "label": "飘逸长发",
+    "en": "long flowing hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "短发",
+      "利落短发",
+      "齐肩短发"
+    ],
+    "label": "清爽短发",
+    "en": "short hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "中长发",
+      "锁骨发"
+    ],
+    "label": "柔顺锁骨发",
+    "en": "medium-length hair reaching collarbones"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "直发",
+      "柔顺直发",
+      "黑长直"
+    ],
+    "label": "丝滑直发",
+    "en": "straight silky hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "卷发",
+      "微卷发",
+      "波浪卷",
+      "长卷发"
+    ],
+    "label": "浪漫微卷长发",
+    "en": "wavy curled hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "单边麻花辫",
+      "侧边编发"
+    ],
+    "label": "温婉单侧麻花辫",
+    "en": "single side braid resting over shoulder"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "法式盘发",
+      "优雅低发髻"
+    ],
+    "label": "优雅低挽发髻",
+    "en": "elegant low chignon updo"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "半扎发",
+      "公主头",
+      "半丸子头"
+    ],
+    "label": "甜美公主半扎发",
+    "en": "half-up half-down hairstyle with ribbon"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "齊刘海",
+      "平刘海",
+      "漫画刘海"
+    ],
+    "label": "乖巧齐刘海",
+    "en": "blunt straight bangs"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "斜刘海",
+      "侧分刘海"
+    ],
+    "label": "气质斜分刘海",
+    "en": "side-swept bangs"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "中分",
+      "中分长发",
+      "露额头"
+    ],
+    "label": "大气中分长发",
+    "en": "center-parted hair, exposed forehead"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "龙须刘海",
+      "碎发修饰脸型",
+      "垂落颊边龙须碎发"
+    ],
+    "label": "龙须刘海",
+    "en": "delicate face-framing hair tendrils"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "白发",
+      "银白发",
+      "苍白发"
+    ],
+    "label": "月白银发",
+    "en": "silver-white hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "黑发",
+      "乌发",
+      "鸦羽黑发"
+    ],
+    "label": "乌黑亮丽发丝",
+    "en": "jet-black glossy hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "金发",
+      "浅金发",
+      "铂金发"
+    ],
+    "label": "耀眼金发",
+    "en": "golden blonde hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "棕发",
+      "栗色发",
+      "茶色发",
+      "奶茶色头发"
+    ],
+    "label": "温柔栗棕茶色发",
+    "en": "warm chestnut brown hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "红发",
+      "赤发",
+      "酒红长发",
+      "橘红发"
+    ],
+    "label": "明艳酒红发色",
+    "en": "vibrant crimson red hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "蓝发",
+      "深蓝发",
+      "冰蓝发",
+      "水蓝发"
+    ],
+    "label": "清透水蓝发色",
+    "en": "cerulean blue hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "粉发",
+      "樱粉发",
+      "桃粉发"
+    ],
+    "label": "甜美樱花粉发",
+    "en": "pastel sakura pink hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "紫发",
+      "浅紫发",
+      "深紫发"
+    ],
+    "label": "神秘紫罗兰发色",
+    "en": "violet purple hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "绿发",
+      "翠绿发",
+      "浅绿发"
+    ],
+    "label": "清新翠绿发色",
+    "en": "emerald mint green hair"
+  },
+  {
+    "cat": "发型细分扩充",
+    "terms": [
+      "挑染发",
+      "双色发",
+      "阴阳发",
+      "渐变发",
+      "时尚双色渐变染发"
+    ],
+    "label": "挑染发",
+    "en": "two-tone gradient dyed hair"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "连衣裙",
+      "长裙",
+      "短裙",
+      "洋装"
+    ],
+    "label": "优雅连衣裙",
+    "en": "dress, flowing skirt"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "白裙",
+      "白色连衣裙",
+      "小白裙"
+    ],
+    "label": "纯净白色连衣裙",
+    "en": "pure white dress"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "黑裙",
+      "黑色连衣裙",
+      "小黑裙"
+    ],
+    "label": "修身黑色连衣裙",
+    "en": "sleek black dress"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "红裙",
+      "红色礼服裙"
+    ],
+    "label": "明艳红丝绒长裙",
+    "en": "crimson red dress"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "衬衫",
+      "白衬衫",
+      "雪纺衫"
+    ],
+    "label": "清爽白衬衫",
+    "en": "crisp white collared shirt"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "T恤",
+      "短袖T恤",
+      "白T恤"
+    ],
+    "label": "休闲棉质T恤",
+    "en": "casual cotton t-shirt"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "卫衣",
+      "连帽衫",
+      "连帽卫衣"
+    ],
+    "label": "宽松连帽卫衣",
+    "en": "oversized hoodie sweatshirt"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "毛衣",
+      "针织衫",
+      "高领毛衣",
+      "开衫毛衣"
+    ],
+    "label": "柔软粗针毛衣",
+    "en": "soft knitted sweater"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "外套",
+      "夹克",
+      "皮衣",
+      "牛仔外套",
+      "棒球服"
+    ],
+    "label": "时尚休闲外套",
+    "en": "stylish jacket"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "大衣",
+      "毛呢大衣",
+      "长款风衣"
+    ],
+    "label": "修身长款呢大衣",
+    "en": "long tailored overcoat"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "西装",
+      "西服",
+      "正装",
+      "小西装"
+    ],
+    "label": "剪裁合体西装",
+    "en": "tailored suit blazer"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "短裤",
+      "牛仔短裤",
+      "运动短裤"
+    ],
+    "label": "高腰休闲短裤",
+    "en": "high-waisted shorts"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "长裤",
+      "牛仔裤",
+      "休闲裤",
+      "西装裤"
+    ],
+    "label": "修身长裤",
+    "en": "fitted trousers"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "半身裙",
+      "A字裙",
+      "格纹裙",
+      "包臀裙",
+      "高腰格纹百褶短裙"
+    ],
+    "label": "半身裙",
+    "en": "pleated mini skirt"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "礼服",
+      "晚礼服",
+      "抹胸礼服",
+      "吊带礼服"
+    ],
+    "label": "华丽高定晚礼服",
+    "en": "elegant evening gown"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "睡衣",
+      "睡裙",
+      "真丝吊带睡裙",
+      "居家服",
+      "丝滑蕾丝吊带睡裙"
+    ],
+    "label": "真丝吊带睡裙",
+    "en": "silk lace slip nightgown"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "围巾",
+      "红围巾",
+      "针织围巾",
+      "披肩"
+    ],
+    "label": "温暖羊绒围巾",
+    "en": "cozy knitted scarf"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "领带",
+      "领结",
+      "蝴蝶结领结"
+    ],
+    "label": "学院丝带领结",
+    "en": "ribbon necktie bow"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "发带",
+      "发箍",
+      "蝴蝶结发饰",
+      "发卡",
+      "发簪"
+    ],
+    "label": "精致蝴蝶结发饰",
+    "en": "delicate ribbon hair accessory"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "帽子",
+      "棒球帽",
+      "草帽",
+      "礼帽",
+      "针织帽"
+    ],
+    "label": "时尚遮阳帽",
+    "en": "stylish hat"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "耳环",
+      "耳坠",
+      "珍珠耳环",
+      "流苏耳环"
+    ],
+    "label": "精致闪烁耳坠",
+    "en": "dainty drop earrings"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "项链",
+      "吊坠",
+      "珍珠项链",
+      "璀璨锁骨吊坠"
+    ],
+    "label": "珍珠项链",
+    "en": "pendant necklace"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "手链",
+      "手镯",
+      "玉镯",
+      "手表",
+      "戒指"
+    ],
+    "label": "纤巧腕表手链",
+    "en": "delicate bracelet and ring"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "球鞋",
+      "运动鞋",
+      "帆布鞋",
+      "板鞋",
+      "小白鞋"
+    ],
+    "label": "清爽休闲运动鞋",
+    "en": "clean casual sneakers"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "凉鞋",
+      "拖鞋",
+      "罗马凉鞋"
+    ],
+    "label": "清凉系带凉鞋",
+    "en": "strappy sandals"
+  },
+  {
+    "cat": "服饰鞋袜细分扩充",
+    "terms": [
+      "短袜",
+      "棉袜",
+      "蕾丝短袜",
+      "船袜",
+      "堆堆袜"
+    ],
+    "label": "蕾丝花边短袜",
+    "en": "lace-trimmed ankle socks"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "开心",
+      "高兴",
+      "快乐",
+      "喜悦",
+      "愉悦"
+    ],
+    "label": "明媚开心笑容",
+    "en": "happy joyful smile"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "悲伤",
+      "难过",
+      "忧郁",
+      "伤感",
+      "哀愁"
+    ],
+    "label": "忧郁感伤眼神",
+    "en": "melancholic wistful expression"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "生气",
+      "愤怒",
+      "恼火",
+      "瞪眼"
+    ],
+    "label": "微嗔瞪视表情",
+    "en": "angry glaring expression"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "平静",
+      "安详",
+      "温柔",
+      "淡定",
+      "从容"
+    ],
+    "label": "平静温婉神情",
+    "en": "calm serene expression"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "呆萌",
+      "发呆",
+      "放空",
+      "迷茫",
+      "天然呆"
+    ],
+    "label": "呆萌放空神态",
+    "en": "innocent dazed airhead expression"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "认真",
+      "专注",
+      "严肃",
+      "凝重"
+    ],
+    "label": "专注认真眼神",
+    "en": "focused serious gaze"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "困倦",
+      "打哈欠",
+      "犯困",
+      "刚睡醒"
+    ],
+    "label": "揉眼困倦打哈欠",
+    "en": "sleepy yawning expression, rubbing eyes"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "走路",
+      "漫步",
+      "散步",
+      "行走"
+    ],
+    "label": "轻盈漫步姿态",
+    "en": "walking gracefully"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "奔跑",
+      "跑步",
+      "飞奔",
+      "追逐",
+      "充满活力奔跑动态"
+    ],
+    "label": "奔跑",
+    "en": "running dynamically, hair flying"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "跳跃",
+      "腾空",
+      "起跳"
+    ],
+    "label": "轻盈腾空跃起",
+    "en": "jumping in mid-air"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "跳舞",
+      "旋转",
+      "翩翩起舞",
+      "旋转起舞裙摆飞扬"
+    ],
+    "label": "翩翩起舞",
+    "en": "dancing and twirling, swirling skirt"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "坐着",
+      "端坐",
+      "静坐",
+      "盘腿坐"
+    ],
+    "label": "安静优美坐姿",
+    "en": "sitting gracefully"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "躺着",
+      "平躺",
+      "侧躺",
+      "小憩"
+    ],
+    "label": "放松舒适卧姿",
+    "en": "lying down comfortably"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "趴着",
+      "趴在桌上",
+      "伏案"
+    ],
+    "label": "慵懒趴在桌面",
+    "en": "resting head on arms on desk"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "靠着",
+      "倚靠",
+      "斜靠墙边",
+      "靠窗"
+    ],
+    "label": "慵懒斜倚窗边",
+    "en": "leaning casually against window frame"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "蹲着",
+      "抱膝蹲",
+      "蹲下喂猫"
+    ],
+    "label": "轻轻蹲下身姿",
+    "en": "crouching down gently"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "回头",
+      "转身",
+      "扭头",
+      "侧身"
+    ],
+    "label": "转身侧颜轮廓",
+    "en": "turning around in profile view"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "抬头",
+      "仰头",
+      "望天"
+    ],
+    "label": "微仰下巴抬头看",
+    "en": "tilting head up"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "低头",
+      "垂首",
+      "低头沉思"
+    ],
+    "label": "微微低头垂眸",
+    "en": "tilting head down thoughtfully"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "挥手",
+      "招手",
+      "打招呼",
+      "微笑抬手挥手致意"
+    ],
+    "label": "打招呼",
+    "en": "waving hand with a friendly smile"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "托腮",
+      "撑脸",
+      "扶额"
+    ],
+    "label": "单手托腮凝思",
+    "en": "resting chin on hand"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "提包",
+      "背书包",
+      "拎包",
+      "单肩背着学院书包"
+    ],
+    "label": "背书包",
+    "en": "carrying a school bag"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "捧花",
+      "抱着花束",
+      "手捧鲜花",
+      "双手怀抱缤纷鲜花束"
+    ],
+    "label": "抱着花束",
+    "en": "holding a lush bouquet of flowers"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "打伞",
+      "撑着伞",
+      "手握伞柄撑伞伫立"
+    ],
+    "label": "撑着伞",
+    "en": "holding an open umbrella"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "喝茶",
+      "喝咖啡",
+      "端着杯子",
+      "端着精致骨瓷茶杯"
+    ],
+    "label": "喝咖啡",
+    "en": "holding a porcelain teacup"
+  },
+  {
+    "cat": "表情眼神与肢体动态扩充",
+    "terms": [
+      "拍照",
+      "举着相机",
+      "自拍",
+      "手持复古相机取景"
+    ],
+    "label": "举着相机",
+    "en": "holding a vintage camera"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "明亮",
+      "阳光明媚",
+      "清新透亮",
+      "高调光"
+    ],
+    "label": "明亮清透自然光",
+    "en": "bright airy high-key natural lighting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "昏暗",
+      "暗调",
+      "幽暗",
+      "微光",
+      "低调光",
+      "深邃暗调微光氛围"
+    ],
+    "label": "低调光",
+    "en": "moody low-key dim lighting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "暖光",
+      "温暖光线",
+      "暖色调",
+      "橘黄暖光"
+    ],
+    "label": "温馨琥珀暖光",
+    "en": "warm amber glowing light"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "冷光",
+      "清冷光线",
+      "冷色调",
+      "蓝白冷光"
+    ],
+    "label": "清冷蓝调光线",
+    "en": "cool icy blue ambient light"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "逆光",
+      "背光",
+      "发光边缘",
+      "唯美逆光轮廓金边"
+    ],
+    "label": "发光边缘",
+    "en": "dramatic rim backlighting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "侧光",
+      "半明半暗",
+      "立体光影"
+    ],
+    "label": "立体感侧面布光",
+    "en": "sculpted side key lighting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "顶光",
+      "天窗光",
+      "束光",
+      "柔和自上而下顶光"
+    ],
+    "label": "天窗光",
+    "en": "overhead skylight illumination"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "树影斑驳",
+      "光斑",
+      "碎光",
+      "枝叶漏下的斑驳阳光"
+    ],
+    "label": "树影斑驳",
+    "en": "dappled sunlight filtering through leaves"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "柔和",
+      "柔光",
+      "朦胧",
+      "柔和过渡"
+    ],
+    "label": "柔焦朦胧漫射光",
+    "en": "soft diffused dreamy lighting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "高对比",
+      "强烈明暗",
+      "光影强烈",
+      "高反差戏剧明暗对比"
+    ],
+    "label": "高对比",
+    "en": "high-contrast chiaroscuro shadow play"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "特写",
+      "大特写",
+      "脸部特写",
+      "眼部特写",
+      "精细面部微距特写"
+    ],
+    "label": "大特写",
+    "en": "extreme close-up portrait"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "近景",
+      "胸像",
+      "肩部以上"
+    ],
+    "label": "精致近景人像",
+    "en": "close-up bust portrait"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "中景",
+      "半身",
+      "腰部以上",
+      "膝盖以上",
+      "标准半身中景构图"
+    ],
+    "label": "腰部以上",
+    "en": "medium waist-up shot"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "全景",
+      "全身",
+      "从头到脚",
+      "完整全身立绘构图"
+    ],
+    "label": "从头到脚",
+    "en": "full-body standing shot"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "远景",
+      "大远景",
+      "广角全景"
+    ],
+    "label": "开阔壮丽大远景",
+    "en": "expansive wide-angle long shot"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "平视",
+      "正面视角",
+      "视线齐平",
+      "自然平视正面视角"
+    ],
+    "label": "正面视角",
+    "en": "eye-level front view"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "俯拍",
+      "从上往下拍",
+      "高机位"
+    ],
+    "label": "高角度俯拍视角",
+    "en": "high-angle overhead view"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "仰拍",
+      "从下往上拍",
+      "低机位",
+      "低角度张力仰拍视角"
+    ],
+    "label": "从下往上拍",
+    "en": "low-angle looking-up view"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "侧面",
+      "侧颜",
+      "正侧面",
+      "四分之三侧脸",
+      "优美四分之三侧颜视角"
+    ],
+    "label": "正侧面",
+    "en": "three-quarter profile view"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "背影",
+      "后背视角",
+      "从背后拍"
+    ],
+    "label": "意境背影构图",
+    "en": "view from behind, back silhouette"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "动漫",
+      "二次元",
+      "日漫",
+      "插画",
+      "漫画",
+      "精致日系动漫插画"
+    ],
+    "label": "二次元",
+    "en": "detailed Japanese anime illustration"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "写实",
+      "真实",
+      "照片感",
+      "超写实",
+      "人像摄影",
+      "超写实大师级摄影质感"
+    ],
+    "label": "照片感",
+    "en": "photorealistic 8k DSLR photography"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "油画",
+      "厚涂油画",
+      "古典画",
+      "浓郁笔触厚涂油画"
+    ],
+    "label": "厚涂油画",
+    "en": "rich impasto oil painting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "水彩",
+      "淡彩",
+      "手绘水彩",
+      "清透水彩晕染手绘"
+    ],
+    "label": "手绘水彩",
+    "en": "delicate watercolor painting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "水墨",
+      "国画",
+      "丹青",
+      "古风画",
+      "东方意境水墨设色画"
+    ],
+    "label": "古风画",
+    "en": "traditional Chinese ink and wash painting"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "赛博",
+      "科幻风",
+      "未来感",
+      "赛博朋克霓虹未来风"
+    ],
+    "label": "科幻风",
+    "en": "cyberpunk futuristic neon aesthetic"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "复古",
+      "怀旧",
+      "老照片",
+      "胶片感",
+      "复古颗粒胶片摄影感"
+    ],
+    "label": "老照片",
+    "en": "vintage 35mm film photography with natural grain"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "奇幻",
+      "魔幻",
+      "童话风",
+      "梦幻",
+      "唯美奇幻魔法插画风"
+    ],
+    "label": "童话风",
+    "en": "ethereal fantasy digital art"
+  },
+  {
+    "cat": "光线色调与画风构图扩充",
+    "terms": [
+      "极简",
+      "扁平",
+      "留白",
+      "干净",
+      "极简干净构图美学"
+    ],
+    "label": "极简",
+    "en": "minimalist clean aesthetic"
+  }
+]

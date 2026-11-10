@@ -1,0 +1,11 @@
+{
+  "modelId": "ds4f-mini",
+  "runtime": "auto",
+  "port": 0,
+  "reasoningBudget": 0,
+  "ctxSize": 8192,
+  "temperature": 0.35,
+  "topP": 0.9,
+  "repeatPenalty": 1.12,
+  "autoStart": true
+}

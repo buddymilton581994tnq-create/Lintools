@@ -1,0 +1,321 @@
+/* 主题覆盖表。neon（暗夜霓虹）是默认样式，不用写。
+   代码里的颜色是 Tailwind 写死的工具类，这里按 data-theme 整套覆盖：
+   颜色、字体、圆角、发光都算主题的一部分。
+
+   每个主题都有推荐字体：把对应文件放进 fonts 目录即自动生效，
+   没放就退回系统字体，不影响使用。 */
+@font-face {
+  font-family: 'AlimamaShuHeiTi';
+  src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype');
+  font-display: swap;
+}
+/* Adobe 黑体 Std 没有随软件分发（版权字体），这里不写 @font-face，
+   只在字体栈里留名字：用户自己装了这个字体就直接用，没装就落到系统黑体，
+   也避免浏览器去请求一个不存在的文件、控制台里冒一条 404。 */
+@font-face {
+  font-family: 'SourceHanSerifSC';
+  src: url('/fonts/SourceHanSerifSC.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ZcoolGaoDuanHei';
+  src: url('/fonts/ZcoolGaoDuanHei.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SarasaMonoSC';
+  src: url('/fonts/SarasaMonoSC.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ========== 暗夜霓虹 neon（默认主题：以 logo 为核心，银紫荧光） ========== */
+/* 字体：Adobe 黑体 Std（放进 fonts 目录即生效），加粗显示；没装则用雅黑加粗兜底 */
+[data-theme='neon'] body {
+  font-family: 'AdobeHeitiStd', 'Adobe Heiti Std', 'Adobe 黑体 Std', 'Microsoft YaHei UI', 'PingFang SC', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+/* 底色往 logo 的深夜紫黑靠 */
+[data-theme='neon'] .bg-\[\#070d0d\] { background-color: #0a0a10; }
+[data-theme='neon'] .bg-\[\#070d0d\]\/80 { background-color: rgba(10, 10, 16, 0.82); }
+[data-theme='neon'] .bg-\[\#0a1414\] { background-color: #12101c; }
+/* accent：银 → 紫 */
+[data-theme='neon'] .text-teal-300 { color: #dcd8f7; }
+[data-theme='neon'] .text-teal-400 { color: #b9aefc; }
+[data-theme='neon'] .text-teal-500 { color: #a78bfa; }
+[data-theme='neon'] .text-teal-500\/70 { color: rgba(167, 139, 250, 0.7); }
+[data-theme='neon'] .text-teal-500\/80 { color: rgba(167, 139, 250, 0.8); }
+[data-theme='neon'] .text-teal-200 { color: #e9e6fb; }
+[data-theme='neon'] .text-teal-200\/70 { color: rgba(233, 230, 251, 0.7); }
+[data-theme='neon'] .text-teal-100\/70 { color: rgba(237, 233, 254, 0.7); }
+[data-theme='neon'] .text-teal-100\/80 { color: rgba(237, 233, 254, 0.8); }
+[data-theme='neon'] .bg-teal-400 { background-color: #b9aefc; }
+[data-theme='neon'] .bg-teal-500 { background-color: #a78bfa; }
+[data-theme='neon'] .bg-teal-500\/90 { background-color: rgba(167, 139, 250, 0.9); }
+[data-theme='neon'] .bg-teal-400\/10,
+[data-theme='neon'] .bg-teal-500\/10 { background-color: rgba(167, 139, 250, 0.1); }
+[data-theme='neon'] .bg-teal-400\/15 { background-color: rgba(185, 174, 252, 0.15); }
+[data-theme='neon'] .bg-teal-400\/20 { background-color: rgba(185, 174, 252, 0.2); }
+[data-theme='neon'] .bg-teal-400\/25 { background-color: rgba(185, 174, 252, 0.25); }
+[data-theme='neon'] .bg-teal-500\/5,
+[data-theme='neon'] .bg-teal-500\/\[0\.04\] { background-color: rgba(167, 139, 250, 0.05); }
+[data-theme='neon'] .border-teal-400 { border-color: #b9aefc; }
+[data-theme='neon'] .border-teal-400\/40 { border-color: rgba(185, 174, 252, 0.4); }
+[data-theme='neon'] .border-teal-400\/50 { border-color: rgba(185, 174, 252, 0.5); }
+[data-theme='neon'] .border-teal-400\/60 { border-color: rgba(185, 174, 252, 0.6); }
+[data-theme='neon'] .border-teal-500\/10 { border-color: rgba(167, 139, 250, 0.1); }
+[data-theme='neon'] .border-teal-500\/15 { border-color: rgba(167, 139, 250, 0.15); }
+[data-theme='neon'] .border-teal-500\/20 { border-color: rgba(167, 139, 250, 0.2); }
+[data-theme='neon'] .border-teal-500\/25 { border-color: rgba(167, 139, 250, 0.25); }
+[data-theme='neon'] .border-teal-500\/30 { border-color: rgba(167, 139, 250, 0.3); }
+[data-theme='neon'] .border-teal-500\/40 { border-color: rgba(167, 139, 250, 0.4); }
+[data-theme='neon'] .border-teal-500\/50 { border-color: rgba(167, 139, 250, 0.5); }
+[data-theme='neon'] .outline-teal-400 { outline-color: #b9aefc; }
+/* 荧光：青色发光统一换成紫色发光（按 class 里写死的 rgba 颜色匹配） */
+[data-theme='neon'] [class*="rgba(45,212,191"] {
+  box-shadow: 0 0 14px rgba(167, 139, 250, 0.35) !important;
+}
+/* 进度环的 SVG 描边是内联写死的，单独换 */
+[data-theme='neon'] circle[stroke="rgb(45,212,191)"] { stroke: #b9aefc; }
+[data-theme='neon'] .animate-ping { background-color: #b9aefc; }
+
+/* ========== 白昼纸墨 paper ========== */
+[data-theme='paper'] body {
+  background: #f5f1e8;
+  color: #292524;
+  font-family: 'SourceHanSerifSC', 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+}
+[data-theme='paper'] * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+[data-theme='paper'] .rounded-md,
+[data-theme='paper'] .rounded-lg {
+  border-radius: 2px !important;
+}
+/* 底 */
+[data-theme='paper'] .bg-\[\#070d0d\] { background-color: #f5f1e8; }
+[data-theme='paper'] .bg-\[\#070d0d\]\/80 { background-color: rgba(245, 241, 232, 0.88); }
+[data-theme='paper'] .bg-\[\#0a1414\] { background-color: #ece5d5; }
+[data-theme='paper'] .bg-black { background-color: #e8e0cf; }
+[data-theme='paper'] .bg-black\/30 { background-color: rgba(255, 255, 255, 0.5); }
+[data-theme='paper'] .bg-black\/40 { background-color: rgba(255, 255, 255, 0.65); }
+[data-theme='paper'] .bg-black\/50 { background-color: rgba(255, 255, 255, 0.8); }
+[data-theme='paper'] .bg-white\/\[0\.02\],
+[data-theme='paper'] .bg-white\/\[0\.03\],
+[data-theme='paper'] .bg-white\/5 { background-color: rgba(60, 50, 30, 0.05); }
+[data-theme='paper'] .bg-zinc-800 { background-color: #ded5c2; }
+[data-theme='paper'] .bg-zinc-500 { background-color: #a8a29e; }
+/* 字 */
+[data-theme='paper'] .text-zinc-50,
+[data-theme='paper'] .text-zinc-100,
+[data-theme='paper'] .text-zinc-200 { color: #292524; }
+[data-theme='paper'] .text-zinc-300 { color: #44403c; }
+[data-theme='paper'] .text-zinc-400 { color: #6b655c; }
+[data-theme='paper'] .text-zinc-500 { color: #8a8378; }
+[data-theme='paper'] .text-zinc-600 { color: #a39e93; }
+/* 边 */
+[data-theme='paper'] .border-zinc-800 { border-color: #e4dcc9; }
+[data-theme='paper'] .border-zinc-700,
+[data-theme='paper'] .border-zinc-700\/80 { border-color: #d8cfbc; }
+[data-theme='paper'] .border-zinc-600 { border-color: #c4b9a4; }
+/*  accent：靛蓝墨 */
+[data-theme='paper'] .text-teal-300 { color: #4f46e5; }
+[data-theme='paper'] .text-teal-400 { color: #4338ca; }
+[data-theme='paper'] .text-teal-500 { color: #4338ca; }
+[data-theme='paper'] .text-teal-500\/70 { color: rgba(67, 56, 202, 0.7); }
+[data-theme='paper'] .text-teal-500\/80 { color: rgba(67, 56, 202, 0.8); }
+[data-theme='paper'] .text-teal-200 { color: #4f46e5; }
+[data-theme='paper'] .text-teal-200\/70 { color: rgba(79, 70, 229, 0.7); }
+[data-theme='paper'] .text-teal-100\/70,
+[data-theme='paper'] .text-teal-100\/80 { color: rgba(67, 56, 202, 0.75); }
+[data-theme='paper'] .bg-teal-400 { background-color: #4f46e5; }
+[data-theme='paper'] .bg-teal-500 { background-color: #4338ca; }
+[data-theme='paper'] .bg-teal-500\/90 { background-color: #4f46e5; }
+[data-theme='paper'] .bg-teal-400\/10,
+[data-theme='paper'] .bg-teal-500\/10 { background-color: rgba(79, 70, 229, 0.09); }
+[data-theme='paper'] .bg-teal-400\/15 { background-color: rgba(79, 70, 229, 0.13); }
+[data-theme='paper'] .bg-teal-400\/20 { background-color: rgba(79, 70, 229, 0.16); }
+[data-theme='paper'] .bg-teal-400\/25 { background-color: rgba(79, 70, 229, 0.2); }
+[data-theme='paper'] .bg-teal-500\/5,
+[data-theme='paper'] .bg-teal-500\/\[0\.04\] { background-color: rgba(79, 70, 229, 0.05); }
+[data-theme='paper'] .border-teal-400 { border-color: #4f46e5; }
+[data-theme='paper'] .border-teal-400\/40 { border-color: rgba(79, 70, 229, 0.4); }
+[data-theme='paper'] .border-teal-400\/50 { border-color: rgba(79, 70, 229, 0.5); }
+[data-theme='paper'] .border-teal-400\/60 { border-color: rgba(79, 70, 229, 0.6); }
+[data-theme='paper'] .border-teal-500\/10 { border-color: rgba(79, 70, 229, 0.12); }
+[data-theme='paper'] .border-teal-500\/15 { border-color: rgba(79, 70, 229, 0.18); }
+[data-theme='paper'] .border-teal-500\/20 { border-color: rgba(79, 70, 229, 0.24); }
+[data-theme='paper'] .border-teal-500\/25 { border-color: rgba(79, 70, 229, 0.3); }
+[data-theme='paper'] .border-teal-500\/30 { border-color: rgba(79, 70, 229, 0.34); }
+[data-theme='paper'] .border-teal-500\/40 { border-color: rgba(79, 70, 229, 0.42); }
+[data-theme='paper'] .border-teal-500\/50 { border-color: rgba(79, 70, 229, 0.5); }
+[data-theme='paper'] .outline-teal-400 { outline-color: #4f46e5; }
+[data-theme='paper'] .text-black { color: #f5f1e8; }
+
+/* ========== 赛博紫夜 violet ========== */
+[data-theme='violet'] body {
+  font-family: 'ZcoolGaoDuanHei', 'Segoe UI', 'Microsoft YaHei UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  letter-spacing: 0.01em;
+}
+[data-theme='violet'] .bg-\[\#070d0d\] { background-color: #0b0812; }
+[data-theme='violet'] .bg-\[\#070d0d\]\/80 { background-color: rgba(11, 8, 18, 0.82); }
+[data-theme='violet'] .bg-\[\#0a1414\] { background-color: #130d1e; }
+[data-theme='violet'] .text-teal-300 { color: #c4b5fd; }
+[data-theme='violet'] .text-teal-400 { color: #a78bfa; }
+[data-theme='violet'] .text-teal-500 { color: #8b5cf6; }
+[data-theme='violet'] .text-teal-500\/70 { color: rgba(139, 92, 246, 0.7); }
+[data-theme='violet'] .text-teal-500\/80 { color: rgba(139, 92, 246, 0.8); }
+[data-theme='violet'] .text-teal-200 { color: #ddd6fe; }
+[data-theme='violet'] .text-teal-200\/70 { color: rgba(221, 214, 254, 0.7); }
+[data-theme='violet'] .text-teal-100\/70 { color: rgba(237, 233, 254, 0.7); }
+[data-theme='violet'] .text-teal-100\/80 { color: rgba(237, 233, 254, 0.8); }
+[data-theme='violet'] .bg-teal-400 { background-color: #a78bfa; }
+[data-theme='violet'] .bg-teal-500 { background-color: #8b5cf6; }
+[data-theme='violet'] .bg-teal-500\/90 { background-color: rgba(139, 92, 246, 0.9); }
+[data-theme='violet'] .bg-teal-400\/10,
+[data-theme='violet'] .bg-teal-500\/10 { background-color: rgba(167, 139, 250, 0.1); }
+[data-theme='violet'] .bg-teal-400\/15 { background-color: rgba(167, 139, 250, 0.15); }
+[data-theme='violet'] .bg-teal-400\/20 { background-color: rgba(167, 139, 250, 0.2); }
+[data-theme='violet'] .bg-teal-400\/25 { background-color: rgba(167, 139, 250, 0.25); }
+[data-theme='violet'] .bg-teal-500\/5,
+[data-theme='violet'] .bg-teal-500\/\[0\.04\] { background-color: rgba(139, 92, 246, 0.05); }
+[data-theme='violet'] .border-teal-400 { border-color: #a78bfa; }
+[data-theme='violet'] .border-teal-400\/40 { border-color: rgba(167, 139, 250, 0.4); }
+[data-theme='violet'] .border-teal-400\/50 { border-color: rgba(167, 139, 250, 0.5); }
+[data-theme='violet'] .border-teal-400\/60 { border-color: rgba(167, 139, 250, 0.6); }
+[data-theme='violet'] .border-teal-500\/10 { border-color: rgba(139, 92, 246, 0.1); }
+[data-theme='violet'] .border-teal-500\/15 { border-color: rgba(139, 92, 246, 0.15); }
+[data-theme='violet'] .border-teal-500\/20 { border-color: rgba(139, 92, 246, 0.2); }
+[data-theme='violet'] .border-teal-500\/25 { border-color: rgba(139, 92, 246, 0.25); }
+[data-theme='violet'] .border-teal-500\/30 { border-color: rgba(139, 92, 246, 0.3); }
+[data-theme='violet'] .border-teal-500\/40 { border-color: rgba(139, 92, 246, 0.4); }
+[data-theme='violet'] .border-teal-500\/50 { border-color: rgba(139, 92, 246, 0.5); }
+[data-theme='violet'] .outline-teal-400 { outline-color: #a78bfa; }
+
+/* ========== 雾灰极简 mono ========== */
+[data-theme='mono'] body {
+  font-family: 'SarasaMonoSC', 'Cascadia Code', 'JetBrains Mono', Consolas, 'Microsoft YaHei', monospace;
+}
+[data-theme='mono'] * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+[data-theme='mono'] .rounded,
+[data-theme='mono'] .rounded-md,
+[data-theme='mono'] .rounded-lg {
+  border-radius: 0 !important;
+}
+[data-theme='mono'] .bg-\[\#070d0d\] { background-color: #101012; }
+[data-theme='mono'] .bg-\[\#070d0d\]\/80 { background-color: rgba(16, 16, 18, 0.85); }
+[data-theme='mono'] .bg-\[\#0a1414\] { background-color: #161618; }
+[data-theme='mono'] .text-teal-300 { color: #d4d4d8; }
+[data-theme='mono'] .text-teal-400 { color: #a1a1aa; }
+[data-theme='mono'] .text-teal-500 { color: #8b8b93; }
+[data-theme='mono'] .text-teal-500\/70 { color: rgba(161, 161, 170, 0.7); }
+[data-theme='mono'] .text-teal-500\/80 { color: rgba(161, 161, 170, 0.8); }
+[data-theme='mono'] .text-teal-200 { color: #e4e4e7; }
+[data-theme='mono'] .text-teal-200\/70 { color: rgba(228, 228, 231, 0.7); }
+[data-theme='mono'] .text-teal-100\/70 { color: rgba(244, 244, 245, 0.7); }
+[data-theme='mono'] .text-teal-100\/80 { color: rgba(244, 244, 245, 0.8); }
+[data-theme='mono'] .bg-teal-400 { background-color: #a1a1aa; }
+[data-theme='mono'] .bg-teal-500 { background-color: #71717a; }
+[data-theme='mono'] .bg-teal-500\/90 { background-color: rgba(113, 113, 122, 0.9); }
+[data-theme='mono'] .bg-teal-400\/10,
+[data-theme='mono'] .bg-teal-500\/10 { background-color: rgba(161, 161, 170, 0.1); }
+[data-theme='mono'] .bg-teal-400\/15 { background-color: rgba(161, 161, 170, 0.15); }
+[data-theme='mono'] .bg-teal-400\/20 { background-color: rgba(161, 161, 170, 0.2); }
+[data-theme='mono'] .bg-teal-400\/25 { background-color: rgba(161, 161, 170, 0.25); }
+[data-theme='mono'] .bg-teal-500\/5,
+[data-theme='mono'] .bg-teal-500\/\[0\.04\] { background-color: rgba(161, 161, 170, 0.05); }
+[data-theme='mono'] .border-teal-400 { border-color: #a1a1aa; }
+[data-theme='mono'] .border-teal-400\/40 { border-color: rgba(161, 161, 170, 0.4); }
+[data-theme='mono'] .border-teal-400\/50 { border-color: rgba(161, 161, 170, 0.5); }
+[data-theme='mono'] .border-teal-400\/60 { border-color: rgba(161, 161, 170, 0.6); }
+[data-theme='mono'] .border-teal-500\/10 { border-color: rgba(161, 161, 170, 0.12); }
+[data-theme='mono'] .border-teal-500\/15 { border-color: rgba(161, 161, 170, 0.18); }
+[data-theme='mono'] .border-teal-500\/20 { border-color: rgba(161, 161, 170, 0.24); }
+[data-theme='mono'] .border-teal-500\/25 { border-color: rgba(161, 161, 170, 0.3); }
+[data-theme='mono'] .border-teal-500\/30 { border-color: rgba(161, 161, 170, 0.34); }
+[data-theme='mono'] .border-teal-500\/40 { border-color: rgba(161, 161, 170, 0.42); }
+[data-theme='mono'] .border-teal-500\/50 { border-color: rgba(161, 161, 170, 0.5); }
+[data-theme='mono'] .outline-teal-400 { outline-color: #a1a1aa; }
+
+/* ========== 水墨丹青 ink ========== */
+/* 今昔豪龙书法体：把 JinXiHaoLong.otf 放到软件 fonts 目录、或系统装了该字体即生效，否则用系统行楷兜底 */
+@font-face {
+  font-family: 'JinXiHaoLong';
+  src: url('/fonts/JinXiHaoLong.otf') format('opentype');
+  font-display: swap;
+}
+[data-theme='ink'] body {
+  background: #f4efe3;
+  color: #26221c;
+  font-family: 'JinXiHaoLong', 'X-OTF Haolong', '今昔豪龙', 'STXingkai', 'Xingkai SC', 'KaiTi', 'STKaiti', serif;
+  letter-spacing: 0.02em;
+}
+[data-theme='ink'] * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+[data-theme='ink'] .rounded-md,
+[data-theme='ink'] .rounded-lg {
+  border-radius: 2px !important;
+}
+/* 宣纸底与墨色字 */
+[data-theme='ink'] .bg-\[\#070d0d\] { background-color: #f4efe3; }
+[data-theme='ink'] .bg-\[\#070d0d\]\/80 { background-color: rgba(244, 239, 227, 0.9); }
+[data-theme='ink'] .bg-\[\#0a1414\] { background-color: #ede7d6; }
+[data-theme='ink'] .bg-black { background-color: #e6dfcc; }
+[data-theme='ink'] .bg-black\/30 { background-color: rgba(255, 255, 255, 0.45); }
+[data-theme='ink'] .bg-black\/40 { background-color: rgba(255, 255, 255, 0.6); }
+[data-theme='ink'] .bg-black\/50 { background-color: rgba(255, 255, 255, 0.75); }
+[data-theme='ink'] .bg-white\/\[0\.02\],
+[data-theme='ink'] .bg-white\/\[0\.03\],
+[data-theme='ink'] .bg-white\/5 { background-color: rgba(60, 50, 35, 0.05); }
+[data-theme='ink'] .bg-zinc-800 { background-color: #ddd4c2; }
+[data-theme='ink'] .bg-zinc-500 { background-color: #a8a29e; }
+[data-theme='ink'] .text-zinc-50,
+[data-theme='ink'] .text-zinc-100,
+[data-theme='ink'] .text-zinc-200 { color: #26221c; }
+[data-theme='ink'] .text-zinc-300 { color: #3f382e; }
+[data-theme='ink'] .text-zinc-400 { color: #5c554a; }
+[data-theme='ink'] .text-zinc-500 { color: #7a7264; }
+[data-theme='ink'] .text-zinc-600 { color: #98907f; }
+[data-theme='ink'] .border-zinc-800 { border-color: #e0d7c1; }
+[data-theme='ink'] .border-zinc-700,
+[data-theme='ink'] .border-zinc-700\/80 { border-color: #cfc4a9; }
+[data-theme='ink'] .border-zinc-600 { border-color: #bcb096; }
+/* accent：墨色 */
+[data-theme='ink'] .text-teal-300 { color: #3f382e; }
+[data-theme='ink'] .text-teal-400 { color: #44403c; }
+[data-theme='ink'] .text-teal-500 { color: #57534e; }
+[data-theme='ink'] .text-teal-500\/70 { color: rgba(87, 83, 78, 0.7); }
+[data-theme='ink'] .text-teal-500\/80 { color: rgba(87, 83, 78, 0.8); }
+[data-theme='ink'] .text-teal-200 { color: #292524; }
+[data-theme='ink'] .text-teal-200\/70 { color: rgba(41, 37, 36, 0.7); }
+[data-theme='ink'] .text-teal-100\/70,
+[data-theme='ink'] .text-teal-100\/80 { color: rgba(41, 37, 36, 0.75); }
+[data-theme='ink'] .bg-teal-400 { background-color: #57534e; }
+[data-theme='ink'] .bg-teal-500 { background-color: #44403c; }
+[data-theme='ink'] .bg-teal-500\/90 { background-color: #44403c; }
+[data-theme='ink'] .bg-teal-400\/10,
+[data-theme='ink'] .bg-teal-500\/10 { background-color: rgba(68, 64, 60, 0.08); }
+[data-theme='ink'] .bg-teal-400\/15 { background-color: rgba(68, 64, 60, 0.12); }
+[data-theme='ink'] .bg-teal-400\/20 { background-color: rgba(68, 64, 60, 0.16); }
+[data-theme='ink'] .bg-teal-400\/25 { background-color: rgba(68, 64, 60, 0.2); }
+[data-theme='ink'] .bg-teal-500\/5,
+[data-theme='ink'] .bg-teal-500\/\[0\.04\] { background-color: rgba(68, 64, 60, 0.05); }
+[data-theme='ink'] .border-teal-400 { border-color: #57534e; }
+[data-theme='ink'] .border-teal-400\/40 { border-color: rgba(87, 83, 78, 0.4); }
+[data-theme='ink'] .border-teal-400\/50 { border-color: rgba(87, 83, 78, 0.5); }
+[data-theme='ink'] .border-teal-400\/60 { border-color: rgba(87, 83, 78, 0.6); }
+[data-theme='ink'] .border-teal-500\/10 { border-color: rgba(87, 83, 78, 0.12); }
+[data-theme='ink'] .border-teal-500\/15 { border-color: rgba(87, 83, 78, 0.18); }
+[data-theme='ink'] .border-teal-500\/20 { border-color: rgba(87, 83, 78, 0.24); }
+[data-theme='ink'] .border-teal-500\/25 { border-color: rgba(87, 83, 78, 0.3); }
+[data-theme='ink'] .border-teal-500\/30 { border-color: rgba(87, 83, 78, 0.36); }
+[data-theme='ink'] .border-teal-500\/40 { border-color: rgba(87, 83, 78, 0.44); }
+[data-theme='ink'] .border-teal-500\/50 { border-color: rgba(87, 83, 78, 0.52); }
+[data-theme='ink'] .outline-teal-400 { outline-color: #57534e; }
+[data-theme='ink'] .text-black { color: #f4efe3; }

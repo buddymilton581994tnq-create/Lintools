@@ -1,0 +1,554 @@
+[
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "看向观众",
+      "直视镜头",
+      "眼神接触",
+      "与我对视",
+      "直视镜头眼神交流"
+    ],
+    "label": "看向观众",
+    "en": "looking directly at viewer, engaging eye contact"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "移开视线",
+      "看向别处",
+      "侧目不看镜头",
+      "羞涩移开视线看向一旁"
+    ],
+    "label": "移开视线",
+    "en": "looking away to the side, averted gaze"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "斜眼看",
+      "余光瞥视",
+      "暗中观察眼神",
+      "眼角余光斜瞥镜头"
+    ],
+    "label": "斜眼看",
+    "en": "sideways glance, looking from corner of eyes"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "向上看",
+      "仰望眼神",
+      "抬头看天空",
+      "微微仰首向上凝望"
+    ],
+    "label": "向上看",
+    "en": "looking up wistfully, catchlights reflecting sky"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "向下看",
+      "垂眸",
+      "低眉顺眼",
+      "俯视眼神",
+      "长睫低垂静静向下看"
+    ],
+    "label": "向下看",
+    "en": "downcast eyes, long eyelashes casting tiny shadows on cheeks"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "闭眼",
+      "双目紧闭",
+      "安静合眼",
+      "安静闭上双眼感受微风"
+    ],
+    "label": "双目紧闭",
+    "en": "eyes gently closed, serene peaceful expression"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "半闭眼",
+      "迷蒙睡眼",
+      "慵懒半睁眼",
+      "慵懒半阖睡意眼眸"
+    ],
+    "label": "半闭眼",
+    "en": "half-closed sleepy eyes, languid relaxed eyelids"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "单眼闭合",
+      "俏皮眨单眼",
+      "wink",
+      "俏皮单眼Wink眨眼"
+    ],
+    "label": "单眼闭合",
+    "en": "cute one-eye wink, lively expression"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "翻白眼",
+      "嫌弃白眼",
+      "傲娇微翻白眼表情"
+    ],
+    "label": "翻白眼",
+    "en": "rolling eyes playfully, annoyed cute look"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "眼眶湿润",
+      "含泪欲泣",
+      "强忍泪水",
+      "眼眶泛红蓄满晶莹泪水"
+    ],
+    "label": "眼眶湿润",
+    "en": " glistening teary eyes, holding back tears, slightly reddened rims"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "瞳孔收缩",
+      "震惊细瞳",
+      "震惊瞬间瞳孔剧烈收缩"
+    ],
+    "label": "瞳孔收缩",
+    "en": "constricted tiny pupils in wide-open shocked eyes"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "瞳孔放大",
+      "心动瞳孔",
+      "专注凝视瞳孔",
+      "专注心动微扩大的清澈瞳孔"
+    ],
+    "label": "瞳孔放大",
+    "en": "dilated expressive pupils filled with bright reflections"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "专注凝望",
+      "深情注视",
+      "温柔目光",
+      "温柔专注凝视目光"
+    ],
+    "label": "专注凝望",
+    "en": "warm attentive gaze, soft expressive eyes with gentle catchlights"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "挑眉",
+      "单侧挑眉",
+      "疑惑皱眉",
+      "灵动挑起单侧眉梢"
+    ],
+    "label": "单侧挑眉",
+    "en": "one eyebrow inquisitively raised"
+  },
+  {
+    "cat": "视线与眼部微动态",
+    "terms": [
+      "八字眉",
+      "委屈蹙眉",
+      "委屈微微蹙起八字秀眉"
+    ],
+    "label": "八字眉",
+    "en": "worried slightly knitted eyebrows"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "猫嘴",
+      "ω嘴",
+      "可爱三瓣嘴",
+      "俏皮二次元ω型小猫嘴"
+    ],
+    "label": "可爱三瓣嘴",
+    "en": "cute cat-like :3 omega mouth shape"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "波浪嘴",
+      "纠结嘴型",
+      "呆萌纠结波浪线小嘴"
+    ],
+    "label": "波浪嘴",
+    "en": "cute squiggly wavy mouth expression"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "微张嘴",
+      "唇齿微启",
+      "呼吸感红唇",
+      "双唇微启隐约露出贝齿"
+    ],
+    "label": "微张嘴",
+    "en": "slightly parted glossy lips showing a hint of white teeth"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "抿嘴",
+      "紧抿双唇",
+      "浅抿微笑",
+      "矜持温柔轻抿嘴角"
+    ],
+    "label": "紧抿双唇",
+    "en": "gently closed lips pressed in a subtle serene smile"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "指尖抵下巴",
+      "思考手势",
+      "食指点脸颊",
+      "食指轻点脸颊思考神态"
+    ],
+    "label": "指尖抵下巴",
+    "en": "index finger resting thoughtfully against cheek, curious expression"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "叼吐司",
+      "嘴叼面包奔跑",
+      "嘴里叼着烤吐司匆忙赶路"
+    ],
+    "label": "叼吐司",
+    "en": "holding a slice of toasted bread in mouth while rushing"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "叼玫瑰",
+      "嘴衔红玫瑰",
+      "唇间轻衔一枝带刺红玫瑰"
+    ],
+    "label": "叼玫瑰",
+    "en": "holding a long-stemmed red rose stem between lips"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "咬发圈",
+      "嘴叼皮筋扎头发",
+      "双唇轻抿黑色发圈抬手束发"
+    ],
+    "label": "咬发圈",
+    "en": "holding an elastic hairband between lips while tying hair up"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "咬领带",
+      "拉扯领带",
+      "轻咬或指尖勾拉松开的领带"
+    ],
+    "label": "咬领带",
+    "en": "tugging loosening necktie at collar"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "品尝甜点",
+      "嘴角沾奶油",
+      "轻拭嘴角",
+      "品尝甜点嘴角微沾奶油"
+    ],
+    "label": "品尝甜点",
+    "en": "tasting pastry with a tiny smudge of whipped cream at the corner of lips"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "喝饮料",
+      "咬吸管",
+      "双手捧杯喝水",
+      "双手捧杯轻咬吸管抬眼看"
+    ],
+    "label": "喝饮料",
+    "en": "holding a drink with both hands, sipping through straw while looking up"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "吹泡泡糖",
+      "粉红泡泡糖",
+      "吹出半透明粉红泡泡糖圆泡"
+    ],
+    "label": "吹泡泡糖",
+    "en": "blowing a translucent pink bubblegum bubble"
+  },
+  {
+    "cat": "嘴型与唇部微动作",
+    "terms": [
+      "哈白气",
+      "冬日呵出白雾",
+      "寒冬微张小口呵出温暖白雾"
+    ],
+    "label": "哈白气",
+    "en": "exhaling a soft puff of warm white breath into freezing winter air"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "十指相扣",
+      "双手交握祈祷",
+      "胸前双手十指紧扣祈祷状"
+    ],
+    "label": "十指相扣",
+    "en": "hands clasped together in front of chest, fingers intertwined"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "双手托腮",
+      "捧脸杀",
+      "花朵捧脸",
+      "双手轻捧脸颊手肘撑桌"
+    ],
+    "label": "双手托腮",
+    "en": "resting both cheeks in cupped hands, elbows on table"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "单手撑头",
+      "侧靠桌沿",
+      "单手支颐慵懒斜倚桌面"
+    ],
+    "label": "单手撑头",
+    "en": "propping head lazily on one palm"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "遮阳手势",
+      "手搭凉棚望远",
+      "抬起单手在额前遮挡阳光远眺"
+    ],
+    "label": "遮阳手势",
+    "en": "shielding eyes from bright sun with one raised hand while gazing afar"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "撩裙摆",
+      "轻提裙角",
+      "风吹按裙子",
+      "微风吹起裙角时双手轻按裙摆"
+    ],
+    "label": "撩裙摆",
+    "en": "hands lightly pressing down fluttering skirt hem in sudden breeze"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "整理披肩",
+      "轻拢衣领",
+      "抚平衣襟",
+      "指尖轻拢披肩与衣领"
+    ],
+    "label": "整理披肩",
+    "en": "slender fingers gracefully adjusting shawl collar across shoulders"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "整理袖口",
+      "扣袖扣",
+      "挽起袖子",
+      "修长手指整理衬衫袖口袖扣"
+    ],
+    "label": "整理袖口",
+    "en": "slender fingers fastening metallic cufflinks on crisp shirt cuff"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "双手背在脑后",
+      "枕手仰躺",
+      "双手交叉枕在脑后放松仰靠"
+    ],
+    "label": "双手背在脑后",
+    "en": "both arms raised with hands laced behind head in relaxed pose"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "背手身后",
+      "双手背在身后前倾",
+      "双手背在身后身体微向前倾靠近镜头"
+    ],
+    "label": "背手身后",
+    "en": "hands clasped behind back while leaning torso playfully forward toward viewer"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "双手插兜",
+      "单手插裤兜",
+      "酷飒单手插进外套或长裤口袋"
+    ],
+    "label": "双手插兜",
+    "en": "one hand tucked casually into pocket, relaxed cool stance"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "抱胸",
+      "双臂环抱胸前",
+      "双臂交叠环抱胸前气场十足"
+    ],
+    "label": "双臂环抱胸前",
+    "en": "arms folded confidently across chest"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "摸头杀",
+      "轻抚头发",
+      "温柔大手轻抚角色柔软发顶"
+    ],
+    "label": "摸头杀",
+    "en": "gentle hand patting head affectionately, soft happy reaction"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "捏脸颊",
+      "轻戳脸蛋",
+      "指尖轻轻戳向软嫩脸颊"
+    ],
+    "label": "捏脸颊",
+    "en": "index finger gently poking soft cheek"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "牵手",
+      "向镜头伸手邀请",
+      "向镜头前伸出纤细手掌发出邀请"
+    ],
+    "label": "向镜头伸手邀请",
+    "en": "extending an open slender hand toward viewer in warm invitation"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "兰花指",
+      "古典舞手势",
+      "拈花指",
+      "纤纤玉指轻捻花枝古典舞手势"
+    ],
+    "label": "兰花指",
+    "en": "graceful classical Chinese dance hand Mudra holding a blossoming twig"
+  },
+  {
+    "cat": "手部精细动作与互动",
+    "terms": [
+      "拉小提琴手势",
+      "抚琴指法",
+      "握剑柄手势",
+      "修长指节稳稳握住缠绳刀柄护手"
+    ],
+    "label": "拉小提琴手势",
+    "en": "defined slender fingers gripping wrapped sword hilt"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "锁骨窝",
+      "精致锁骨阴影",
+      "光影雕刻分明的精致一字锁骨"
+    ],
+    "label": "锁骨窝",
+    "en": "delicate collarbones with soft natural shadow hollow"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "蝴蝶骨",
+      "优美露背肩胛骨",
+      "脊柱沟",
+      "流畅优美的背部蝴蝶骨与脊柱曲线"
+    ],
+    "label": "蝴蝶骨",
+    "en": "graceful bare back showing delicate shoulder blades and subtle spinal groove"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "挺拔腰背",
+      "优雅侧身线条",
+      "舞者核心体态",
+      "挺拔舒展的舞者腰背线条"
+    ],
+    "label": "挺拔腰背",
+    "en": "poised upright dancer posture with graceful waist and back alignment"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "后颈碎发",
+      "天鹅后颈",
+      "束发露颈",
+      "高高束发露出白皙修长后颈与绒毛碎发"
+    ],
+    "label": "后颈碎发",
+    "en": "slender pale nape of neck with wispy baby hairs lit by backlight"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "手腕骨骼细节",
+      "纤巧腕骨",
+      "佩戴腕表手腕",
+      "线条清晰的手腕腕骨与脉搏细节"
+    ],
+    "label": "手腕骨骼细节",
+    "en": "delicate anatomical wrist bone contour with slender tendons"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "膝盖微红",
+      "圆润膝盖骨与纤细脚踝",
+      "细腻粉润的膝盖与纤巧脚踝骨感"
+    ],
+    "label": "膝盖微红",
+    "en": "delicate rosy knees and slender sculpted ankles"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "运动汗珠",
+      "额角汗水",
+      "阳光下微汗",
+      "晨跑运动后额角晶莹汗珠"
+    ],
+    "label": "运动汗珠",
+    "en": "healthy athletic sheen with clear droplets of sweat on forehead after morning run"
+  },
+  {
+    "cat": "身体微观魅力特征",
+    "terms": [
+      "耳廓微红",
+      "透光小巧耳垂",
+      "精灵耳饰",
+      "逆光下微微透红的小巧耳垂与银耳坠"
+    ],
+    "label": "耳廓微红",
+    "en": "delicate earlobes glowing warm pink in backlight with dainty silver drop earrings"
+  }
+]

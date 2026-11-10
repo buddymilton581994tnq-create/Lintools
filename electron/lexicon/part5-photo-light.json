@@ -1,0 +1,404 @@
+[
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "哈苏中画幅",
+      "大片幅相机",
+      "徕卡M",
+      "85mm人像镜皇",
+      "哈苏中画幅85mm大光圈浅景深"
+    ],
+    "label": "哈苏中画幅",
+    "en": "shot on Hasselblad medium format digital, 85mm f/1.2 prime lens, razor-thin focal plane, creamy circular bokeh"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "35mm人文镜头",
+      "50mm标头",
+      "街头抓拍纪实",
+      "徕卡35mm街头纪实自然抓拍"
+    ],
+    "label": "街头抓拍纪实",
+    "en": "candid street photography shot on Leica M 35mm f/1.4, authentic natural moment, subtle film halation"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "14mm超广角",
+      "16mm广角透视",
+      "张力仰拍广角",
+      "14mm超广角夸张空间透视冲击"
+    ],
+    "label": "张力仰拍广角",
+    "en": "ultra-wide 14mm lens perspective, dramatic spatial convergence, foreground close to lens"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "鱼眼镜头",
+      "猫眼畸变",
+      "180度球面透视",
+      "fisheye",
+      "复古圆周畸变鱼眼微距视角"
+    ],
+    "label": "鱼眼镜头",
+    "en": "180-degree circular fisheye lens distortion, playful curved horizon, extreme close-to-camera nose/hand perspective"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "200mm长焦",
+      "空间压缩感",
+      "70-200镜头",
+      "200mm长焦镜头强烈空间背景压缩"
+    ],
+    "label": "空间压缩感",
+    "en": "200mm f/2.8 telephoto lens compression, flattened background layers, dreamy isolated subject"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "微距摄影",
+      "百微镜头",
+      "放大倍率微观细节",
+      "100mm微距镜头毫发毕现微观细节"
+    ],
+    "label": "微距摄影",
+    "en": "extreme macro lens photography, 1:1 magnification revealing microscopic water droplets and fiber textures"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "变形宽银幕镜头",
+      "拉丝炫光",
+      "椭圆散景",
+      "anamorphic",
+      "2.39:1电影变形宽银幕蓝条拉丝炫光"
+    ],
+    "label": "拉丝炫光",
+    "en": "2.39:1 widescreen cinema frame shot on Cooke anamorphic lens, oval bokeh, horizontal blue lens flare streak"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "柯达Portra 400",
+      "富士胶片",
+      "富士Pro400H",
+      "清透日系胶片",
+      "富士Pro400H清透青绿空气感胶片"
+    ],
+    "label": "富士胶片",
+    "en": "Fuji Pro 400H 35mm color negative film stock, airy cyan-pastel greens, delicate organic grain, soft highlight roll-off"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "电影感胶片",
+      "柯达Vision3 500T",
+      "王家卫抽帧色调",
+      "杜可风",
+      "王家卫式钨丝灯迷离抽帧胶片感"
+    ],
+    "label": "电影感胶片",
+    "en": "Wong Kar-wai inspired Kodak Vision3 500T tungsten film aesthetic, step-printed motion trail, lush emerald and neon amber"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "拍立得",
+      "宝丽来相纸",
+      "白边相纸",
+      "漏光暗角",
+      "复古宝丽来SX-70化学显影拍立得"
+    ],
+    "label": "拍立得",
+    "en": "vintage Polaroid instant film aesthetic, creamy chemical color shift, soft vignette, light leak at frame edge"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "湿版摄影",
+      "黑白银盐",
+      "伊尔福HP5高反差黑白胶片",
+      "伊尔福高颗粒银盐黑白纪实胶片"
+    ],
+    "label": "湿版摄影",
+    "en": "Ilford HP5 Plus 400 black-and-white silver gelatin film, gritty authentic grain, deep blacks and glowing silver highlights"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "CCD卡片机",
+      "千禧DV录像带",
+      "VHS磁带噪点",
+      "千禧年代复古CCD机顶闪光直出"
+    ],
+    "label": "CCD卡片机",
+    "en": "early-2000s compact CCD digital camera snapshot, harsh direct pop-up flash, warm nostalgic digital noise"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "双重曝光",
+      "慢门长曝光",
+      "丝绢流水",
+      "星轨光绘",
+      "剪影融合自然风景双重曝光"
+    ],
+    "label": "双重曝光",
+    "en": "artistic in-camera double exposure blending a clean human profile silhouette with misty pine forest"
+  },
+  {
+    "cat": "专业相机、胶片型号与光学特效",
+    "terms": [
+      "柔焦镜",
+      "黑柔滤镜",
+      "梦幻柔光雾感",
+      "bloom",
+      "电影黑柔滤镜高光氤氲柔焦感"
+    ],
+    "label": "柔焦镜",
+    "en": "Tiffen Black Pro-Mist 1/4 filter diffusion, dreamy halation glow around highlights while keeping eyes sharp"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "伦勃朗光",
+      "三角光",
+      "油画侧面戏剧光",
+      "经典45度侧面伦勃朗三角鼻影光"
+    ],
+    "label": "伦勃朗光",
+    "en": "classic 45-degree Rembrandt key light forming an illuminated triangle on the shadow-side cheek"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "蝴蝶光",
+      "派拉蒙光",
+      "美人光",
+      "环形眼神光",
+      "好莱坞经典高机位美人蝴蝶光"
+    ],
+    "label": "蝴蝶光",
+    "en": "glamour Paramount butterfly lighting from high front, sculpting cheekbones, crisp catchlights in eyes"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "侧逆光",
+      "轮廓光",
+      "发丝发光",
+      "金边逆光",
+      "rim light",
+      "强烈金色逆光勾勒透亮发丝边缘"
+    ],
+    "label": "侧逆光",
+    "en": "strong warm rim backlighting igniting individual stray hair strands into a glowing halo"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "分割光",
+      "阴阳脸布光",
+      "硬光高反差黑色电影光",
+      "film noir",
+      "黑色电影百叶窗条纹硬光切割阴影"
+    ],
+    "label": "分割光",
+    "en": "film noir hard chiaroscuro lighting, sharp Venetian blind slat shadows slicing across face and wall"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "底光",
+      "恐怖幽暗顶底光",
+      "篝火映脸光",
+      "低处暖色火光自下而上映亮面庞"
+    ],
+    "label": "篝火映脸光",
+    "en": "upward warm firelight illumination from below, dramatic inverted shadows, floating embers"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "丁达尔效应",
+      "体积光",
+      "耶稣光",
+      "神圣光柱",
+      "穿透树叶光斑",
+      "空气微尘中清晰可见的丁达尔体积光束"
+    ],
+    "label": "丁达尔效应",
+    "en": "dramatic volumetric Tyndall light shafts piercing dusty air, dappled komorebi leaf shadows"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "焦散光影",
+      "水底波纹光斑",
+      "玻璃棱镜彩虹折射",
+      "caustics",
+      "清澈水波投射在脸上的灵动焦散水光纹"
+    ],
+    "label": "焦散光影",
+    "en": "shimmering underwater caustic light ripples dancing across skin and white walls, rainbow prism dispersion"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "黄金时刻",
+      "夕阳暖金斜射光",
+      "日落前黄金时刻琥珀色低角度暖阳"
+    ],
+    "label": "黄金时刻",
+    "en": "magic golden hour low-angle sunlight, long soft shadows, rich honey-amber warmth"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "蓝调时刻",
+      "日落后静谧深蓝天光",
+      "日落后蓝调时刻静谧深邃冷蓝漫射光"
+    ],
+    "label": "蓝调时刻",
+    "en": "serene blue hour twilight ambient illumination balanced with warm distant interior window glow"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "双色霓虹布光",
+      "赛博青红对撞打光",
+      "bisexual lighting",
+      "冷青与品红双侧对撞霓虹光效"
+    ],
+    "label": "双色霓虹布光",
+    "en": "dual-tone cyberpunk gel lighting, cool electric cyan key light from left and hot magenta rim light from right"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "生物发光",
+      "荧光森林蓝眼泪微光",
+      "bioluminescence",
+      "幽暗环境中奇幻荧光植物蓝紫自发光"
+    ],
+    "label": "生物发光",
+    "en": "ethereal bioluminescent flora and glowing blue plankton casting magical cold points of light in darkness"
+  },
+  {
+    "cat": "影视级布光与自然大气光学",
+    "terms": [
+      "烛光",
+      "煤油灯",
+      "红灯笼暖光",
+      "屏幕蓝光",
+      "摇曳红灯笼与烛火温暖点光源"
+    ],
+    "label": "煤油灯",
+    "en": "warm intimate point-source glow from swaying red silk lanterns and tallow candles"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "黄金螺旋",
+      "斐波那契螺旋构图",
+      "三分法构图",
+      "对角线动态构图",
+      "严谨黄金分割螺旋视觉引导构图"
+    ],
+    "label": "黄金螺旋",
+    "en": "golden ratio Fibonacci spiral composition guiding viewer eye effortlessly to focal point"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "中心对称",
+      "韦斯安德森强迫症对称美学",
+      "韦斯安德森式糖果色绝对中心对称构图"
+    ],
+    "label": "中心对称",
+    "en": "Wes Anderson style deadpan symmetrical centered framing, pastel architectural geometry"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "框中框构图",
+      "门窗窥视构图",
+      "前景遮挡偷拍感",
+      "雕花门窗与虚化枝叶形成框中框景深"
+    ],
+    "label": "框中框构图",
+    "en": "natural frame-within-a-frame composition seen through an ornate doorway and out-of-focus foreground foliage"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "大留白",
+      "宋画极简负空间构图",
+      "孤寂高级感大面积意境留白构图"
+    ],
+    "label": "大留白",
+    "en": "poetic minimalist composition with 70% atmospheric negative space, tiny solitary subject"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "荷兰角",
+      "倾斜机位",
+      "不安动感斜构图",
+      "dutch angle",
+      "充满戏剧张力与速度感的倾斜荷兰角镜头"
+    ],
+    "label": "荷兰角",
+    "en": "dynamic tilted Dutch angle camera roll, heightened kinetic tension and action energy"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "极低机位",
+      "蚂蚁视角",
+      "贴地仰拍",
+      "虫视视角",
+      "贴地极低机位仰拍高耸修长透视"
+    ],
+    "label": "极低机位",
+    "en": "dramatic worm-eye ground-level angle looking sharply upward against towering sky"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "上帝视角",
+      "90度垂直俯拍",
+      "航拍平面构成",
+      "flat lay",
+      "90度正上方垂直悬停上帝俯拍视角"
+    ],
+    "label": "上帝视角",
+    "en": "90-degree zenith overhead flat-lay bird-eye perspective"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "越肩镜头",
+      "镜中反射构图",
+      "水面镜像构图",
+      "破碎镜面反射",
+      "破碎镜面碎片多重反射人物眼神特写"
+    ],
+    "label": "越肩镜头",
+    "en": "shattered mirror reflection composition, multiple angled glass shards reflecting different facets of subject eyes"
+  },
+  {
+    "cat": "构图法则與特殊机位",
+    "terms": [
+      "第一人称POV",
+      "伸手向镜头",
+      "打破第四面墙互动",
+      "角色向镜头伸出手的沉浸式第一人称POV"
+    ],
+    "label": "伸手向镜头",
+    "en": "immersive first-person POV shot, character reaching one hand out toward camera lens with warm eye contact"
+  }
+]

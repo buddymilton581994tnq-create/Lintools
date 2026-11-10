@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>霖易工具箱</title>
+<style>
+  @font-face {
+    font-family: "AlimamaShuHeiTi";
+    src: url("../dist/fonts/AlimamaShuHeiTi.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "SarasaMonoSC";
+    src: url("../dist/fonts/SarasaMonoSC.ttf") format("truetype");
+    font-display: swap;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #07050f;
+    color: #f3e8ff;
+    font-family: "AlimamaShuHeiTi", "Microsoft YaHei", "Segoe UI", sans-serif;
+    overflow: hidden;
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+
+  .splash-shell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 22% 58%, rgba(168, 85, 247, 0.24) 0%, rgba(107, 33, 168, 0.08) 42%, transparent 68%),
+      radial-gradient(circle at 88% 16%, rgba(45, 212, 191, 0.14) 0%, transparent 48%),
+      linear-gradient(128deg, #0d081d 0%, #07050f 56%, #05030b 100%);
+    border: 1px solid rgba(192, 132, 252, 0.28);
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    overflow: hidden;
+  }
+
+  /* 切角与非对称装饰边 */
+  .splash-shell::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 168px;
+    height: 3px;
+    background: linear-gradient(90deg, #c084fc 0%, #2dd4bf 75%, transparent 100%);
+    z-index: 5;
+  }
+  .splash-shell::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 280px;
+    height: 2px;
+    background: linear-gradient(270deg, #a855f7 0%, rgba(45, 212, 191, 0.4) 65%, transparent 100%);
+    z-index: 5;
+  }
+
+  /* 斜切分割线 */
+  .slash-divider {
+    position: absolute;
+    top: -30px;
+    bottom: -30px;
+    left: 246px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, rgba(192, 132, 252, 0.42) 22%, rgba(45, 212, 191, 0.35) 78%, transparent 100%);
+    transform: rotate(-11deg);
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .slash-divider-sub {
+    position: absolute;
+    top: -30px;
+    bottom: -30px;
+    left: 256px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 15%, rgba(168, 85, 247, 0.14) 50%, transparent 85%);
+    transform: rotate(-11deg);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* 细密非对称坐标网格 */
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(192, 132, 252, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(192, 132, 252, 0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: linear-gradient(135deg, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.15) 65%, transparent 95%);
+    pointer-events: none;
+  }
+
+  /* 左上垂落紫藤与右上几何切角 SVG */
+  .wisteria-asym {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 170px;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.86;
+  }
+
+  /* 左侧引力舞台（占 38%，重心偏左下） */
+  .left-well {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 0 26px 28px;
+  }
+
+  .stage-index {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(216, 180, 254, 0.52);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stage-index::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #c084fc;
+    box-shadow: 0 0 8px #c084fc;
+    transform: rotate(45deg);
+  }
+
+  .stage {
+    position: relative;
+    width: 192px;
+    height: 192px;
+    margin-bottom: 18px;
+  }
+
+  /* 偏心非对称多轴星轨 */
+  .orbit-asym-1 {
+    position: absolute;
+    inset: -4px 12px 10px -8px;
+    border-radius: 54% 46% 52% 48%;
+    border: 1px solid transparent;
+    border-top-color: rgba(216, 180, 254, 0.92);
+    border-left-color: rgba(168, 85, 247, 0.42);
+    transform: rotate(-24deg) rotateX(62deg);
+    animation: spinAsym1 3.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  }
+  .orbit-asym-2 {
+    position: absolute;
+    inset: 12px -6px -4px 14px;
+    border-radius: 48% 52% 45% 55%;
+    border: 1px dashed rgba(45, 212, 191, 0.45);
+    border-bottom-color: rgba(192, 132, 252, 0.75);
+    transform: rotate(32deg) rotateX(58deg);
+    animation: spinAsym2 5.2s linear infinite reverse;
+  }
+  .orbit-asym-3 {
+    position: absolute;
+    inset: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(192, 132, 252, 0.16);
+    border-right-color: rgba(240, 171, 252, 0.78);
+    animation: spinFlat 6.4s linear infinite;
+  }
+
+  @keyframes spinAsym1 {
+    from { transform: rotate(-24deg) rotateX(62deg) rotateZ(0deg); }
+    to   { transform: rotate(-24deg) rotateX(62deg) rotateZ(360deg); }
+  }
+  @keyframes spinAsym2 {
+    from { transform: rotate(32deg) rotateX(58deg) rotateZ(0deg); }
+    to   { transform: rotate(32deg) rotateX(58deg) rotateZ(360deg); }
+  }
+  @keyframes spinFlat {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .logo-frame {
+    position: absolute;
+    inset: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: floatAsym 3.6s ease-in-out infinite, glowPulse 2.8s ease-in-out infinite;
+  }
+
+  @keyframes floatAsym {
+    0%, 100% { transform: translate(0px, 3px) rotate(0deg); }
+    50%      { transform: translate(2px, -5px) rotate(-1.5deg); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { filter: drop-shadow(-4px 6px 14px rgba(147, 51, 234, 0.5)); }
+    50%      { filter: drop-shadow(4px -4px 26px rgba(192, 132, 252, 0.9)); }
+  }
+
+  .left-caption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    color: rgba(192, 132, 252, 0.7);
+    letter-spacing: 1.5px;
+  }
+  .left-caption .bar {
+    width: 26px;
+    height: 2px;
+    background: linear-gradient(90deg, #c084fc, transparent);
+  }
+
+  /* 右侧非对称排印与实时遥测面板 */
+  .right-deck {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26px 30px 24px 26px;
+  }
+
+  .top-telemetry {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .edition-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px 3px 8px;
+    background: rgba(168, 85, 247, 0.12);
+    border-left: 3px solid #c084fc;
+    border-top: 1px solid rgba(192, 132, 252, 0.28);
+    border-right: 1px solid rgba(192, 132, 252, 0.15);
+    border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+    clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%);
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #e9d5ff;
+  }
+  .edition-pill .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2dd4bf;
+    box-shadow: 0 0 8px #2dd4bf;
+  }
+
+  .ver-stamp {
+    text-align: right;
+    font-family: "SarasaMonoSC", Consolas, monospace;
+  }
+  .ver-stamp .v-num {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(216, 180, 254, 0.25);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .ver-stamp .v-tag {
+    font-size: 9px;
+    color: rgba(161, 161, 170, 0.55);
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+
+  /* 标题主视觉区（左对齐，阶梯错落） */
+  .brand-block {
+    margin-top: 4px;
+    padding-left: 4px;
+  }
+  .kicker {
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #2dd4bf;
+    opacity: 0.85;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #faf5ff;
+    text-shadow: 0 0 24px rgba(168, 85, 247, 0.55);
+    line-height: 1.15;
+    position: relative;
+    display: inline-block;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: -6px;
+    width: 64%;
+    height: 2px;
+    background: linear-gradient(90deg, #c084fc 0%, #2dd4bf 60%, transparent 100%);
+  }
+
+  .author-card {
+    margin-top: 18px;
+    margin-left: 14px;
+    padding: 7px 12px;
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.14) 0%, rgba(15, 23, 42, 0.2) 100%);
+    border-left: 2px solid #a855f7;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    color: rgba(233, 213, 255, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .author-card .badge {
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 9px;
+    padding: 1px 6px;
+    border: 1px solid rgba(251, 191, 36, 0.45);
+    background: rgba(245, 158, 11, 0.12);
+    color: #fde68a;
+  }
+
+  /* 底部非对称加载进度舱 */
+  .boot-console {
+    position: relative;
+    background: rgba(9, 6, 18, 0.78);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    border-left: 3px solid #2dd4bf;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    padding: 12px 14px 13px 14px;
+  }
+
+  .console-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    color: rgba(161, 161, 170, 0.8);
+  }
+  .console-head .phase-tag {
+    color: #5eead4;
+    letter-spacing: 1px;
+  }
+  .console-head .step-dots {
+    display: flex;
+    gap: 5px;
+  }
+  .console-head .step-dots i {
+    display: block;
+    width: 12px;
+    height: 3px;
+    background: rgba(192, 132, 252, 0.22);
+    transform: skewX(-24deg);
+  }
+  .console-head .step-dots i.on {
+    background: #c084fc;
+    box-shadow: 0 0 6px rgba(192, 132, 252, 0.8);
+  }
+
+  .loading-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .loading {
+    font-size: 12px;
+    font-weight: 500;
+    color: #f3e8ff;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .loading::after {
+    content: "";
+    animation: dots 1.2s steps(4) infinite;
+  }
+  @keyframes dots {
+    0% { content: ""; }
+    25% { content: "."; }
+    50% { content: ".."; }
+    75% { content: "..."; }
+  }
+
+  .pulse-Wave {
+    font-family: "SarasaMonoSC", Consolas, monospace;
+    font-size: 10px;
+    color: #c084fc;
+    flex-shrink: 0;
+  }
+
+  .progress-track {
+    position: relative;
+    margin-top: 9px;
+    height: 3px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+  }
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: -35%;
+    width: 42%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #c084fc, #2dd4bf, transparent);
+    animation: sweepBar 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  @keyframes sweepBar {
+    0%   { left: -42%; width: 35%; }
+    50%  { width: 55%; }
+    100% { left: 100%; width: 35%; }
+  }
+</style>
+</head>
+<body>
+  <div class="splash-shell">
+    <div class="bg-grid"></div>
+    <div class="slash-divider"></div>
+    <div class="slash-divider-sub"></div>
+
+    <!-- 左上角单侧垂落紫藤花串（非对称布局：只从左上斜向垂落） -->
+    <svg class="wisteria-asym" viewBox="0 0 340 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-10,6 Q95,34 220,8 T340,0" stroke="rgba(192,132,252,0.38)" stroke-width="1.4" fill="none"/>
+      <g opacity="0.9">
+        <circle cx="28" cy="14" r="6" fill="#9333ea"/>
+        <circle cx="25" cy="28" r="5.5" fill="#a855f7"/>
+        <circle cx="31" cy="41" r="5" fill="#c084fc"/>
+        <circle cx="26" cy="54" r="4.4" fill="#d8b4fe"/>
+        <circle cx="29" cy="67" r="3.8" fill="#e9d5ff"/>
+        <circle cx="27" cy="79" r="3" fill="#f3e8ff"/>
+        <circle cx="28" cy="89" r="2.2" fill="#faf5ff"/>
+
+        <circle cx="64" cy="18" r="5.5" fill="#a855f7"/>
+        <circle cx="68" cy="31" r="5" fill="#c084fc"/>
+        <circle cx="62" cy="44" r="4.2" fill="#d8b4fe"/>
+        <circle cx="65" cy="56" r="3.4" fill="#e9d5ff"/>
+        <circle cx="64" cy="66" r="2.4" fill="#f3e8ff"/>
+
+        <circle cx="102" cy="16" r="4.8" fill="#a855f7"/>
+        <circle cx="99" cy="28" r="4" fill="#c084fc"/>
+        <circle cx="104" cy="39" r="3.2" fill="#d8b4fe"/>
+        <circle cx="101" cy="48" r="2.3" fill="#e9d5ff"/>
+
+        <circle cx="144" cy="13" r="4" fill="#c084fc"/>
+        <circle cx="147" cy="23" r="3.1" fill="#d8b4fe"/>
+        <circle cx="143" cy="32" r="2.2" fill="#e9d5ff"/>
+      </g>
+    </svg>
+
+    <!-- 左栏：偏心星轨与徽标 -->
+    <div class="left-well">
+      <div class="stage-index">SYS // 01</div>
+      <div class="stage">
+        <div class="orbit-asym-1"></div>
+        <div class="orbit-asym-2"></div>
+        <div class="orbit-asym-3"></div>
+        <div class="logo-frame">
+          <img class="logo" src="splash-logo.png" alt="霖易" draggable="false" />
+        </div>
+      </div>
+      <div class="left-caption">
+        <span class="bar"></span>
+        <span>IRIS · WISTERIA</span>
+      </div>
+    </div>
+
+    <!-- 右栏：非对称排印与启动遥测 -->
+    <div class="right-deck">
+      <div class="top-telemetry">
+        <div class="edition-pill">
+          <span class="dot"></span>
+          <span>ASYMMETRIC STUDIO ENGINE</span>
+        </div>
+        <div class="ver-stamp">
+          <div class="v-num">v1.1</div>
+          <div class="v-tag">LOCAL · CLOUD</div>
+        </div>
+      </div>
+
+      <div class="brand-block">
+        <div class="kicker">CREATIVE WORKFLOW &amp; AI SYNTHESIS</div>
+        <h1>霖易工具箱</h1>
+        <div class="author-card">
+          <span>作者 · 霖易aa</span>
+          <span class="badge">抖音唯一免费发布</span>
+        </div>
+      </div>
+
+      <div class="boot-console">
+        <div class="console-head">
+          <span class="phase-tag" id="phase-code">BOOT_SEQ // INIT</span>
+          <div class="step-dots" id="step-dots">
+            <i class="on"></i>
+            <i class="on"></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+        <div class="loading-row">
+          <div class="loading" id="load-text">正在初始化环境</div>
+          <span class="pulse-Wave" id="boot-clock">00.0s</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var t0 = performance.now();
+      var clockEl = document.getElementById("boot-clock");
+      var phaseEl = document.getElementById("phase-code");
+      var dotsEl = document.getElementById("step-dots");
+      var loadEl = document.getElementById("load-text");
+
+      setInterval(function () {
+        if (!clockEl) return;
+        var sec = ((performance.now() - t0) / 1000).toFixed(1);
+        clockEl.textContent = (sec < 10 ? "0" : "") + sec + "s";
+      }, 100);
+
+      window.__setSplashText = function (txt) {
+        if (loadEl) loadEl.textContent = txt;
+        if (!phaseEl || !dotsEl) return;
+        var bars = dotsEl.querySelectorAll("i");
+        var level = 2;
+        if (/加载本地模型|启动本地模型/.test(txt)) {
+          phaseEl.textContent = "BOOT_SEQ // LLM_ENGINE";
+          level = 3;
+        } else if (/就绪|完毕|进入/.test(txt)) {
+          phaseEl.textContent = "BOOT_SEQ // READY";
+          level = 4;
+        } else if (/恢复/.test(txt)) {
+          phaseEl.textContent = "BOOT_SEQ // SNAPSHOT_RESTORE";
+          level = 2;
+        }
+        for (var i = 0; i < bars.length; i++) {
+          bars[i].className = i < level ? "on" : "";
+        }
+      };
+    })();
+  </script>
+</body>
+</html>

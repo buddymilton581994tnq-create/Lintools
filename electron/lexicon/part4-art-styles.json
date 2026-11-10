@@ -1,0 +1,695 @@
+[
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "赛璐璐",
+      "平涂动漫",
+      "动画截图",
+      "TV番剧风",
+      "清脆线稿赛璐璐平涂"
+    ],
+    "label": "赛璐璐",
+    "en": "clean anime cel shading, crisp uniform lineart, distinct shadow shapes, key animation frame"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "伪厚涂",
+      "日韩半厚涂",
+      "轻小说插画风",
+      "通透日系轻小说半厚涂"
+    ],
+    "label": "伪厚涂",
+    "en": "Japanese light novel cover illustration, delicate colored lineart with soft painterly volume rendering"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "厚涂",
+      "无线稿厚涂",
+      "欧美概念原画",
+      "笔触厚涂",
+      "重笔触戏剧光影概念厚涂"
+    ],
+    "label": "无线稿厚涂",
+    "en": "painterly lineless digital impasto concept art, bold expressive brushwork, rich edge control"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "水彩插画",
+      "透明水彩",
+      "水痕晕染",
+      "儿童绘本风",
+      "透明水彩湿画法纸纹晕染"
+    ],
+    "label": "水彩插画",
+    "en": "transparent wet-on-wet watercolor on cold-press cotton paper, granulation texture, soft blooming edges"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "马克笔手绘",
+      "彩铅手绘",
+      "素描速写",
+      "钢笔淡彩",
+      "针管笔线稿配酒精马克笔手绘"
+    ],
+    "label": "马克笔手绘",
+    "en": "Copic marker and fineliner ink sketchbook illustration, cross-hatching and vibrant marker blends"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "黑白日漫",
+      "漫画分镜",
+      "网点纸",
+      "伊藤润二风",
+      "井上雄彦水墨漫画",
+      "精细排线与黑白漫画网点纸"
+    ],
+    "label": "黑白日漫",
+    "en": "monochrome Japanese manga page aesthetic, G-pen dip ink dynamic lineweight, screentone halftone dots"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "韩漫风",
+      "条漫全彩精致风",
+      "精致唯美全彩韩漫立绘"
+    ],
+    "label": "韩漫风",
+    "en": "polished Korean webtoon manhwa style, glamorous lighting, sharp jawlines, glossy fashion rendering"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "美漫风",
+      "波普网点美漫",
+      "蜘蛛侠平行宇宙风",
+      "美式波普网点动态漫画风"
+    ],
+    "label": "美漫风",
+    "en": "Into the Spider-Verse comic book aesthetic, Ben-Day halftone dots, bold ink outlines, chromatic offset"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "碧蓝档案风",
+      "清透高明度二次元",
+      "高明度清透空气感插画"
+    ],
+    "label": "碧蓝档案风",
+    "en": "bright high-key translucent anime style, soft pastel bloom, crisp clean UI-ready character art"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "复古80年代动漫",
+      "90年代老番",
+      "昭和赛璐璐",
+      "高桥留美子",
+      "北条司",
+      "90年代复古手绘赛璐璐胶片番"
+    ],
+    "label": "90年代老番",
+    "en": "1990s vintage hand-painted anime cel photographed on 35mm film, subtle VHS halation, nostalgic shadow tones"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "Q版",
+      "二头身",
+      "粘土人",
+      "chibi",
+      "大头娃娃",
+      "萌系二头身Q版立绘"
+    ],
+    "label": "二头身",
+    "en": "super-deformed cute chibi character, 2-head body proportion, big glossy head, tiny stubby limbs"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "立绘设定集",
+      "三视图",
+      "角色设计图",
+      "拆分设定图",
+      "游戏角色正侧背三视图设定稿"
+    ],
+    "label": "立绘设定集",
+    "en": "character concept reference sheet, front/side/back turnaround views, expression callouts, clean neutral backdrop"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "像素风",
+      "16bit像素",
+      "32bit精细像素",
+      "点阵图",
+      "等轴测像素",
+      "精致复古点阵像素艺术"
+    ],
+    "label": "像素风",
+    "en": "intricate 32-bit pixel art illustration, hand-placed pixel clusters, atmospheric dithering"
+  },
+  {
+    "cat": "二次元与数字插画细分风格",
+    "terms": [
+      "矢量扁平",
+      "孟菲斯插画",
+      "risograph孔版印刷",
+      "复古错版Risograph孔版肌理插画"
+    ],
+    "label": "矢量扁平",
+    "en": "Risograph soy-ink print illustration, grainy stencil noise texture, vibrant fluorescent spot-color overprint"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "古典油画",
+      "文艺复兴",
+      "达芬奇晕涂法",
+      "拉斐尔",
+      "文艺复兴古典罩染油画"
+    ],
+    "label": "古典油画",
+    "en": "High Renaissance oil painting on wood panel, Leonardo sfumato soft transitions, aged varnish craquelure"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "巴洛克",
+      "卡拉瓦乔",
+      "暗色调主义",
+      "伦勃朗油画",
+      "卡拉瓦乔戏剧明暗对照油画"
+    ],
+    "label": "巴洛克",
+    "en": "Baroque tenebrism oil masterpiece, stark chiaroscuro spotlight emerging from pitch-dark background"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "洛可可油画",
+      "弗拉戈纳尔",
+      "布歇",
+      "洛可可轻盈粉彩宫廷油画"
+    ],
+    "label": "洛可可油画",
+    "en": "18th-century French Rococo oil painting, feathery pastel brushwork, romantic garden elegance"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "拉斐尔前派",
+      "沃特豪斯",
+      "米莱斯",
+      "奥菲莉娅风",
+      "拉斐尔前派唯美自然主义油画"
+    ],
+    "label": "拉斐尔前派",
+    "en": "Pre-Raphaelite Brotherhood oil painting, jewel-bright pigments, hyper-detailed botanical flora and flowing auburn hair"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "新艺术运动",
+      "穆夏",
+      "装饰花框",
+      "art nouveau",
+      "穆夏新艺术运动曲线花卉画框"
+    ],
+    "label": "新艺术运动",
+    "en": "Alphonse Mucha Art Nouveau lithograph poster, sinuous whiplash curves, gilded botanical halo frame"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "装饰艺术",
+      "art deco",
+      "流线型黑金几何",
+      "了不起的盖茨比风",
+      "1920年代黑金几何装饰艺术风"
+    ],
+    "label": "装饰艺术",
+    "en": "1920s Art Deco geometric luxury illustration, brushed gold leaf symmetry, obsidian and emerald chevrons"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "印象派",
+      "莫奈",
+      "雷诺阿",
+      "外光派斑驳笔触",
+      "莫奈印象派斑驳光色笔触油画"
+    ],
+    "label": "印象派",
+    "en": "French Impressionist plein-air oil painting, broken dabs of pure vibrant color capturing shimmering light"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "点彩派",
+      "修拉",
+      "色点并置",
+      "新印象派光学密集点彩画法"
+    ],
+    "label": "点彩派",
+    "en": "Neo-Impressionist Pointillism painting composed entirely of tiny distinct dots of pure complementary pigment"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "后印象派",
+      "梵高",
+      "旋涡厚涂星空笔触",
+      "梵高表现主义旋转厚涂笔触"
+    ],
+    "label": "后印象派",
+    "en": "Post-Impressionist Vincent van Gogh style, swirling rhythmic impasto oil ridges in cobalt blue and chrome yellow"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "象征主义",
+      "克里姆特",
+      "金箔镶嵌画风",
+      "克里姆特拜占庭金箔几何装饰油画"
+    ],
+    "label": "象征主义",
+    "en": "Gustav Klimt Golden Phase painting, shimmering real gold leaf mosaic patterns, spiral and mosaic motifs"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "新古典主义",
+      "学院派",
+      "布格罗细腻肤质",
+      "布格罗学院派丝滑写实油画"
+    ],
+    "label": "新古典主义",
+    "en": "William-Adolphe Bouguereau French Academic oil painting, porcelain-smooth lifelike flesh tones, invisible brushwork"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "超现实主义",
+      "达利",
+      "马格利特",
+      "梦境悖论",
+      "古典技法超现实梦境油画"
+    ],
+    "label": "超现实主义",
+    "en": "Surrealist oil painting in the spirit of Rene Magritte and Salvador Dali, uncanny dreamlike juxtaposition"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "表现主义",
+      "席勒神经质线条",
+      "蒙克呐喊风",
+      "埃贡席勒表现主义张力速写设色"
+    ],
+    "label": "表现主义",
+    "en": "Egon Schiele Expressionist gouache and charcoal, raw angular contour lines, expressive anatomical distortion"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "立体主义",
+      "毕加索多维几何解构",
+      "立体主义多视角几何切面构图"
+    ],
+    "label": "立体主义",
+    "en": "Analytical Cubism painting, fragmented interlocking geometric planes viewed from multiple simultaneous angles"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "至上主义",
+      "包豪斯",
+      "蒙德里安红黄蓝构成",
+      "包豪斯现代主义几何构成"
+    ],
+    "label": "至上主义",
+    "en": "Bauhaus modernist geometric composition, primary colors, crisp constructivist typography and balance"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "暗黑超现实",
+      "贝克辛斯基",
+      "吉格尔生物机械",
+      "biomechanical",
+      "吉格尔异形生物机械暗黑画风"
+    ],
+    "label": "暗黑超现实",
+    "en": "H.R. Giger airbrushed biomechanical dark surrealism, fused bone-and-steel ribbed conduits, monochromatic eerie mist"
+  },
+  {
+    "cat": "西方美术史与经典画派（含冷门流派）",
+    "terms": [
+      "厚刀油画",
+      "刮刀画",
+      "肌理画",
+      "重体丙烯调色刀立体堆塑油画"
+    ],
+    "label": "厚刀油画",
+    "en": "heavy palette-knife impasto oil painting, sculpted 3D paint peaks casting tiny physical shadows"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "水墨画",
+      "写意水墨",
+      "泼墨山水",
+      "南宋马远夏圭留白",
+      "传统宣纸泼墨写意山水"
+    ],
+    "label": "水墨画",
+    "en": "traditional Chinese xieyi splash-ink painting on absorbent xuan rice paper, poetic negative space, red cinnabar seal stamp"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "工笔画",
+      "工笔重彩",
+      "绢本设色",
+      "宋院体花鸟",
+      "宋代院体绢本工笔重彩设色"
+    ],
+    "label": "工笔画",
+    "en": "Song-dynasty court style gongbi meticulous painting on aged silk, hairline铁线描 ink outlines, layered mineral pigments"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "青绿山水",
+      "千里江山图",
+      "石青石绿金碧山水",
+      "北宋石青石绿描金青绿山水"
+    ],
+    "label": "青绿山水",
+    "en": " monumental blue-and-green landscape (Qinglv Shanshui) painted with azurite blue, malachite green, and gold mud outlines"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "白描",
+      "十八描",
+      "游丝描",
+      "敦煌线描",
+      "吴道子式古典纯墨线白描"
+    ],
+    "label": "十八描",
+    "en": "classical Chinese baimiao pure ink line drawing, fluid calligraphic brush pressure variations without color"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "没骨画",
+      "恽寿平没骨花鸟",
+      "清雅撞水撞粉没骨花卉画"
+    ],
+    "label": "没骨画",
+    "en": "traditional Chinese mogu boneless painting technique, direct washes of translucent color without ink outlines"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "敦煌壁画",
+      "龟兹壁画",
+      "岩彩画",
+      "重彩岩彩",
+      "金箔岩彩",
+      "斑驳剥落矿物颗粒敦煌岩彩壁画"
+    ],
+    "label": "敦煌壁画",
+    "en": "ancient Dunhuang grotto mineral fresco (Nihonga / Yancai), coarse crushed lapis lazuli and cinnabar crystal grit, oxidized gold leaf, weathered plaster cracks"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "漆画",
+      "大漆螺钿",
+      "黑金莳绘",
+      "剔红雕漆",
+      "非遗黑推光大漆镶嵌幻彩螺钿"
+    ],
+    "label": "大漆螺钿",
+    "en": "traditional Chinese glossy black urushi lacquerware inlaid with iridescent mother-of-pearl raden shell and gold maki-e powder"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "掐丝珐琅",
+      "景泰蓝",
+      "鎏金错金银",
+      "皇家铜胎掐丝珐琅景泰蓝纹样"
+    ],
+    "label": "掐丝珐琅",
+    "en": "imperial cloisonne enamelware, fine bent gold wire compartments filled with glossy turquoise and cobalt vitreous enamel"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "剪纸",
+      "皮影戏",
+      "镂空刻纸光影",
+      "传统民间透光彩色驴皮皮影艺术"
+    ],
+    "label": "皮影戏",
+    "en": "traditional Chinese translucent dyed leather shadow puppetry, intricate openwork filigree backlit against warm screen"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "版画",
+      "木刻版画",
+      "徽派版画",
+      "绝版木刻",
+      "铜版蚀刻画",
+      "丢勒铜版画",
+      "古典精细交叉排线铜版蚀刻版画"
+    ],
+    "label": "木刻版画",
+    "en": "Albrecht Durer style intaglio copperplate engraving, microscopic cross-hatched ink lines on ivory laid paper"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "浮世绘",
+      "葛饰北斋",
+      "歌川广重",
+      "锦绘木版画",
+      "江户浮世绘套色木版画肌理"
+    ],
+    "label": "浮世绘",
+    "en": "Edo-period Japanese ukiyo-e polychrome woodblock print, bokashi hand-rubbed pigment gradation, visible woodgrain on washi paper"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "波斯细密画",
+      "中世纪泥金装饰手抄本",
+      "凯尔特纹样",
+      "中世纪羊皮纸泥金彩绘手抄本"
+    ],
+    "label": "波斯细密画",
+    "en": "medieval illuminated manuscript miniature on vellum, burnished gold leaf borders, ultramarine and vermilion tempera"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "教堂彩绘玻璃",
+      "蒂凡尼彩色镶嵌玻璃",
+      "花窗艺术",
+      "哥特教堂铅条镶嵌透光彩绘玻璃"
+    ],
+    "label": "教堂彩绘玻璃",
+    "en": "backlit Gothic stained-glass rose window art, black lead came outlines, glowing ruby, cobalt, and amber glass segments"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "拜占庭马赛克",
+      "碎瓷镶嵌画",
+      "拜占庭金底琉璃马赛克拼贴"
+    ],
+    "label": "拜占庭马赛克",
+    "en": "ancient Byzantine tesserae mosaic artwork, thousands of tiny hand-cut colored glass and gold-leaf tiles"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "青花瓷",
+      "粉彩瓷",
+      "汝窑天青开片",
+      "冰裂纹釉",
+      "元明钴料苏麻离青白地青花瓷绘"
+    ],
+    "label": "青花瓷",
+    "en": "Ming-dynasty cobalt-blue underglaze Jingdezhen porcelain artistry, glossy translucent celadon crackle glaze"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "蓝晒法",
+      "湿版火棉胶摄影",
+      "银版摄影",
+      "蛋白印相",
+      "19世纪古典普鲁士蓝铁盐蓝晒印相"
+    ],
+    "label": "蓝晒法",
+    "en": "19th-century cyanotype sun-print photography, deep Prussian blue monochrome tones with hand-coated brush edges"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "羊毛毡",
+      "戳戳乐",
+      "衍纸艺术",
+      "立体纸雕灯",
+      "刺绣插画",
+      "多层透光暖色立体纸雕灯箱"
+    ],
+    "label": "羊毛毡",
+    "en": "multi-layered laser-cut kirigami paper-cut lightbox diorama, warm internal LED depth shadows"
+  },
+  {
+    "cat": "中国画、东方美学与世界非遗工艺（极冷门全覆盖）",
+    "terms": [
+      "粘土定格",
+      "泥塑微缩",
+      "陶瓷公仔",
+      "软陶手作",
+      "指纹肌理手工粘土定格动画风"
+    ],
+    "label": "粘土定格",
+    "en": "stop-motion polymer claymation miniature, subtle artisan thumbprint textures, miniature studio lighting"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "虚幻引擎5",
+      "UE5",
+      "路径追踪",
+      "Octane渲染",
+      "Redshift渲染",
+      "Blender渲染",
+      "UE5影视级光线追踪PBR渲染"
+    ],
+    "label": "虚幻引擎5",
+    "en": "Unreal Engine 5 path-traced CGI render, physically based materials, Lumen global illumination, 8k micro-detail"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "盲盒风",
+      "泡泡玛特风",
+      "潮玩PVC材质",
+      "搪胶公仔",
+      "潮玩磨砂PVC半透光盲盒渲染"
+    ],
+    "label": "盲盒风",
+    "en": "designer vinyl blind-box art toy 3D render, smooth matte PVC finish with soft subsurface scattering, studio softbox"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "低多边形",
+      "low poly",
+      "PS1复古多边形",
+      "N64复古3D",
+      "PS1怀旧低多边形抖动贴图3D"
+    ],
+    "label": "低多边形",
+    "en": "retro 1998 PlayStation 1 low-poly 3D graphics, affine texture warping, crisp pixelated vertex lighting"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "蒸汽波",
+      "vaporwave",
+      "石膏像棕榈树粉蓝网格",
+      "千禧怀旧粉青霓虹蒸汽波拼贴"
+    ],
+    "label": "蒸汽波",
+    "en": "vaporwave aesthetic, magenta-cyan sunset grid, classical marble bust, palm trees, Windows 95 UI nostalgia"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "梦核",
+      "dreamcore",
+      "怪核",
+      "weirdcore",
+      "阈限空间",
+      "liminal space",
+      "后室",
+      "超现实怀旧千禧阈限梦核空间"
+    ],
+    "label": "阈限空间",
+    "en": "dreamcore liminal space aesthetic, uncanny empty sunlit childhood hallway, low-res nostalgic haze, surreal quietude"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "池核",
+      "poolcore",
+      "无尽白瓷泳池",
+      "静谧日光折射无尽白砖泳池核"
+    ],
+    "label": "无尽白瓷泳池",
+    "en": "poolcore liminal architecture, vast silent indoor room of white ceramic tiles and crystal-clear turquoise water caustics"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "赛博Y2K",
+      "千禧液态金属",
+      "酸性平面设计",
+      "acid graphics",
+      "千禧Y2K液态铬金属酸性视觉"
+    ],
+    "label": "千禧液态金属",
+    "en": "Y2K cyber-futurism, liquid chrome 3D typography, iridescent holographic foil,fisheye lens"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "故障艺术",
+      "glitch art",
+      "像素排序",
+      "RGB色散错位",
+      "数据破损",
+      "数字信号撕裂RGB错位故障艺术"
+    ],
+    "label": "故障艺术",
+    "en": "datamosh digital glitch art, pixel sorting streaks, CRT scanlines, heavy RGB chromatic split"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "热成像",
+      "红外摄影",
+      "X光透视艺术",
+      "紫外荧光摄影",
+      "伪彩红外热成像光谱视觉"
+    ],
+    "label": "热成像",
+    "en": "false-color infrared thermography aesthetic, glowing magenta-orange-violet heat gradient"
+  },
+  {
+    "cat": "3D渲染、故障艺术与互联网先锋美学",
+    "terms": [
+      "航拍微缩",
+      "移轴微缩景观",
+      "tilt-shift",
+      "移轴镜头微缩模型玩具城市感"
+    ],
+    "label": "航拍微缩",
+    "en": "tilt-shift miniature faking photography, selective plane of focus making real world look like tiny scale model"
+  }
+]

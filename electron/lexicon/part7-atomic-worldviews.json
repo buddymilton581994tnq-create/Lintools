@@ -1,0 +1,665 @@
+[
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "水手领",
+      "海军领"
+    ],
+    "label": "海军水手领",
+    "en": "classic sailor collar with contrasting stripe trim"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "娃娃领",
+      "彼得潘领"
+    ],
+    "label": "圆角蕾丝娃娃领",
+    "en": "rounded Peter Pan collar edged with delicate lace"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "立领",
+      "中华立领",
+      "盘扣立领",
+      "中式织锦盘扣立领"
+    ],
+    "label": "中华立领",
+    "en": "traditional mandarin stand collar with handmade frog button clasp"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "高领",
+      "堆堆领",
+      "半高领"
+    ],
+    "label": "修身针织高领",
+    "en": "snug ribbed turtleneck collar"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "方领",
+      "法式方领",
+      "露锁骨方领",
+      "法式复古大方领"
+    ],
+    "label": "法式方领",
+    "en": "wide French square neckline framing collarbones"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "一字肩",
+      "一字领",
+      "卡肩礼服领"
+    ],
+    "label": "优雅露肩一字领",
+    "en": "off-the-shoulder bardot neckline exposing shoulders"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "深V领",
+      "交叉V领"
+    ],
+    "label": "修饰颈线深V领",
+    "en": "plunging V-neckline"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "挂脖领",
+      "绕颈削肩",
+      "halter",
+      "优雅绕颈削肩挂脖领"
+    ],
+    "label": "挂脖领",
+    "en": "halter neck strap tied behind nape, bare shoulders"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "心形领",
+      "抹胸领",
+      "sweetheart neckline"
+    ],
+    "label": "复古抹胸心形领",
+    "en": "structured sweetheart bustier neckline"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "荷叶领",
+      "拉夫领",
+      "伊丽莎白褶领",
+      "ruff",
+      "古典多层风琴褶拉夫领"
+    ],
+    "label": "荷叶领",
+    "en": "elaborate Elizabethan pleated organza ruff collar"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "泡泡袖",
+      "公主袖",
+      "灯笼袖",
+      "蓬松薄纱公主泡泡袖"
+    ],
+    "label": "泡泡袖",
+    "en": "voluminous sheer puff sleeves gathered at cuffs"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "羊腿袖",
+      "复古宫廷袖",
+      "维多利亚古典羊腿袖"
+    ],
+    "label": "羊腿袖",
+    "en": "1890s gigot leg-of-mutton sleeves tapering tightly to forearm"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "喇叭袖",
+      "水袖",
+      "钟形大袖",
+      "振袖长袂",
+      "飘逸层叠蕾丝喇叭袖"
+    ],
+    "label": "喇叭袖",
+    "en": "flared bell sleeves with cascading lace cuffs"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "主教袖",
+      "系带开叉袖",
+      "垂坠感丝绸主教灯笼袖"
+    ],
+    "label": "主教袖",
+    "en": "billowing sheer silk bishop sleeves buttoned at wrist"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "冰袖",
+      "分离袖",
+      "袖套",
+      "detached sleeves",
+      "二次元露肩分离式长袖套"
+    ],
+    "label": "分离袖",
+    "en": "detached wide flared sleeves held above elbows with ribbon bands, bare shoulders"
+  },
+  {
+    "cat": "服装领型与袖型细节",
+    "terms": [
+      "朱丽叶袖",
+      "宫廷分段泡袖",
+      "浪漫古典朱丽叶分段袖"
+    ],
+    "label": "朱丽叶袖",
+    "en": "romantic Juliet sleeve puffed at shoulder and fitted down forearm"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "百褶裙",
+      "学院格纹裙",
+      "JK短裙",
+      "高腰格纹刀褶百褶裙"
+    ],
+    "label": "百褶裙",
+    "en": "high-waisted knife-pleated tartan mini skirt"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "伞裙",
+      "大摆裙",
+      "圆裙",
+      "赫本裙",
+      "优雅过膝复古高腰大摆伞裙"
+    ],
+    "label": "大摆裙",
+    "en": "1950s Audrey Hepburn style full-circle A-line midi skirt"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "鱼尾裙",
+      "包臀鱼尾礼服裙",
+      "勾勒曲线修身丝缎鱼尾裙"
+    ],
+    "label": "鱼尾裙",
+    "en": "figure-hugging mermaid trumpet skirt flaring below knees"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "蛋糕裙",
+      "多层荷叶边塔裙",
+      "层叠蕾丝花边蓬松蛋糕塔裙"
+    ],
+    "label": "蛋糕裙",
+    "en": "tiered ruffled chiffon layer cake skirt"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "前短后长裙",
+      "燕尾裙",
+      "不对称斜裁裙",
+      "飘逸前短后长燕尾纱裙"
+    ],
+    "label": "前短后长裙",
+    "en": "asymmetrical high-low hem tulle skirt with flowing back train"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "花苞裙",
+      "郁金香裙",
+      "气球蓬裙",
+      "俏皮立体褶皱花苞短裙"
+    ],
+    "label": "花苞裙",
+    "en": "sculptural gathered bubble hem mini skirt"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "纱裙",
+      "仙女网纱裙",
+      "tulle skirt",
+      "轻盈多层雾感网纱长裙"
+    ],
+    "label": "仙女网纱裙",
+    "en": "ethereal multi-layered misty tulle maxi skirt"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "背带裙",
+      "背带裤",
+      "工装连体裤",
+      "复古学院牛角扣背带裙"
+    ],
+    "label": "背带裙",
+    "en": "vintage pinafore suspender dress over blouse"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "热裤",
+      "牛仔毛边短裤",
+      "皮短裤",
+      "高腰磨边丹宁牛仔热裤"
+    ],
+    "label": "牛仔毛边短裤",
+    "en": "high-waisted frayed-hem denim daisy dukes shorts"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "阔腿裤",
+      "垂感西装裤",
+      "水手阔腿裤",
+      "潇洒高腰垂坠感西装阔腿裤"
+    ],
+    "label": "阔腿裤",
+    "en": "high-waisted wide-leg tailored pleated trousers"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "灯笼裤",
+      "哈伦裤",
+      "西域纱裤",
+      "轻盈半透金丝雪纺灯笼裤"
+    ],
+    "label": "灯笼裤",
+    "en": "sheer gold-trimmed silk harem pants gathered at ankles"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "工装裤",
+      "伞兵裤",
+      "机能多袋束脚裤",
+      "多口袋飘带战术束脚工装裤"
+    ],
+    "label": "工装裤",
+    "en": "tactical multi-pocket cargo joggers with hanging webbing straps"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "腰封",
+      "宽皮腰带",
+      "金属腰链",
+      "束腰封",
+      "雕花银扣皮革塑形宽腰封"
+    ],
+    "label": "宽皮腰带",
+    "en": "wide cinched leather waist corset belt with engraved silver buckle"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "披肩",
+      "皮草披肩",
+      "蕾丝坎肩",
+      "云肩",
+      "珍珠流苏苏绣四合如意云肩"
+    ],
+    "label": "皮草披肩",
+    "en": "traditional Chinese embroidered cloud-collar (yunjian) with dangling pearl tassels"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "手套",
+      "蕾丝长手套",
+      "歌剧丝缎手套",
+      "露指战术手套",
+      "猫爪手套",
+      "优雅肘上丝缎歌剧长手套"
+    ],
+    "label": "蕾丝长手套",
+    "en": "elbow-length glossy white satin opera gloves"
+  },
+  {
+    "cat": "裙型、裤型与局部穿搭原子词",
+    "terms": [
+      "面纱",
+      "半透黑纱",
+      "珠帘面纱",
+      "狐狸面具",
+      "威尼斯舞会面具",
+      "防毒面具",
+      "半遮面神秘金丝刺绣薄纱面帘"
+    ],
+    "label": "半透黑纱",
+    "en": "translucent gold-embroidered sheer face veil revealing expressive eyes"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "太阳朋克",
+      "solarpunk",
+      "生态乌托邦",
+      "绿植玻璃未来城",
+      "阳光绿植与流线白瓷光伏融合的太阳朋克生态城"
+    ],
+    "label": "太阳朋克",
+    "en": "Solarpunk utopia aesthetic, Art Nouveau curved glass towers covered in lush hanging gardens, wind turbines, warm sunlight"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "柴油朋克",
+      "dieselpunk",
+      "二战复古重工业柳钉机械",
+      "1940年代铆钉钢板重油烟雾柴油朋克美学"
+    ],
+    "label": "柴油朋克",
+    "en": "1940s gritty Dieselpunk aesthetic, riveted heavy steel plating, roaring radial piston engines, brass gauges, oil smoke"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "原子朋克",
+      "atompunk",
+      "1950年代太空竞赛复古科幻",
+      "辐射风",
+      "1950年代镀铬流线鱼鳍火箭原子朋克美学"
+    ],
+    "label": "原子朋克",
+    "en": "1950s retro-futuristic Atompunk style, Googie architecture, chrome tailfins, bubble-helmet raygun sci-fi"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "发条朋克",
+      "clockwork punk",
+      "达芬奇手稿机械风",
+      "精密镂空黄铜游丝发条机械朋克美学"
+    ],
+    "label": "发条朋克",
+    "en": "Renaissance Clockpunk aesthetic, intricate exposed brass escapement gears,mainsprings, Leonardo parchment blueprints"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "丝绸朋克",
+      "silkpunk",
+      "机关术",
+      "木牛流马东方奇幻机械",
+      "竹木丝绸与青铜齿轮结合的东方机关术丝绸朋克"
+    ],
+    "label": "丝绸朋克",
+    "en": "Oriental Silkpunk aesthetic, giant bamboo-and-silk mechanical wings, bronze interlocking luopan gears, glowing paper lanterns"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "生化朋克",
+      "biopunk",
+      "基因培养皿荧光有机科技",
+      "幽绿营养液玻璃培养舱与有机神经科技生化朋克"
+    ],
+    "label": "生化朋克",
+    "en": "Biopunk laboratory aesthetic, glowing emerald nutrient tanks, translucent organic tubing, genetic helix holograms"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "磁带未来主义",
+      "cassette futurism",
+      "80年代CRT按键机械太空舱",
+      "异形1工业风",
+      "80年代厚重机械键盘与琥珀色CRT监视器磁带未来主义"
+    ],
+    "label": "磁带未来主义",
+    "en": "1980s Cassette Futurism aesthetic, chunky tactile mechanical switches, amber monochrome CRT monitors, coiled cords, beige ABS plastic"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "残酷主义",
+      "粗野主义建筑",
+      "brutalism",
+      "沙丘巨物风",
+      "BDO巨构恐惧",
+      "沙丘式压迫感几何裸露混凝土巨构建筑美学"
+    ],
+    "label": "残酷主义",
+    "en": "monolithic Brutalist megastructure architecture, raw board-formed concrete slabs, tiny human figure for colossal scale"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "中式民俗怪谈",
+      "中式梦核",
+      "纸人红轿冥婚微恐",
+      "规则怪谈美学",
+      "幽暗冷绿雾气配大红纸灯笼的中式民俗悬疑美学"
+    ],
+    "label": "中式民俗怪谈",
+    "en": "eerie Chinese folklore horror aesthetic, coldjade mist contrasted with glowing blood-red paper lanterns, weathered ancestral courtyard"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "哥特血源风",
+      "维多利亚克苏鲁",
+      "雅楠古街夜雨",
+      "血源诅咒式尖塔铁栅栏湿滑鹅卵石黑夜古街"
+    ],
+    "label": "哥特血源风",
+    "en": "Bloodborne inspired Victorian Gothic nightmare cityscape, towering spires, wrought-iron streetlamps in cold fog, wet cobblestones"
+  },
+  {
+    "cat": "冷门科幻、奇幻与复古未来世界观美学",
+    "terms": [
+      "剑与魔法",
+      "JRPG王道奇幻",
+      "浮空岛水晶塔",
+      "碧空云海与古代魔法水晶环绕的JRPG浮空遗迹"
+    ],
+    "label": "剑与魔法",
+    "en": "classic high-fantasy JRPG world, floating grassy sky islands with cascading waterfalls, giant glowing mana crystal spire"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "火焰特效",
+      "青莲业火",
+      "凤凰烈焰",
+      "火星飞溅",
+      "盘旋升腾的半透明炽热金红火焰与飞舞火星"
+    ],
+    "label": "火焰特效",
+    "en": "swirling tongues of roaring translucent golden-crimson fire and glowing floating embers"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "冰霜魔法",
+      "冰晶碎裂",
+      "绝对零度寒气",
+      "六角雪花冰凌",
+      "空气凝结锐利剔透的发光蓝白冰晶棱柱与寒雾"
+    ],
+    "label": "冰霜魔法",
+    "en": "razor-sharp translucent sapphire ice crystals erupting in mid-air with freezing mist trails"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "雷电特效",
+      "紫电青霜",
+      "电弧环绕",
+      "闪电链",
+      "噼啪跃动的高亮蓝白与电光紫高压闪电电弧"
+    ],
+    "label": "雷电特效",
+    "en": "crackling arcs of blinding electric cyan-violet plasma lightning branching across body"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "水魔法",
+      "悬浮水球",
+      "水龙卷",
+      "清澈流体飞溅",
+      "失重悬浮折射光影的清澈螺旋水流缎带"
+    ],
+    "label": "水魔法",
+    "en": "zero-gravity ribbons of crystal-clear liquid water swirling gracefully with suspended droplets and refraction"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "圣光魔法",
+      "金色羽毛飘落",
+      "神圣法阵",
+      "金色粒子",
+      "神圣柔和的鎏金几何魔法阵与飘落发光白羽"
+    ],
+    "label": "圣光魔法",
+    "en": "intricate glowing golden geometric magic circle beneath feet, drifting luminous white feathers and light particles"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "暗影黑雾",
+      "深渊黑炎",
+      "彼岸花瓣飞散",
+      "乌鸦群飞",
+      "翻涌的黑紫深渊魔气与纷飞的暗红花瓣乌鸦羽毛"
+    ],
+    "label": "暗影黑雾",
+    "en": "tendrils of shadowy obsidian-violet dark miasma smoke mixed with scattering black raven feathers and crimson petals"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "星辰魔法",
+      "银河星屑",
+      "星座连线",
+      "极光星云流体",
+      "指尖流淌的璀璨深空星云尘埃与发光黄金星轨"
+    ],
+    "label": "星辰魔法",
+    "en": "cosmic nebula stardust and glowing golden constellation lines swirling around fingertips"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "全息UI",
+      "科幻HUD界面",
+      "悬浮半透明代码框",
+      "悬浮在空气中的半透明青色全息数据投影交互界面"
+    ],
+    "label": "全息UI",
+    "en": "floating translucent cyan holographic HUD data screens and geometric wireframes casting soft glow"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "花吹雪",
+      "漫天玫瑰花瓣",
+      "金色银杏叶飞舞",
+      "蒲公英绒毛",
+      "微风卷起漫天飞舞的柔焦半透明樱花瓣雨"
+    ],
+    "label": "花吹雪",
+    "en": "whirlwind of thousands of soft-focus translucent pink sakura petals dancing across the frame"
+  },
+  {
+    "cat": "魔法元素、粒子流体与超自然画面特效",
+    "terms": [
+      "蝴蝶群",
+      "发光蓝闪蝶",
+      "萤火虫夏夜微光",
+      "幽暗夜色中成群飞舞的发光大蓝闪蝶与黄绿萤火虫"
+    ],
+    "label": "蝴蝶群",
+    "en": "swarm of iridescent glowing blue morpho butterflies and warm fireflies illuminating the twilight air"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "塔罗牌",
+      "穆夏卡牌框",
+      "烫金羊皮纸边框",
+      "库洛牌风",
+      "烫金神秘学星象日月雕花塔罗牌卡面构图"
+    ],
+    "label": "塔罗牌",
+    "en": "ornate gilded Tarot card illustration layout, intricate astrological sun-and-moon border filigree, Roman numeral header"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "立绘卡牌",
+      "SSR抽卡立绘",
+      "满破立绘背景特效",
+      "手游SSR满破动态张力华丽背景特效大立绘"
+    ],
+    "label": "立绘卡牌",
+    "en": "gacha game SSR awakened splash art, dynamic diagonal action pose surrounded by elaborate elemental props and effects"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "杂志封面",
+      "Vogue时尚大片排版",
+      "日杂风留白排版",
+      "高级时尚摄影大片质感构图预留干净版式空间"
+    ],
+    "label": "杂志封面",
+    "en": "high-fashion editorial magazine cover photography, crisp studio styling, clean negative space at top for masthead"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "四格漫画",
+      "多格漫画分镜",
+      "电影上下黑边字幕截图",
+      "2.35:1宽银幕电影上下黑边带胶片质感剧照"
+    ],
+    "label": "四格漫画",
+    "en": "2.35:1 letterboxed cinema frame still, subtle cinematic film grain, poignant dramatic storytelling moment"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "贴纸风",
+      "模切白边贴纸",
+      "手帐拼贴画",
+      "knolling平铺整齐陈列",
+      "强迫症治愈系90度俯拍物品整齐几何平铺陈列"
+    ],
+    "label": "贴纸风",
+    "en": "knolling flat-lay photography, everyday items and accessories arranged in crisp parallel 90-degree geometric order"
+  },
+  {
+    "cat": "分镜排版、边框设计与特殊画幅形式",
+    "terms": [
+      "等距微缩房间",
+      "isometric",
+      "剖面小窝盒子模型",
+      "精致可爱的45度等轴测微缩立体剖面小房间盒子"
+    ],
+    "label": "等距微缩房间",
+    "en": "cute isometric 3D cutaway diorama box room, warm miniature furniture details, floating isolated on clean backdrop"
+  }
+]

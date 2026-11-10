@@ -1,0 +1,902 @@
+[
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "黑长直",
+      "及腰黑长发"
+    ],
+    "label": "柔顺及腰黑长直",
+    "en": "long glossy jet-black straight hair reaching waist, silky hair strands"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "公主切",
+      "姬发式",
+      "hime cut",
+      "齐刘海姬发式公主切"
+    ],
+    "label": "公主切",
+    "en": "traditional Japanese hime cut, blunt straight bangs, neat cheek-length sidelocks, long straight back hair"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "双马尾",
+      "高双马尾",
+      "细双马尾",
+      "傲娇双马尾"
+    ],
+    "label": "俏皮高扎双马尾",
+    "en": "high twin tails tied symmetrically with ribbons, bouncy hair tips"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "低双马尾",
+      "村姑辫",
+      "麻花双辫",
+      "双麻花辫",
+      "温柔松散双麻花辫"
+    ],
+    "label": "低双马尾",
+    "en": "loose low braided twin pigtails resting over shoulders"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "螺旋双马尾",
+      "钻头卷",
+      "纵卷",
+      "大小姐卷发",
+      "drill hair",
+      "华丽贵族螺旋钻头卷"
+    ],
+    "label": "螺旋双马尾",
+    "en": "voluminous ringlets twin drill curls (ojou-sama curls), bouncy corkscrew locks"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "单马尾",
+      "高马尾",
+      "运动马尾"
+    ],
+    "label": "利落高扎单马尾",
+    "en": "energetic high ponytail swaying behind head, loose temple tendrils"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "侧马尾",
+      "歪马尾",
+      "俏皮不对称侧马尾"
+    ],
+    "label": "侧马尾",
+    "en": "cute asymmetrical side ponytail resting over one shoulder"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "波波头",
+      "妹妹头",
+      "齐耳短发",
+      "bob头",
+      "内扣短发",
+      "内扣空气感波波头"
+    ],
+    "label": "波波头",
+    "en": "chin-length inward-curled short bob haircut, airy Wispy bangs"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "狼尾",
+      "鲻鱼头",
+      "层次感碎短发",
+      "wolf cut",
+      "日系层次感狼尾碎发"
+    ],
+    "label": "鲻鱼头",
+    "en": "trendy shaggy layered wolf-cut hair with textured feathered ends"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "精灵短发",
+      "超短发",
+      "少年感短发",
+      "pixie cut",
+      "清爽露耳精灵短发"
+    ],
+    "label": "精灵短发",
+    "en": "cropped boyish pixie short haircut, neat nape, delicate exposed ears"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "水母头",
+      "断层长短发",
+      "jellyfish hair",
+      "亚文化双层水母头"
+    ],
+    "label": "水母头",
+    "en": "avant-garde jellyfish haircut, rounded bob upper layer with two long flowing lower tentacles"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "丸子头",
+      "团子头",
+      "花苞头",
+      "高盘丸子",
+      "蓬松慵懒高丸子头"
+    ],
+    "label": "丸子头",
+    "en": "messy high hair bun with loose wispy strands framing neck"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "双丸子头",
+      "哪吒头",
+      "包子头",
+      "中华娘发髻",
+      "odango",
+      "中华风丝带双丸子头"
+    ],
+    "label": "双丸子头",
+    "en": "double odango hair buns withsilk covers and dangling tassels"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "羊角辫",
+      "环形辫",
+      "牛角包编发",
+      "可爱环形羊角编发"
+    ],
+    "label": "羊角辫",
+    "en": "braided looped twin buns on sides of head"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "法式鱼骨辫",
+      "蝎子辫",
+      "瀑布辫",
+      "花环编发",
+      "浪漫森系鱼骨花环编发"
+    ],
+    "label": "法式鱼骨辫",
+    "en": "intricate French fishtail crown braid woven with tiny baby-breath flowers"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "大波浪",
+      "法式慵懒卷",
+      "羊毛卷",
+      "蛋卷头",
+      "泡面头",
+      "蓬松复古大波浪长卷发"
+    ],
+    "label": "大波浪",
+    "en": "voluminous cascading Hollywood wavy curls, glamorous soft shine"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "湿发",
+      "微湿刘海",
+      "出浴湿发",
+      "微湿成缕贴颊发丝"
+    ],
+    "label": "微湿刘海",
+    "en": "damp glossy hair strands clinging softly to forehead, cheeks, and collarbone"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "呆毛",
+      "天线呆毛",
+      "爱心呆毛",
+      "ahoge",
+      "灵动翘起单根呆毛"
+    ],
+    "label": "天线呆毛",
+    "en": "expressive curved ahoge cowlick strand bouncing atop head"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "八字刘海",
+      "空气刘海",
+      "法式刘海",
+      "斜刘海",
+      "眉上刘海",
+      "二次元M字刘海",
+      "轻盈微卷八字空气刘海"
+    ],
+    "label": "八字刘海",
+    "en": "wispy see-through curtain bangs framing eyes"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "遮眼发",
+      "单眼遮蔽",
+      "长刘海遮眼",
+      "神秘单侧遮眼长刘海"
+    ],
+    "label": "遮眼发",
+    "en": "long sweeping asymmetric bangs covering one eye"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "飞仙髻",
+      "堕马髻",
+      "流云髻",
+      "惊鹄髻",
+      "高椎髻",
+      "双丫髻",
+      "垂挂髻",
+      "古风步摇流云盘发髻"
+    ],
+    "label": "飞仙髻",
+    "en": "elaborate Tang-Song classical Chinese updo chignon adorned with gold-jade hairpins and pearl buyao"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "日本岛田髻",
+      "文金高岛田",
+      "花魁发髻",
+      "华丽玳瑁簪花魁高发髻"
+    ],
+    "label": "日本岛田髻",
+    "en": "ornate Edo oiran datehyogo updo bristling with tortoiseshell kanzashi hairpins and tsumami-zaiku silk flowers"
+  },
+  {
+    "cat": "发型发饰",
+    "terms": [
+      "脏辫",
+      "雷鬼辫",
+      "拳击辫",
+      "box braids",
+      "酷飒金属环脏辫编发"
+    ],
+    "label": "雷鬼辫",
+    "en": "tightly braided cornrows and dreadlock braids adorned with silver hair cuffs"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "银发",
+      "白发",
+      "月白发",
+      "铂金银发",
+      "清冷月白银色发丝"
+    ],
+    "label": "月白发",
+    "en": "luminous platinum silver-white hair catching cool rim light"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "樱花粉发",
+      "浅粉发",
+      "草莓金发",
+      "梦幻柔雾樱花粉发"
+    ],
+    "label": "樱花粉发",
+    "en": "pastel sakura pink hair with translucent backlit tips"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "雾霾蓝发",
+      "冰蓝发",
+      "水色长发",
+      "清透冰川水蓝发色"
+    ],
+    "label": "雾霾蓝发",
+    "en": "icy pastel cerulean blue hair"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "薰衣草紫发",
+      "香芋紫发",
+      "银紫渐变发",
+      "梦幻银紫渐变发色"
+    ],
+    "label": "薰衣草紫发",
+    "en": "ethereal lavender-violet gradient hair"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "亚麻金发",
+      "香槟金发",
+      "蜂蜜金发",
+      "耀眼蜂蜜香槟金发"
+    ],
+    "label": "亚麻金发",
+    "en": "sunlit champagne honey-blonde hair"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "酒红发",
+      "暗红发",
+      "绯红长发",
+      "浓郁绯红丝绒发色"
+    ],
+    "label": "酒红发",
+    "en": "deep crimson burgundy hair"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "薄荷绿发",
+      "墨绿发",
+      "祖母绿发",
+      "精灵感清透薄荷绿发"
+    ],
+    "label": "薄荷绿发",
+    "en": "soft mint-emerald green hair"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "挑染",
+      "挂耳染",
+      "内层挑染",
+      "裙摆染",
+      "渐变染",
+      "阴阳染",
+      "彩虹挑染",
+      "个性双色内层挂耳染"
+    ],
+    "label": "挂耳染",
+    "en": "two-tone peekaboo inner-layer hair dye (dark outer hair with vibrant contrasting inner streaks)"
+  },
+  {
+    "cat": "发色与染发工艺",
+    "terms": [
+      "星空发",
+      "流光发",
+      "半透明发光发梢",
+      "半透明星屑发光发梢"
+    ],
+    "label": "星空发",
+    "en": "luminescent translucent hair tips embedded with tiny glowing stardust particles"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "异色瞳",
+      "鸳鸯眼",
+      "金蓝异瞳",
+      "红蓝异瞳",
+      "神秘金蓝双色异瞳"
+    ],
+    "label": "异色瞳",
+    "en": "striking heterochromia eyes, one icy sapphire blue iris and one glowing amber gold iris"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "竖瞳",
+      "猫眼竖瞳",
+      "龙瞳",
+      "蛇瞳",
+      "凛冽宝石感细长竖瞳"
+    ],
+    "label": "猫眼竖瞳",
+    "en": "slit vertical reptile/feline pupils inside jewel-like glowing irises"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "心形高光瞳",
+      "少女漫画星瞳",
+      "梦幻高光眼",
+      "少女漫梦幻高光眼瞳"
+    ],
+    "label": "心形高光瞳",
+    "en": "sparkling shojo-manga style catchlights inside bright expressive irises"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "星星眼",
+      "星芒瞳",
+      "推子星瞳",
+      "璀璨六芒星高光眼瞳"
+    ],
+    "label": "星星眼",
+    "en": "sparkling star-shaped catchlights inside vibrant detailed irises (idol starry eyes)"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "圈圈眼",
+      "蚊香眼",
+      "晕头转向眼"
+    ],
+    "label": "呆萌漩涡圈圈眼",
+    "en": "dizzy spiral pupils, flustered cute expression"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "高光消失",
+      "空洞眼神",
+      "死鱼眼",
+      "暗淡无光瞳",
+      "失去高光的幽暗空洞眼神"
+    ],
+    "label": "高光消失",
+    "en": "empty lifeless dark eyes completely devoid of catchlights, eerie unsettling stare"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "发光瞳",
+      "荧光眼",
+      "魔眼",
+      "轮回眼",
+      "机械电子瞳",
+      "全息瞄准环机械发光瞳"
+    ],
+    "label": "发光瞳",
+    "en": "cybernetic glowing iris with concentric HUD reticle rings"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "下垂眼",
+      "狗狗眼",
+      "无辜垂眼",
+      "tareme",
+      "温柔无辜狗狗下垂眼"
+    ],
+    "label": "下垂眼",
+    "en": "soft droopy tareme puppy eyes, gentle approachable gaze"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "吊梢眼",
+      "丹凤眼",
+      "狐狸眼",
+      "猫系挑眼",
+      "tsurime",
+      "凌厉魅惑上挑狐狸眼"
+    ],
+    "label": "吊梢眼",
+    "en": "sharp upturned tsurime fox eyes with winged outer corners"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "长睫毛",
+      "白睫毛",
+      "雪霜睫毛",
+      "太阳花睫毛",
+      "覆雪般纤长银白眼睫"
+    ],
+    "label": "长睫毛",
+    "en": "long frosty silver-white eyelashes catching soft light"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "烟熏妆",
+      "哥特暗黑妆",
+      "小恶魔妆",
+      "暗黑哥特浓重烟熏唇妆"
+    ],
+    "label": "烟熏妆",
+    "en": "dramatic dark charcoal smoky eye makeup paired with deep plum-black lipstick"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "微醺妆",
+      "宿醉妆",
+      "晒伤妆",
+      "蜜桃腮红",
+      "眼下腮红",
+      "日系微醺眼下绯红腮红"
+    ],
+    "label": "微醺妆",
+    "en": "igari drunk-blush makeup, soft pink flush blended across cheeks and nose bridge"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "清透伪素颜",
+      "水光肌",
+      "奶油肌",
+      "白开水妆",
+      "清透水光伪素颜裸妆"
+    ],
+    "label": "清透伪素颜",
+    "en": "dewy glass-skin no-makeup look, translucent skin glow, sheer nude-pink lip gloss"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "唐代花钿",
+      "额间朱砂",
+      "梅花妆",
+      "面靥",
+      "斜红",
+      "金箔妆",
+      "盛唐额间赤金牡丹花钿"
+    ],
+    "label": "唐代花钿",
+    "en": "classical Tang-dynasty crimson-and-gold floral huadian forehead mark, delicate dimple dots"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "战损妆",
+      "擦伤",
+      "创可贴",
+      "鼻梁创可贴",
+      "血迹",
+      "脸颊轻擦伤配可爱创可贴"
+    ],
+    "label": "战损妆",
+    "en": "subtle battle smudges on cheek with a cute adhesive bandage across nose bridge"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "魔纹",
+      "发光契约纹",
+      "符文印记",
+      "图腾刺青",
+      "奥术铭文",
+      "发光奥术符文契约印记"
+    ],
+    "label": "发光契约纹",
+    "en": "intricate glowing arcane filigree rune markings pulsing softly on skin"
+  },
+  {
+    "cat": "眼瞳、五官与妆容纹饰",
+    "terms": [
+      "美甲",
+      "痛甲",
+      "穿戴甲",
+      "法式美甲",
+      "猫眼美甲",
+      "黑色指甲",
+      "精致碎钻延长水光美甲"
+    ],
+    "label": "穿戴甲",
+    "en": "long manicured almond nails with iridescent magnetic cat-eye gel and tiny rhinestones"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "微笑",
+      "浅笑",
+      "温柔笑",
+      "治愈笑容",
+      "温柔弯眼治愈浅笑"
+    ],
+    "label": "温柔笑",
+    "en": "warm gentle eye-smile, serene upturned lips"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "开怀大笑",
+      "元气露齿笑",
+      "灿烂笑容",
+      "明媚阳光元气灿笑"
+    ],
+    "label": "开怀大笑",
+    "en": "radiant carefree open-mouthed laugh, bright crinkled eyes"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "坏笑",
+      "邪魅一笑",
+      "挑衅笑",
+      "歪嘴笑",
+      "戏谑挑眉单侧坏笑"
+    ],
+    "label": "邪魅一笑",
+    "en": "confident teasing smirk, one eyebrow slightly raised"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "害羞",
+      "脸红",
+      "耳根泛红",
+      "腼腆微笑",
+      "腼腆低眸脸颊微红"
+    ],
+    "label": "耳根泛红",
+    "en": "bashful blush across cheeks, shyly averted gaze, gentle timid expression"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "咬唇",
+      "轻咬下唇",
+      "忍耐表情",
+      "欲言又止轻咬粉唇"
+    ],
+    "label": "轻咬下唇",
+    "en": "gently biting lower lip, glistening wet lip highlight, emotional tension"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "吐舌",
+      "略略略",
+      "俏皮鬼脸",
+      "wink眨眼",
+      "单眼俏皮Wink吐舌"
+    ],
+    "label": "略略略",
+    "en": "playful one-eye wink with tip of pink tongue sticking out"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "鼓腮帮",
+      "生气嘟嘴",
+      "河豚脸",
+      "pout",
+      "委屈鼓起包子脸嘟嘴"
+    ],
+    "label": "鼓腮帮",
+    "en": "cute puffed-cheeks pouting expression, furrowed brows"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "哭泣",
+      "落泪",
+      "泪眼婆娑",
+      "梨花带雨",
+      "眼角含泪",
+      "晶莹泪珠滑落脸颊"
+    ],
+    "label": "泪眼婆娑",
+    "en": "glistening crystal teardrops welling up on lower lashes and rolling down cheek"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "沉思神态",
+      "静谧凝思",
+      "若有所思",
+      "放空远眺",
+      "静谧若有所思神态"
+    ],
+    "label": "沉思神态",
+    "en": "pensive contemplative expression, calm distant gaze, serene relaxed lips"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "冷漠",
+      "厌世脸",
+      "高冷俯视",
+      "鄙夷眼神",
+      "看垃圾的眼神",
+      "冰冷孤傲蔑视眼神"
+    ],
+    "label": "厌世脸",
+    "en": "icy disdainful gaze looking down through half-closed lashes, chin slightly raised"
+  },
+  {
+    "cat": "表情神态与微表情",
+    "terms": [
+      "惊讶",
+      "瞳孔地震",
+      "捂嘴惊呼",
+      "微微睁大双眸惊讶捂嘴"
+    ],
+    "label": "瞳孔地震",
+    "en": "wide surprised eyes, hand delicately covering parted mouth"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "站姿",
+      "S型曲线站姿",
+      "插腰站立",
+      "抱臂站立",
+      "背手站立",
+      "优雅重心微偏S曲线站姿"
+    ],
+    "label": "插腰站立",
+    "en": "graceful contrapposto standing pose, hands clasped gently behind back"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "W坐姿",
+      "鸭子坐",
+      "萝莉坐",
+      "wariza",
+      "地板乖巧W型鸭子坐"
+    ],
+    "label": "鸭子坐",
+    "en": "cute wariza W-sitting flat on floor, knees together and calves folded outward"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "正坐",
+      "日式跪坐",
+      "seiza",
+      "端庄塌塌米日式正坐"
+    ],
+    "label": "日式跪坐",
+    "en": "polite Japanese seiza kneeling posture on tatami, hands resting neatly on thighs"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "抱膝坐",
+      "蜷缩坐姿",
+      "窗台坐姿",
+      "静坐窗台双手抱膝"
+    ],
+    "label": "抱膝坐",
+    "en": "perched on a wide window ledge hugging knees to chest, chin resting on arms"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "翘二郎腿",
+      "交叠双腿坐姿",
+      "女王坐姿",
+      "高脚椅修长双腿交叠坐姿"
+    ],
+    "label": "翘二郎腿",
+    "en": "seated gracefully with long legs crossed at thigh, dangling high-heel shoe"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "侧卧",
+      "贵妃卧",
+      "趴在床上",
+      "托腮晃小腿",
+      "俯卧床榻托腮晃动小腿"
+    ],
+    "label": "贵妃卧",
+    "en": "lying prone on stomach on soft bedsheets, propping chin in hands with lower legs playfully kicked up behind"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "仰卧",
+      "躺在花海",
+      "躺在水中",
+      "发丝散开",
+      "仰躺俯拍长发如扇铺散"
+    ],
+    "label": "躺在花海",
+    "en": "lying flat on back viewed from above, long hair fanned out radially around head"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "伸懒腰",
+      "高举双手",
+      "晨起慵懒",
+      "双手高举舒展腰肢伸懒腰"
+    ],
+    "label": "伸懒腰",
+    "en": "stretching both arms high overhead upon waking, arched slender waist"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "回眸",
+      "回头看镜头",
+      "背影回望",
+      "侧身驻足越肩回眸"
+    ],
+    "label": "回头看镜头",
+    "en": "turning head over shoulder to look back at camera, hair and hem mid-swirl"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "撩头发",
+      "扎马尾动作",
+      "咬发圈",
+      "嘴角轻咬发圈双手束发"
+    ],
+    "label": "撩头发",
+    "en": "holding a hair tie between lips while both hands gather hair up into a ponytail, exposed nape and underarms"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "提裙礼",
+      "优雅屈膝礼",
+      "curtsy",
+      "双手轻提裙摆屈膝行礼"
+    ],
+    "label": "提裙礼",
+    "en": "delicately pinching side hems of wide skirt in a graceful curtsy bow"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "系鞋带动作",
+      "整理靴筒",
+      "坐姿穿鞋",
+      "坐姿俯身整理鞋靴绑带"
+    ],
+    "label": "系鞋带动作",
+    "en": "seated and leaning forward, hands neatly tying leather boot laces"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "推眼镜",
+      "扶镜框",
+      "指尖轻推鼻梁镜框反光"
+    ],
+    "label": "推眼镜",
+    "en": "middle finger lightly adjusting bridge of glasses, cool lens glint"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "比心",
+      "脸颊比心",
+      "双手比耶",
+      "猫爪手势",
+      "嘘手势",
+      "食指抵唇轻做噤声手势"
+    ],
+    "label": "脸颊比心",
+    "en": "index finger pressed softly against lips in a secretive shushing gesture"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "拔刀斩",
+      "居合斩姿势",
+      "拉弓射箭",
+      "施法手势",
+      "空中跃起",
+      "凌空跃起拔刀一闪动态"
+    ],
+    "label": "拔刀斩",
+    "en": "dynamic mid-air leaping action pose, drawing katana blade with motion blur arc"
+  },
+  {
+    "cat": "人体姿势、互动动态与手部特写",
+    "terms": [
+      "公主抱",
+      "壁咚",
+      "牵手回望",
+      "膝枕",
+      "背后拥抱",
+      "温柔膝枕俯视互动"
+    ],
+    "label": "公主抱",
+    "en": "intimate lap-pillow perspective, subject looking down tenderly while stroking hair"
+  }
+]

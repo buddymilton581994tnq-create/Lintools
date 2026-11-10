@@ -1,0 +1,498 @@
+[
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "哥特式大教堂",
+      "飞扶壁",
+      "肋架拱顶",
+      "玫瑰花窗教堂",
+      "gothic architecture",
+      "高耸哥特肋架拱顶与玫瑰花窗圣堂"
+    ],
+    "label": "哥特式大教堂",
+    "en": "soaring Gothic cathedral architecture, pointed ribbed vaults, flying buttresses, intricate stained-glass rose window casting colored light beams"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "巴洛克宫殿",
+      "鎏金穹顶",
+      "镜厅",
+      "巴洛克建筑",
+      "baroque palace",
+      "巴洛克鎏金浮雕天顶画与水晶镜厅"
+    ],
+    "label": "巴洛克宫殿",
+    "en": "opulent Baroque palace hall, trompe-loeil ceiling frescoes, gilded Corinthian pilasters, towering arched mirrors and crystal chandeliers"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "粗野主义",
+      "清水混凝土建筑",
+      "几何纪念碑建筑",
+      "brutalist architecture",
+      "粗野主义巨型悬挑清水混凝土几何建筑"
+    ],
+    "label": "粗野主义",
+    "en": "monumental Brutalist architecture, raw board-formed exposed concrete cantilevers, stark geometric shadows, monolithic scale"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "包豪斯",
+      "现代主义建筑",
+      "玻璃幕墙几何建筑",
+      "bauhaus",
+      "包豪斯现代主义白墙钢框玻璃几何空间"
+    ],
+    "label": "包豪斯",
+    "en": "Bauhaus modernist architecture, clean white stucco volumes, industrial steel-grid curtain walls, functionalist primary-color accents"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "装饰艺术建筑",
+      "流线型摩天楼",
+      "黑金几何大厅",
+      "art deco architecture",
+      "Art Deco黑金几何太阳纹黄铜摩天楼大厅"
+    ],
+    "label": "装饰艺术建筑",
+    "en": "1920s Art Deco skyscraper lobby, black marble walls inlaid with polished brass sunburst chevron geometry, stepped ziggurat sconces"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "新艺术运动建筑",
+      "植物曲线铁艺",
+      "慕夏风建筑",
+      "art nouveau interior",
+      "新艺术运动蜿蜒植物锻铁与彩玻穹顶回廊"
+    ],
+    "label": "植物曲线铁艺",
+    "en": "Art Nouveau architectural conservatory, sinuous whiplash wrought-iron botanical arches, iridescent stained-glass skylight dome, mosaic floor"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "徽派建筑",
+      "马头墙",
+      "粉墙黛瓦",
+      "江南天井四水归堂",
+      "烟雨江南粉墙黛瓦高耸马头墙与四水归堂天井"
+    ],
+    "label": "徽派建筑",
+    "en": "traditional Huizhou architecture, whitewashed walls with stepped grey-tile horse-head gables, stone-paved skywell courtyard collecting rain"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "中式飞檐斗拱",
+      "歇山顶",
+      "重檐庑殿顶",
+      "朱漆宫墙",
+      "重檐歇山顶层叠木构斗拱与琉璃瓦飞檐"
+    ],
+    "label": "中式飞檐斗拱",
+    "en": "classical Chinese palace timber architecture, interlocking dougong brackets, upturned glazed-tile eaves with mythical ridge beasts, vermilion pillars"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "苏州园林",
+      "太湖石假山",
+      "月洞门",
+      "曲桥水榭",
+      "漏窗花墙",
+      "苏州古典园林月洞门框景与太湖石曲桥水榭"
+    ],
+    "label": "苏州园林",
+    "en": "classical Suzhou scholar garden, circular moon gate framing porous Taihu limestone rockery, zigzag timber bridge over lotus pond, lattice windows"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "枯山水庭院",
+      "日式禅院",
+      "白砂青苔庭园",
+      "缘侧走廊",
+      "京都禅宗寺院白砂波纹枯山水与木质缘侧"
+    ],
+    "label": "枯山水庭院",
+    "en": "Kyoto Zen temple karesansui dry landscape garden, raked white gravel ripples around moss-covered stones, weathered hinoki wood engawa veranda"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "摩尔式庭院",
+      "伊斯兰几何瓷砖",
+      "钟乳石拱门",
+      "阿尔罕布拉宫",
+      "摩尔式蜂窝钟乳石雕花拱廊与几何镜面水池"
+    ],
+    "label": "摩尔式庭院",
+    "en": "Moorish palace courtyard, intricate muqarnas honeycomb stucco arches, zellige geometric tilework, still reflecting pool lined with myrtle hedges"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "北欧木屋",
+      "A字木屋",
+      "极简原木室内",
+      "scandinavian cabin",
+      "北欧森林全景落地窗A字型冷杉原木小屋"
+    ],
+    "label": "北欧木屋",
+    "en": "minimalist Nordic A-frame timber cabin nestled in pine forest, floor-to-ceiling glass gable, warm birch wood interior, cast-iron fireplace"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "下沉式庭院",
+      "极简美术馆",
+      "安藤忠雄光影建筑",
+      "光之廊道",
+      "安藤忠雄式极简清水混凝土水景与几何切光美术馆"
+    ],
+    "label": "下沉式庭院",
+    "en": "Tadao Ando inspired minimalist concrete museum, smooth Tie-rod perforated concrete walls, dramatic razor-sharp slit of natural daylight, shallow water mirror"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "维多利亚温室",
+      "水晶宫玻璃花房",
+      "锻铁植物园",
+      "victorian conservatory",
+      "维多利亚古典白色锻铁拱顶玻璃植物温室"
+    ],
+    "label": "维多利亚温室",
+    "en": "grand Victorian wrought-iron glass conservatory dome, overgrown with giant tropical ferns and climbing white roses, sunbeams through mist"
+  },
+  {
+    "cat": "世界建筑流派与空间构造",
+    "terms": [
+      "溶洞地下圣殿",
+      "悬空栈道古寺",
+      "绝壁悬空寺",
+      "万丈绝壁栈道镶嵌的木构飞阁悬空古寺"
+    ],
+    "label": "溶洞地下圣殿",
+    "en": "ancient wooden cliffside hanging monastery anchored into sheer vertical canyon rockface, precarious timber walkways, swirling mountain mist"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "交响乐团",
+      "金色音乐厅",
+      "指挥家舞台",
+      "管弦乐现场",
+      "维也纳风格鎏金音乐厅交响乐团恢弘演奏现场"
+    ],
+    "label": "交响乐团",
+    "en": "grand philharmonic concert hall, conductor on podium with baton raised, full symphony orchestra with gleaming brass and cello sections, warm golden acoustics"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "摇滚音乐节",
+      "万人体育场演唱会",
+      "激光矩阵舞台",
+      "livehouse现场",
+      "万人露天摇滚音乐节激光矩阵与冷焰火舞台"
+    ],
+    "label": "摇滚音乐节",
+    "en": "massive stadium rock concert stage, blinding laser beam matrix cutting through haze, pyrotechnic spark fountains, silhouette of guitarist against LED wall"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "爵士乐俱乐部",
+      "萨克斯独奏",
+      "复古地下酒馆舞台",
+      "jazz club",
+      "昏暗丝绒帷幕地下爵士俱乐部琥珀追光独奏"
+    ],
+    "label": "爵士乐俱乐部",
+    "en": "intimate smoky underground jazz club, crimson velvet curtains, warm amber spotlight on brass saxophone and upright double bass, vintage microphone"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "百老汇歌舞剧",
+      "歌剧院舞台",
+      "红丝绒大幕",
+      "戏剧追光",
+      "古典歌剧院红丝绒流苏大幕与高角度戏剧追光"
+    ],
+    "label": "百老汇歌舞剧",
+    "en": "classical opera house proscenium stage, heavy crimson velvet curtains with gold tassels, steep high-contrast theatrical follow-spot on wooden stage floor"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "T台走秀",
+      "高定时装周",
+      "秀场聚光灯",
+      "runway show",
+      "巴黎高定时装周镜面长T台与阵列闪光灯"
+    ],
+    "label": "高定时装周",
+    "en": "haute couture fashion week runway, glossy black reflective catwalk, dramatic overhead truss lighting, rows of camera lenses in dark audience"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "马戏团帐篷",
+      "空中飞人舞台",
+      "复古红白条纹马戏团",
+      "复古奇幻红白条纹马戏团穹顶帐篷与彩灯圆台"
+    ],
+    "label": "马戏团帐篷",
+    "en": "vintage grand circus big-top tent interior, red and cream striped canvas canopy, festooned warm string lights, sawdust ring and trapeze swings"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "皮影戏幕布",
+      "非遗戏台",
+      "古戏台灯火",
+      "社戏舞台",
+      "江南古镇临水雕花木戏台与红灯笼夜戏氛围"
+    ],
+    "label": "皮影戏幕布",
+    "en": "traditional Chinese carved-wood waterside opera stage at night, warm glowing red palace lanterns reflecting in canal, painted stage backdrop"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "全息虚拟演唱会",
+      "赛博舞台",
+      "粒子投影舞台",
+      "未来感360度环形全息粒子投影虚拟偶像舞台"
+    ],
+    "label": "赛博舞台",
+    "en": "futuristic 360-degree holographic concert arena, floating translucent AR lyrics and luminescent particle ribbons, neon light-sticks sea"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "ゴボ投影灯",
+      "树影百叶窗花纹光",
+      "图案切割舞台光",
+      "gobo lighting",
+      "Gobo图案切割聚光灯投射几何光影斑驳效果"
+    ],
+    "label": "ゴボ投影灯",
+    "en": "theatrical gobo stencil spotlight projecting crisp geometric lattice shadows across subject and backdrop"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "干冰烟雾舞台",
+      "贴地云雾特效",
+      "低空舞台冷雾",
+      "贴地翻涌的浓密白色干冰云雾与逆光光束"
+    ],
+    "label": "干冰烟雾舞台",
+    "en": "thick billowing low-lying dry ice fog blanketing stage floor, backlit by dramatic cyan and amber floor par-lights"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "彩带礼花炮",
+      "金箔漫天飞舞",
+      "谢幕金雨",
+      "confetti shower",
+      "盛大演出谢幕瞬间漫天飘落的璀璨金箔礼花雨"
+    ],
+    "label": "彩带礼花炮",
+    "en": "climactic stage finale shower of shimmering gold metallic confetti ribbons fluttering through bright spotlights"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "双色戏剧轮廓光",
+      "红蓝撞色舞台光",
+      "冰火双色背光",
+      "高饱和冰蓝与炽烈绯红双侧戏剧对撞轮廓光"
+    ],
+    "label": "冰火双色背光",
+    "en": "dramatic dual-color theatrical gel rim lighting, intense electric sapphire blue from left and fiery crimson from right"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "后台化妆间",
+      "灯泡好莱坞化妆镜",
+      "演出候场走廊",
+      "排满暖黄球泡灯的复古后台演员化妆镜台"
+    ],
+    "label": "后台化妆间",
+    "en": "backstage dressing room vanity mirror framed by glowing warm tungsten globe bulbs, costume racks and script pages"
+  },
+  {
+    "cat": "舞台演艺、乐团现场与戏剧灯光",
+    "terms": [
+      "街头艺人夜演",
+      "欧洲石板路街头演奏",
+      "手风琴大提琴街头",
+      "雨后欧洲鹅卵石广场路灯下的街头大提琴演奏"
+    ],
+    "label": "街头艺人夜演",
+    "en": "busker performing cello on rain-slicked European cobblestone square under warm cast-iron streetlamp, open velvet instrument case"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "瑞士国际主义排版",
+      "网格系统海报",
+      "包豪斯海报设计",
+      "swiss typography",
+      "瑞士国际主义严谨非对称网格与极简无衬线海报版式"
+    ],
+    "label": "网格系统海报",
+    "en": "Swiss International Typographic Style poster layout, strict asymmetric modular grid, bold clean sans-serif typography, negative space"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "时尚杂志封面",
+      "Vogue封面排版",
+      "时装画报版式",
+      "fashion magazine cover",
+      "高级时装杂志封面大号衬线刊头与出血裁切构图"
+    ],
+    "label": "时尚杂志封面",
+    "en": "high-fashion editorial magazine cover layout, elegant high-contrast Didot masthead typography overlapping subject, clean issue barcode and subheads"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "中世纪泥金装饰手抄本",
+      "羊皮纸古籍花体字",
+      "illuminated manuscript",
+      "中世纪欧洲羊皮纸泥金藤蔓花边框与哥特花体手抄本"
+    ],
+    "label": "羊皮纸古籍花体字",
+    "en": "medieval illuminated manuscript page on aged vellum, intricate gold-leaf acanthus vine border, ultramarine and vermilion ornate drop-cap miniatures"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "塔罗牌卡面设计",
+      "鎏金星象边框卡面",
+      "奥术卡牌框",
+      "tarot card frame",
+      "新艺术风格精雕鎏金星象日月图腾塔罗牌边框版式"
+    ],
+    "label": "奥术卡牌框",
+    "en": "ornate esoteric Tarot card illustration framed by gilded Art Nouveau Filigree border, celestial sun-moon-star corner emblems, Roman numeral cartouche"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "日式轻小说封面",
+      "日系商业插画封面排版",
+      "light novel cover",
+      "日系轻小说商业封面鲜明几何标题字与角标构图"
+    ],
+    "label": "日式轻小说封面",
+    "en": "Japanese light novel cover illustration composition, dynamic character focal point with intentional upper/side breathing room for graphic title design"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "复古博物学图鉴",
+      "植物学铜版画手稿",
+      "达尔文手绘生物图谱",
+      "botanical plate",
+      "18世纪自然博物学手绘水彩铜版画标本解构图鉴"
+    ],
+    "label": "复古博物学图鉴",
+    "en": "18th-century natural history encyclopedic illustration plate, detailed cross-section botanical/zoological studies on cream laid paper, Latin calligraphy labels"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "蓝图工程制图",
+      "机械爆炸分解图",
+      "达芬奇手稿制图",
+      "technical blueprint",
+      "精密工业正交三视图与零部件爆炸分解工程蓝图"
+    ],
+    "label": "蓝图工程制图",
+    "en": "precise technical engineering blueprint schematic, isometric exploded-view diagram, fine white vector dimension lines and callout annotations on Prussian blue grid"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "酸性设计海报",
+      "千禧液态金属字体",
+      "Y2K视觉排版",
+      "acid graphics",
+      "先锋酸性平面设计液态铬金属扭曲字体与网格噪点海报"
+    ],
+    "label": "酸性设计海报",
+    "en": "avant-garde acid graphic design poster, liquid chrome 3D typography, warped checkerboard wireframe, halftone grain and holographic stickers"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "中国古籍线装书版式",
+      "宋版书刻本",
+      "朱印藏书章竖排书页",
+      "传统宣纸乌丝栏宋版雕版印刷书页与朱文藏书印章"
+    ],
+    "label": "宋版书刻本",
+    "en": "traditional Song-dynasty woodblock printed book layout on xuan paper, black ruled vertical border columns, carved cinnabar red collector seals"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "邮票齿孔画幅",
+      "纪念邮票微缩版画",
+      "雕版凹印邮票",
+      "postage stamp art",
+      "精细钢版凹印线条与锯齿边框的古典纪念邮票设计"
+    ],
+    "label": "邮票齿孔画幅",
+    "en": "vintage engraved commemorative postage stamp design, die-cut perforated edges, fine intaglio crosshatching lines, denomination numeral in corner"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "黑胶唱片封套",
+      "复古专辑封面",
+      "迷幻摇滚唱片封面",
+      "vinyl album cover",
+      "经典方形黑胶唱片封套极具张力的超现实艺术封面"
+    ],
+    "label": "黑胶唱片封套",
+    "en": "iconic square vinyl LP album cover art,轻微 worn cardboard sleeve edges, bold conceptual visual metaphor, timeless graphic balance"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "剪纸拼贴海报",
+      "波普丝网印刷",
+      "安迪沃霍尔风版画",
+      "pop art screenprint",
+      "高饱和撞色丝网印刷套色错位与波普网点艺术海报"
+    ],
+    "label": "剪纸拼贴海报",
+    "en": "vibrant Pop Art silkscreen print, bold halftone Ben-Day dots, slightly offset CMYK color registration, high-contrast graphic contours"
+  },
+  {
+    "cat": "平面视觉、书籍装帧与字体排版设计",
+    "terms": [
+      "立体书纸艺",
+      "多层光影纸雕盒",
+      "pop-up book art",
+      "打开的精巧立体书多层折纸剧场与暖色藏光纸雕"
+    ],
+    "label": "立体书纸艺",
+    "en": "intricate open pop-up book paper theater, multi-layered laser-cut paper silhouettes with hidden warm LED backlighting casting depth shadows"
+  }
+]

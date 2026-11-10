@@ -1,0 +1,488 @@
+[
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "空间站环形船坞",
+      "近地轨道太空站",
+      "太空电梯基地",
+      "orbital station",
+      "巨型离心旋转圆环近地轨道空间站与蓝白地球弧线"
+    ],
+    "label": "太空电梯基地",
+    "en": "colossal rotating centrifugal ring orbital space station suspended above glowing blue curvature of Earth, solar panel arrays catching harsh sunlight"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "行星际探索漫游车",
+      "六轮火星车",
+      "外星科考装甲车",
+      "planetary rover",
+      "重型六轮独立悬挂外星科考漫游车与机械采样臂"
+    ],
+    "label": "六轮火星车",
+    "en": "heavy-duty six-wheeled pressurized planetary exploration rover, articulated robotic core-sampling arm, solar dust on white composite hull"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "超音速隐身战机",
+      "舰载战斗机甲板弹射",
+      "矢量推力尾焰",
+      "fighter jet",
+      "航母蒸汽甲板蓄势待发的鸭翼隐身战机与蓝紫加力尾焰"
+    ],
+    "label": "矢量推力尾焰",
+    "en": "sleek fifth-generation stealth fighter jet on rain-wet aircraft carrier flight deck, glowing blue-violet Mach-diamond afterburner plumes, steam rising"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "大航海风帆战列舰",
+      "三桅全装帆船",
+      "黄金鹿号古帆船",
+      "galleon ship",
+      "17世纪大航海时代满帆破浪的三层甲板鎏金尾楼风帆战列舰"
+    ],
+    "label": "三桅全装帆船",
+    "en": "majestic 17th-century three-masted Spanish galleon under full billowing canvas sails, ornate gilded stern lantern gallery, crashingemerald ocean swells"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "蒸汽朋克飞艇",
+      "装甲齐柏林飞船",
+      "螺旋桨浮空战舰",
+      "steampunk airship",
+      "悬挂多组黄铜螺旋桨与巨型气囊的维多利亚装甲浮空飞艇"
+    ],
+    "label": "蒸汽朋克飞艇",
+    "en": "colossal steampunk dreadnought airship cruising through cloud sea, riveted brass hull, spinning wooden-blade propellers, canvas balloon envelope"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "深海载人潜水器",
+      "球形耐压舱潜艇",
+      "万米深渊探照灯",
+      "deep sea submersible",
+      "开启高强探照灯穿透深海黑暗的钛合金球形全景潜水器"
+    ],
+    "label": "深海载人潜水器",
+    "en": "high-tech spherical acrylic-dome deep-sea research submersible, powerful halogen floodlights illuminating hydrothermal vents in pitch-black abyss"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "蒸汽机车火车头",
+      "东方快车复古车厢",
+      "暴雪中的蒸汽列车",
+      "steam locomotive",
+      "喷涌滚滚白烟穿越雪山高架石桥的铸铁黑金蒸汽机车"
+    ],
+    "label": "蒸汽机车火车头",
+    "en": "vintage cast-iron black steam locomotive thundering across a stone viaduct bridge in blizzard, billowing white steam clouds, warm glowing passenger windows"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "赛博重型机甲格纳库",
+      "巨型机器人整备工厂",
+      "机械臂维修平台",
+      "mecha hangar",
+      "火花飞溅的地下巨型机甲整备格纳库与悬吊桁架"
+    ],
+    "label": "机械臂维修平台",
+    "en": "cavernous underground mecha maintenance hangar bay, towering bipedal armor unit in scaffolding gantry, welding sparks, hydraulic cables and warning stripes"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "复古敞篷老爷车",
+      "摩纳哥古董跑车",
+      "30年代流线型跑车",
+      "vintage roadster",
+      "镀铬进气格栅与酒红真皮座椅的1930年代流线型古董敞篷跑车"
+    ],
+    "label": "复古敞篷老爷车",
+    "en": "classic 1930s Coachbuilt streamlined roadster, mirror-polished chrome wire wheels and grille, British racing green paint, burgundy leather cockpit"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "カフェレーサー复古摩托",
+      "赛博荧光重机车",
+      "流线型导流罩赛车摩托",
+      "裸露风冷发动机金属管线的复古咖啡骑士改装机车"
+    ],
+    "label": "赛博荧光重机车",
+    "en": "custom Cafe Racer vintage motorcycle, brushed aluminum fuel tank, exposed air-cooled twin engine fins, leather solo saddle, clip-on handlebars"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "粒子对撞机实验室",
+      "托卡马克核聚变装置",
+      "高能物理环形腔体",
+      "布满精密超导线圈与金箔管线的环形高能粒子对撞机核心腔"
+    ],
+    "label": "粒子对撞机实验室",
+    "en": "futuristic high-energy particle collider detector cavern, concentric rings of gold-foil cryogenic conduits, fiber-optic bundles, symmetrical engineering grandeur"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "天文台巨型望远镜",
+      "穹顶射电望远镜阵列",
+      "高山星空观测站",
+      "observatory dome",
+      "雪山之巅敞开银色球形穹顶仰望银河的巨型光学天文望远镜"
+    ],
+    "label": "天文台巨型望远镜",
+    "en": "high-altitude mountaintop astronomical observatory with open silver slit dome, massive segmented-mirror telescope aimed at vibrant Milky Way core"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "精密陀飞轮机芯",
+      "镂空机械表齿轮微距",
+      "瑞士钟表擒纵机构",
+      "tourbillon movement",
+      "蓝钢螺丝与红宝石轴承交错的精密镂空陀飞轮机械机芯微距"
+    ],
+    "label": "精密陀飞轮机芯",
+    "en": "extreme macro view of Swiss haute horlogerie skeleton tourbillon watch movement, Côtes de Genève bridges, blued steel screws, ruby jewel bearings, brass gears"
+  },
+  {
+    "cat": "航空航天、航海舰船与重工机械",
+    "terms": [
+      "极地破冰科考船",
+      "红白破冰船碾碎浮冰",
+      "北极冰海航行",
+      "橘红舰首劈开蔚蓝北极厚重浮冰层的重型极地破冰科考船"
+    ],
+    "label": "北极冰海航行",
+    "en": "heavy polar icebreaker vessel with bright orange reinforced hull crushing through thick turquoise Arctic pack ice, Radar masts, low polar sun"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "山海经异兽",
+      "青丘九尾白狐",
+      "夫诸白鹿",
+      "东方瑞兽麒麟",
+      "《山海经》云雾仙山间踏火腾云的鎏金麟甲东方瑞兽麒麟"
+    ],
+    "label": "山海经异兽",
+    "en": "mythical Qilin auspicious beast from Classic of Mountains and Seas, iridescent jade-and-gold scales, branching antlers, walking on swirling auspicious clouds"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "烛龙",
+      "应龙展翅",
+      "东方苍龙腾渊",
+      "金龙盘柱",
+      "风暴雷云间金鳞熠熠吞吐明珠的东方五爪苍龙"
+    ],
+    "label": "应龙展翅",
+    "en": "majestic Eastern five-clawed azure dragon coiling through thunderclouds, gleaming metallic gold scales, flowing whiskers, luminous pearl of lightning"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "北欧女武神瓦尔基里",
+      "英灵殿天马女武神",
+      "奥丁乌鸦卢恩符文",
+      "valkyrie",
+      "极光夜空下身披白银羽翼甲胄手持冈格尼尔圣枪的北欧女武神"
+    ],
+    "label": "英灵殿天马女武神",
+    "en": "Norse mythology Valkyrie warrior maiden, winged silver helm, intricately engraved runic plate armor, glowing spear, aurora borealis sky"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "世界之树尤克特拉希尔",
+      "撑天巨树神庙",
+      "星光巨树根系",
+      "yggdrasil",
+      "树冠托起璀璨星河且根系涌出灵泉的神话世界之树尤克特拉希尔"
+    ],
+    "label": "撑天巨树神庙",
+    "en": "colossal mythical World Tree Yggdrasil reaching into cosmos, canopy woven with nebulae and stars, ancient mossy roots cradling glowing spring of wisdom"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "奥林匹斯神殿众神",
+      "雅典娜智慧女神",
+      "阿波罗黄金战车",
+      "greek mythology",
+      "云端大理石科林斯神柱间披挂金盾与猫头鹰的古希腊智慧女神"
+    ],
+    "label": "奥林匹斯神殿众神",
+    "en": "classical Greek mythology deity atop Mount Olympus, white marble Corinthian colonnade, gilded bronze aegis shield, olive branch crown, golden Mediterranean light"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "阿努比斯胡狼神",
+      "古埃及太阳船荷鲁斯",
+      "亡灵书黄金圣甲虫",
+      "egyptian deity",
+      "古埃及砂岩方尖碑前佩戴黄金青金石胸饰的神圣荷鲁斯鹰神"
+    ],
+    "label": "阿努比斯胡狼神",
+    "en": "ancient Egyptian deity Horus in monumental sandstone temple, falcon-crested golden crown with solar disc, glowing hieroglyphs, lapis lazuli and turquoise jewelry"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "凯尔特森林德鲁伊",
+      "石圈巨石阵秘仪",
+      "牡鹿森林之神",
+      "celtic druid",
+      "迷雾古橡树林与青苔巨石阵间吟唱自然魔法的凯尔特德鲁伊"
+    ],
+    "label": "牡鹿森林之神",
+    "en": "Celtic mythology druid in misty ancient oak grove, standing stones carved with swirling Triskele knots, glowing golden mistletoe sickle, white stag companion"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "亚瑟王湖中仙女",
+      "阿瓦隆迷雾圣剑",
+      "圆桌骑士圣杯",
+      "excalibur",
+      "阿瓦隆晨雾镜湖中白纱仙女双手托举散发光芒的誓约胜利之剑"
+    ],
+    "label": "圆桌骑士圣杯",
+    "en": "Arthurian legend Lady of the Lake emerging from glassy misty Avalon waters, raising jewel-hilted Excalibur sword wreathed in ethereal silver light"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "敦煌九色鹿",
+      "莫高窟瑞兽壁画",
+      "藻井莲花飞天神女",
+      "敦煌莫高窟青绿矿物壁画中周身散发佛光瑞气的灵动九色鹿"
+    ],
+    "label": "敦煌九色鹿",
+    "en": "sacred Nine-Colored Deer of Dunhuang mural legend, pristine white coat patterned with malachite green and cinnabar clouds, radiant golden halo"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "百鬼夜行绘卷",
+      "日式妖怪天狗狐火",
+      "浮世绘妖怪游行",
+      "hyakki yagyo",
+      "幽蓝狐火照亮的京都古街朱红鸟居下奇幻瑰丽的百鬼夜行绘卷"
+    ],
+    "label": "百鬼夜行绘卷",
+    "en": "folklore Hyakki Yagyo night parade of supernatural spirits beneath torii gates, floating blue kitsune-bi foxfire lanterns, whimsical paper umbrellas and masks"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "浴火凤凰涅槃",
+      "九天朱雀神鸟",
+      "鎏金火羽神鸟",
+      "phoenix rising",
+      "振翅冲破暗夜苍穹尾羽化作流金烈焰与火星的涅槃凤凰"
+    ],
+    "label": "浴火凤凰涅槃",
+    "en": "immortal phoenix bird rising in mid-air, expansive wings of molten gold and crimson flame feathers trailing glowing embers against dark sky"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "中世纪独角兽挂毯",
+      "千花图森林独角兽",
+      "月光白独角兽",
+      "月光蓝铃花森林中额生螺旋水晶长角的纯白神话独角兽"
+    ],
+    "label": "月光白独角兽",
+    "en": "mythical pure-white unicorn in moonlit bluebell glade, opalescent spiral horn, flowing silver mane, medieval mille-fleurs tapestry botanical richness"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "狮鹫骑士",
+      "皇家金羽狮鹫",
+      "鹰头狮身神兽",
+      "griffin",
+      "耸立于高山悬崖城堡之上金羽鹰首与矫健狮身交融的皇家狮鹫"
+    ],
+    "label": "狮鹫骑士",
+    "en": "majestic heraldic griffin perched on alpine castle battlement, golden eagle head and feathered wings, muscular lion hindquarters, dramatic mountain clouds"
+  },
+  {
+    "cat": "世界神话体系、史诗传奇与民俗图腾",
+    "terms": [
+      "深海利维坦巨兽",
+      "星海巨鲲扶摇",
+      "北冥有鱼化而为鹏",
+      "《逍遥游》北冥云海与璀璨星河间展翅如垂天之云的化鹏巨鲲"
+    ],
+    "label": "星海巨鲲扶摇",
+    "en": "colossal mythical Kunpeng leviathan soaring seamlessly between bioluminescent ocean waves and starry nebula clouds, translucent glowing fins spanning the horizon"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "深海发光水母",
+      "海月水母微距",
+      "幽蓝生物发光深海",
+      "bioluminescent jellyfish",
+      "幽暗深海中半透明伞盖流转霓虹青紫生物荧光的游弋水母"
+    ],
+    "label": "深海发光水母",
+    "en": "bioluminescent chrysaora jellyfish drifting in dark abyssal water, translucent bell pulsing with electric cyan and magenta veins, trailing delicate tentacles"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "雪豹高山巡视",
+      "喜马拉雅雪山雪豹",
+      "冰川岩壁雪豹",
+      "喜马拉雅暴风雪山脊岩石上灰白玫瑰斑纹厚毛凛冽凝视的雪豹"
+    ],
+    "label": "雪豹高山巡视",
+    "en": "elusive snow leopard perched on jagged Himalayan granite ridge in swirling snow, thick smoky-grey spotted fur, piercing pale-green eyes, long fluffy tail"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "蓝闪蝶雨林微距",
+      "大蓝闪蝶金属鳞片",
+      "蝴蝶翅膀结构色",
+      "热带雨林晨露叶片上折射璀璨金属结构色蓝光的闪蝶双翼微距"
+    ],
+    "label": "蓝闪蝶雨林微距",
+    "en": "macro photography of Blue Morpho butterfly resting on dewy rainforest fern, microscopic iridescent wing scales shimmering in brilliant cobalt blue"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "极地白鸮飞翔",
+      "哈利波特雪鸮",
+      "苔原展翅猫头鹰",
+      "snowy owl",
+      "金色琥珀双眸紧盯前方贴着雪原无声滑翔的纯白黑斑雪鸮"
+    ],
+    "label": "极地白鸮飞翔",
+    "en": "majestic snowy owl gliding low over snowfield with wings fully outstretched, pristine white plumage barred with dark flecks, intense golden-amber eyes"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "蜂鸟悬停采蜜",
+      "高速快门蜂鸟翡翠羽",
+      "花间蜂鸟凝固瞬间",
+      "1/8000秒高速快门凝固在扶桑花前喉羽闪烁绿宝石光泽的悬停蜂鸟"
+    ],
+    "label": "蜂鸟悬停采蜜",
+    "en": "high-speed shutter photography of ruby-throated hummingbird hovering mid-air sipping hibiscus nectar, frozen translucent wingbeat, iridescent emerald gorget feathers"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "红冠丹顶鹤雪地起舞",
+      "水墨意境仙鹤芦苇",
+      "北海道雪原丹顶鹤",
+      "晨雾缭绕的冰封溪流芦苇丛中引吭展翅对舞的丹顶鹤"
+    ],
+    "label": "水墨意境仙鹤芦苇",
+    "en": "pair of red-crowned cranes dancing gracefully in frosty morning river mist, snow-dusted reed beds, crisp white and black plumage, scarlet crown"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "热带珊瑚礁生态",
+      "阳光穿透浅海珊瑚群",
+      "小丑鱼海葵微距",
+      "丁达尔水下阳光束穿透清澈蒂芙尼蓝海水照亮的绚丽鹿角珊瑚礁群"
+    ],
+    "label": "热带珊瑚礁生态",
+    "en": "vibrant tropical coral reef underwater ecosystem, underwater sunbeams piercing crystal-clear turquoise water, colorful staghorn corals and schools of anthias fish"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "萤火虫森林夏夜",
+      "幽谷流萤长曝光",
+      "森林发光蘑菇微距",
+      "幽静夏夜古杉林青苔溪畔点点翠绿流萤交织的长曝光梦幻光轨"
+    ],
+    "label": "萤火虫森林夏夜",
+    "en": "enchanted summer night cedar forest by mossy stream, long-exposure trails of hundreds of glowing emerald-yellow fireflies hovering over ferns"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "昙花一现夜放",
+      "月下白昙花微距",
+      "晶莹露珠白色花瓣",
+      "月光幽蓝夜色下舒展如丝绸般通透洁白花瓣与金黄花蕊的盛放昙花"
+    ],
+    "label": "昙花一现夜放",
+    "en": "Botanical close-up of Queen of the Night epiphyllum flower blooming in moonlight, translucent silky white petals with dewdrops, delicate golden stamens"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "水晶晶洞矿物微距",
+      "紫水晶簇原生矿石",
+      "萤石八面体结晶",
+      "切开的天然玄武岩晶洞内部密布闪烁霓虹冷光的紫水晶与方解石晶簇"
+    ],
+    "label": "水晶晶洞矿物微距",
+    "en": "macro mineral photography of split volcanic amethyst geode cavity, sharp terminated violet quartz crystal points catching prismatic light reflections"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "冰岛极光冰洞",
+      "蓝冰川水下冰洞",
+      "透明万年蓝冰纹理",
+      "万年冰川内部如蓝宝石般剔透的波浪状冰壁拱洞与洞口绿色极光"
+    ],
+    "label": "冰岛极光冰洞",
+    "en": "inside a translucent glacial blue-ice cave in Iceland, sculpted sapphire-blue ice walls trapping ancient air bubbles, green aurora visible at cave entrance"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "盘根错节古榕树",
+      "独木成林气根雨林",
+      "阳光穿透千年古树",
+      "垂挂百条气根笼罩青苔石阶并洒下万道晨曦光柱的千年古榕树"
+    ],
+    "label": "盘根错节古榕树",
+    "en": "ancient giant banyan tree in misty tropical forest, curtain of hanging aerial roots over mossy stone steps, volumetric morning sunbeams filtering through canopy"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "雪花六角冰晶微距",
+      "窗花冰霜羽毛结晶",
+      "极寒肥皂泡结冰微距",
+      "黑色绒布基底上纤毫毕现的天然六角分形对称雪花冰晶超微距摄影"
+    ],
+    "label": "雪花六角冰晶微距",
+    "en": "extreme focus-stacked macro photography of a single natural hexagonal dendritic snowflake crystal, razor-sharp geometric ice facets with rainbow refraction"
+  },
+  {
+    "cat": "珍稀动植物生态与自然微距奇观",
+    "terms": [
+      "锦鲤荷塘俯拍",
+      "琉璃水波红白锦鲤",
+      "青莲睡莲游鱼",
+      "碧绿圆荷叶与盛放粉荷掩映下摆动轻纱长尾游弋的红白鎏金锦鲤"
+    ],
+    "label": "锦鲤荷塘俯拍",
+    "en": "top-down view of tranquil lotus pond, crimson-and-white kohaku koi fish with flowing veil fins swimming beneath emerald lotus pads and pink blossoms"
+  }
+]

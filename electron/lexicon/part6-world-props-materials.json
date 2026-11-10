@@ -1,0 +1,463 @@
+[
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "中式园林",
+      "苏州园林",
+      "太湖石月亮门",
+      "曲桥荷塘",
+      "徽派马头墙",
+      "江南烟雨白墙黛瓦月亮门园林"
+    ],
+    "label": "中式园林",
+    "en": "classical Suzhou scholar garden in misty drizzle, circular moon gate framing bamboo, whitewashed Hui walls and black tiles"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "故宫红墙",
+      "飞檐斗拱",
+      "琉璃瓦宫殿",
+      "仙界天宫",
+      "悬空寺",
+      "云海之巅鎏金琉璃瓦飞檐仙宫"
+    ],
+    "label": "故宫红墙",
+    "en": "majestic celestial Chinese palace with upturned glazed golden roofs and intricate dougong brackets floating above sea of clouds"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "日式神社",
+      "千本鸟居",
+      "枯山水庭院",
+      "缘侧木廊",
+      "汤屋温泉",
+      "朱红千本鸟居与青苔石灯笼秘境参道"
+    ],
+    "label": "日式神社",
+    "en": "tunnel of vermilion Torii gates winding up a misty cedar mountain, moss-covered stone lanterns"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "哥特大教堂",
+      "飞扶壁尖拱",
+      "玫瑰花窗",
+      "修道院回廊",
+      "高耸哥特肋架拱顶与彩色玫瑰花窗圣堂"
+    ],
+    "label": "哥特大教堂",
+    "en": "soaring Gothic cathedral nave, pointed rib vaults, dusty sunbeams through stained-glass rose window"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "欧式古典图书馆",
+      "通天旋转书架",
+      "霍格沃茨魔法学院风",
+      "黄铜旋转梯通天橡木古典藏书阁"
+    ],
+    "label": "通天旋转书架",
+    "en": "grand Baroque multi-story library, spiral wrought-iron staircase, thousands of leather-bound tomes, floating candles"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "维多利亚温室花房",
+      "水晶宫玻璃花房",
+      "铸铁穹顶阳光植物园玻璃温室花房"
+    ],
+    "label": "维多利亚温室花房",
+    "en": "Victorian wrought-iron and glass conservatory overflowing with exotic orchids, ferns, and humid sunbeams"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "赛博九龙城寨",
+      "密集霓虹贫民窟",
+      "空中全息立交桥",
+      "赛博朋克密集层叠霓虹管道九龙城寨"
+    ],
+    "label": "赛博九龙城寨",
+    "en": "hyper-dense cyberpunk Kowloon Walled City megastructure, tangled cables, dripping AC units, vertical neon kanji signs"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "蒸汽朋克飞艇港",
+      "巨大发条钟楼内部",
+      "巨型咬合黄铜齿轮与蒸汽管道钟楼内部"
+    ],
+    "label": "蒸汽朋克飞艇港",
+    "en": "colossal steampunk clocktower interior, interlocking giant brass cogwheels, hissing copper steam pipes, sunbeams through clockface"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "废土末日都市",
+      "植被吞噬摩天楼",
+      "生锈核电冷却塔",
+      "尼尔机械纪元风",
+      "绿植藤蔓吞噬的寂静末日摩天楼废墟"
+    ],
+    "label": "废土末日都市",
+    "en": "post-apocalyptic overgrown metropolis ruins, sunken highway flooded with clear water, deer wandering among ivy-wrapped skyscrapers"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "海底亚特兰蒂斯",
+      "深海玻璃海底隧道",
+      "水母宫殿",
+      "发光水母环绕的深海大理石遗迹亚特兰蒂斯"
+    ],
+    "label": "水母宫殿",
+    "en": "sunken marble ruins of Atlantis on ocean floor, giant glowing jellyfish drifting past fluted columns, shafts of surface light"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "无限镜屋",
+      "埃舍尔悖论楼梯",
+      "倒置重力天空之城",
+      "埃舍尔超现实错视无尽旋转阶梯空间"
+    ],
+    "label": "无限镜屋",
+    "en": "M.C. Escher inspired impossible architecture, gravity-defying Relativity staircases looping in every direction"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "昭和复古喫茶店",
+      "深夜食堂居酒屋",
+      "霓虹街机厅",
+      "复古唱片行",
+      "暖黄皮沙发与奶油苏打昭和复古喫茶店"
+    ],
+    "label": "霓虹街机厅",
+    "en": "nostalgic Showa-era Japanese kissaten coffee shop, dark wood booths, stained-glass pendant lamps, melon cream soda on table"
+  },
+  {
+    "cat": "东方古建、西式建筑与超现实秘境空间",
+    "terms": [
+      "少女卧室",
+      "电竞房",
+      "阁楼天窗画室",
+      "洒满阳光的教室",
+      "摆满画架油彩与绿植的斜顶天窗阁楼画室"
+    ],
+    "label": "少女卧室",
+    "en": "sun-drenched attic artist studio, slanted skylight, wooden easels, paint-splattered floorboards, jars of brushes"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "天空之镜",
+      "乌尤尼盐沼",
+      "完美水面镜像天空",
+      "无边际如镜面般倒映云霞的盐湖天空之镜"
+    ],
+    "label": "天空之镜",
+    "en": "Salar de Uyuni mirror salt flat, seamless horizon reflecting towering pastel sunset clouds and starry Milky Way"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "极光",
+      "冰岛黑沙滩",
+      "蓝冰洞",
+      "冰川裂隙",
+      "晶莹幽蓝千年冰川洞穴与漫天绿紫极光"
+    ],
+    "label": "冰岛黑沙滩",
+    "en": "translucent sapphire glacier ice cave opening onto an Icelandic black sand beach under swirling emerald aurora borealis"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "火山喷发",
+      "熔岩流",
+      "黑曜石荒原",
+      "地狱火海",
+      "暗夜崩裂赤红岩浆流淌的黑曜石火山口"
+    ],
+    "label": "火山喷发",
+    "en": "erupting volcanic caldera at night, glowing rivers of molten orange magma cracking through black basalt crust, volcanic lightning"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "荧光海滩",
+      "蓝眼泪海浪",
+      "星空银河海边",
+      "璀璨银河拱桥下泛着幽蓝荧光浪花的海滩"
+    ],
+    "label": "荧光海滩",
+    "en": "nighttime shoreline with glowing electric-blue bioluminescent waves crashing under the galactic core of the Milky Way"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "彼岸花海",
+      "曼珠沙华",
+      "薰衣草田",
+      "向日葵花海",
+      "蓝花楹大道",
+      "幽暗薄雾中一望无际的血红彼岸花曼珠沙华海"
+    ],
+    "label": "彼岸花海",
+    "en": "endless field of crimson red spider lilies (higanbana) blooming in eerie twilight mist"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "深秋银杏林",
+      "京都红枫古道",
+      "落樱吹雪河畔",
+      "满地金黄落叶与阳光穿透的千年银杏大道"
+    ],
+    "label": "深秋银杏林",
+    "en": "carpet of golden ginkgo leaves along an autumn avenue, sunlit yellow foliage drifting in crisp air"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "超级单体风暴",
+      "龙卷风",
+      "球状闪电",
+      "积雨云砧状云海",
+      "夕阳染金的巨型层叠超级单体风暴积雨云"
+    ],
+    "label": "超级单体风暴",
+    "en": "colossal cumulonimbus supercell thunderhead cloud lit warm peach and violet at dusk over vast plains"
+  },
+  {
+    "cat": "自然地貌、极端气象与宇宙奇观",
+    "terms": [
+      "黑洞吸积盘",
+      "卡冈图雅",
+      "星云诞生柱",
+      "环绕行星环",
+      "星际穿越式弯曲光环超巨型黑洞吸积盘"
+    ],
+    "label": "黑洞吸积盘",
+    "en": "gargantuan relativistic black hole with blazing golden accretion disk gravitational lensing against deep space nebula"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "巨型机甲",
+      "真实系机甲",
+      "高达风",
+      "液压机械关节",
+      "装甲外骨骼",
+      "重工业做旧掉漆液压装甲巨型双足机甲"
+    ],
+    "label": "巨型机甲",
+    "en": "colossal weathered bipedal combat mecha in hangar bay, hydraulic pistons, reactive armor blocks, maintenance sparks"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "外骨骼装甲",
+      "动力甲",
+      "科幻步兵装甲",
+      "碳纤维流线型精密战术动力外骨骼装甲"
+    ],
+    "label": "外骨骼装甲",
+    "en": "sleek carbon-fiber powered exosuit with glowing servo actuators and helmet HUD"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "太刀",
+      "日本刀",
+      "武士刀",
+      "妖刀村正",
+      "大太刀",
+      "居合刃纹",
+      "寒光凛冽烧刃沸纹修长日本太刀"
+    ],
+    "label": "日本刀",
+    "en": "razor-sharp Japanese tachi katana blade displaying intricate wavy hamon temper line, silk-wrapped tsuka hilt"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "唐横刀",
+      "绣春刀",
+      "汉剑",
+      "青铜越王剑",
+      "子母剑",
+      "黑金错银装具百炼花纹钢直刃唐横刀"
+    ],
+    "label": "唐横刀",
+    "en": "Damascus pattern-welded Tang Hengdao straight saber with gilded silver lotus scabbard fittings"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "双手巨剑",
+      "大剑",
+      "圣剑",
+      "符文重剑",
+      "骑士长枪",
+      "镌刻发光蓝色符文的哥特十字护手双手巨剑"
+    ],
+    "label": "双手巨剑",
+    "en": "engraved steel zweihander greatsword inlaid with glowing rune channels along the fuller"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "死神镰刀",
+      "蔷薇缠绕大镰刀",
+      "锁链镰刀",
+      "暗黑荆棘黑玫瑰缠绕的新月巨型死神镰刀"
+    ],
+    "label": "死神镰刀",
+    "en": "massive crescent-bladed gothic war scythe entwined with black thorny roses and iron chains"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "魔法杖",
+      "星盘法杖",
+      "魔导书",
+      "炼金药水瓶",
+      "塔罗牌",
+      "水晶球",
+      "悬浮旋转黄铜星盘与发光水晶核心魔法杖"
+    ],
+    "label": "魔法杖",
+    "en": "ornate arcane staff crowned with floating concentric brass astrolabe rings and a levitating prism crystal"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "折扇",
+      "团扇",
+      "油纸伞",
+      "红灯笼",
+      "古琴",
+      "琵琶",
+      "洞箫",
+      "手绘水墨白鹤竹骨洒金宣纸折扇与青玉萧"
+    ],
+    "label": "油纸伞",
+    "en": "hand-painted gold-flecked xuan paper folding fan with bamboo ribs paired with a translucent celadon jade flute"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "战术突击步枪",
+      "反器材狙击枪",
+      "左轮手枪",
+      "双枪",
+      "赛博电磁步枪",
+      "导轨满配全息瞄具消音战术卡宾枪"
+    ],
+    "label": "战术突击步枪",
+    "en": "customized modular tactical rifle with holographic sight, suppressor, and laser PEQ box"
+  },
+  {
+    "cat": "科幻机甲、枪械军武、冷兵器与奇幻法器",
+    "terms": [
+      "古董怀表",
+      "黄铜望远镜",
+      "提灯",
+      "煤油马灯",
+      "黑胶留声机",
+      "镂空陀飞轮机芯古典金色链条怀表"
+    ],
+    "label": "古董怀表",
+    "en": "open-face antique gold skeleton pocket watch revealing tiny spinning brass gears and chain"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "次表面散射",
+      "玉石透光感",
+      "花瓣透光",
+      "耳廓透光",
+      "SSS材质",
+      "真实温润如凝脂白玉的次表面散射透光质感"
+    ],
+    "label": "次表面散射",
+    "en": "realistic subsurface scattering (SSS), warm light diffusing translucently through ear tips, fingertips, and jade"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "丝绒微距绒毛",
+      "羊绒织物纹理",
+      "亚麻粗布经纬线",
+      "放大可见纤维光泽的高密织物微距纹理"
+    ],
+    "label": "丝绒微距绒毛",
+    "en": "tactile textile micro-texture showing individual woven threads, soft fuzz halo, and natural fabric drape"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "水珠凝结",
+      "冰镇汽水瓶壁水雾",
+      "汗珠滑落锁骨",
+      "晶莹剔透折射环境光的细密凝结水珠"
+    ],
+    "label": "水珠凝结",
+    "en": "glistening beads of condensation and tiny water droplets refracting surroundings on smooth surface"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "拉丝大马士革钢",
+      "氧化铜绿",
+      "包浆木纹",
+      "锻造碳纤维",
+      "拉丝钛合金",
+      "暗哑锻造碳纤维与阳极氧化烧蓝钛合金肌理"
+    ],
+    "label": "氧化铜绿",
+    "en": "forged chopped carbon-fiber weave paired with heat-blued anodized titanium hardware"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "碎裂瓷器",
+      "金缮修复",
+      "kintsugi",
+      "金粉裂纹",
+      "金缮工艺纯金漆修补裂痕的古朴黑釉瓷器"
+    ],
+    "label": "碎裂瓷器",
+    "en": "Japanese Kintsugi ceramic art, broken stoneware seams mended with gleaming powdered gold lacquer"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "全息镭射",
+      "五彩斑斓的黑",
+      "珍珠母贝幻彩",
+      "肥皂泡薄膜干涉",
+      "随角度变幻虹彩光泽的薄膜干涉镭射材质"
+    ],
+    "label": "全息镭射",
+    "en": "thin-film interference iridescence, holographic oil-slick rainbow sheen over dark obsidian surface"
+  },
+  {
+    "cat": "微观材质物理与诱人美食特写",
+    "terms": [
+      "日式拉面",
+      "流心溏心蛋",
+      "吉卜力美食",
+      "舒芙蕾松饼",
+      "草莓奶油蛋糕",
+      "威士忌冰球",
+      "吉卜力式热气腾腾色泽诱人的治愈系美食特写"
+    ],
+    "label": "日式拉面",
+    "en": "mouth-watering gourmet food close-up, rising translucent steam, glossy rich broth, glistening specular highlights"
+  }
+]

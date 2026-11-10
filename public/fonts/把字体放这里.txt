@@ -1,0 +1,11 @@
+主题字体都已装好。如要更换字体，把同名字体文件放进这个文件夹覆盖即可，重启软件后生效。
+
+文件名必须严格对应（可在软件「设置 → 界面风格」里查看）：
+
+  暗夜霓虹  →  AdobeHeitiStd.otf     （Adobe 黑体 Std，待补，暂用雅黑加粗兜底）
+  水墨丹青  →  JinXiHaoLong.otf      （今昔豪龙，已装）
+  白昼纸墨  →  SourceHanSerifSC.otf  （思源宋体，已装）
+  赛博紫夜  →  ZcoolGaoDuanHei.ttf   （站酷高端黑，已装）
+  雾灰极简  →  SarasaMonoSC.ttf      （更纱黑体 Mono SC，已装）
+
+—— 霖易aa
