@@ -570,3 +570,52 @@ function watchR18Switch() {
 }
 
 setInterval(watchR18Switch, 2000)
+
+// ---------------------------------------------------------------------------
+// 防止误触关闭前端弹窗
+// 设置、使用指南那些是 React 画的，遮罩自带 onClick 关闭，点一下空白就没了。
+// 源码是打包产物改不了，只能在捕获阶段把落在遮罩上的点击拦下来。
+// 判断依据：fixed 定位、覆盖大半屏、有半透明底色、点中的是遮罩本身而不是卡片。
+// ---------------------------------------------------------------------------
+
+function isDialogBackdrop(el) {
+  if (!el || el.nodeType !== 1) return false
+  if (typeof el.getBoundingClientRect !== 'function') return false
+  const s = window.getComputedStyle(el)
+  if (s.position !== 'fixed' && s.position !== 'absolute') return false
+  const r = el.getBoundingClientRect()
+  if (r.width < window.innerWidth * 0.6 || r.height < window.innerHeight * 0.6) return false
+  const bg = s.backgroundColor || ''
+  if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') return false
+  // 遮罩本身通常没有边框，卡片有
+  if (s.borderTopWidth !== '0px') return false
+  return true
+}
+
+function blockBackdropClose(e) {
+  try {
+    if (isDialogBackdrop(e.target)) {
+      e.stopPropagation()
+      e.stopImmediatePropagation()
+      e.preventDefault()
+    }
+  } catch {
+    /* ignore */
+  }
+}
+
+document.addEventListener('pointerdown', blockBackdropClose, true)
+document.addEventListener('mousedown', blockBackdropClose, true)
+document.addEventListener('click', blockBackdropClose, true)
+
+// 顺带把 Esc 也挡掉，前端弹窗多半监听它关闭
+document.addEventListener(
+  'keydown',
+  (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      e.stopPropagation()
+      e.stopImmediatePropagation()
+    }
+  },
+  true,
+)
