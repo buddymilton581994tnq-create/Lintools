@@ -165,6 +165,141 @@ const TIER_STYLE = {
   ].join(';'),
 }
 
+/**
+ * 和整体 UI 一套视觉的确认框。
+ * window.confirm 是系统原生窗口，白底方角，和深色界面完全不搭，所以自己画一个。
+ */
+function showTierConfirm(model) {
+  return new Promise((resolve) => {
+    const mask = document.createElement('div')
+    mask.id = 'lt-tier-confirm'
+    mask.style.cssText = [
+      'position:fixed',
+      'inset:0',
+      'z-index:2147483000',
+      'display:flex',
+      'align-items:center',
+      'justify-content:center',
+      'background:rgba(3,6,8,0.72)',
+      'backdrop-filter:blur(3px)',
+      'opacity:0',
+      'transition:opacity .16s ease',
+      'font:13px/1.6 system-ui,-apple-system,"Microsoft YaHei",sans-serif',
+    ].join(';')
+
+    const card = document.createElement('div')
+    card.style.cssText = [
+      'width:380px',
+      'padding:20px 20px 16px',
+      'border-radius:14px',
+      'border:1px solid rgba(45,212,191,0.32)',
+      'background:linear-gradient(160deg,#121c1e 0%,#0a1012 100%)',
+      'box-shadow:0 24px 64px rgba(0,0,0,0.75),inset 0 1px 0 rgba(255,255,255,0.04)',
+      'transform:translateY(6px) scale(.985)',
+      'transition:transform .18s cubic-bezier(.2,.8,.3,1)',
+    ].join(';')
+
+    const head = document.createElement('div')
+    head.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:14px;'
+    const dot = document.createElement('span')
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#2dd4bf;box-shadow:0 0 8px rgba(45,212,191,.8);'
+    const title = document.createElement('span')
+    title.textContent = '切换本地模型'
+    title.style.cssText = 'font-size:14px;font-weight:600;color:#e6f2f1;letter-spacing:.3px;'
+    head.appendChild(dot)
+    head.appendChild(title)
+
+    const body = document.createElement('div')
+    body.style.cssText = 'margin-bottom:18px;'
+    const nameLine = document.createElement('div')
+    nameLine.textContent = model.short || model.name || model.id
+    nameLine.style.cssText = 'font-size:15px;font-weight:600;color:#7fe8d4;margin-bottom:4px;'
+    const specLine = document.createElement('div')
+    const gb = model.bytes ? (model.bytes / 1024 ** 3).toFixed(1) : ''
+    specLine.textContent = [model.label, gb ? gb + ' GB' : '', model.vramHint].filter(Boolean).join(' · ')
+    specLine.style.cssText = 'font-size:11.5px;color:#6d8080;margin-bottom:10px;'
+    const tip = document.createElement('div')
+    tip.textContent = model.installed ? '本地已下载，切换会立即生效。' : '本地还没有这个模型，确认后开始下载，中途可以在设置里取消。'
+    tip.style.cssText = 'font-size:12px;color:#9fb3b3;line-height:1.55;'
+    body.appendChild(nameLine)
+    body.appendChild(specLine)
+    body.appendChild(tip)
+
+    const row = document.createElement('div')
+    row.style.cssText = 'display:flex;justify-content:flex-end;gap:8px;'
+
+    const mkBtn = (text, primary) => {
+      const b = document.createElement('button')
+      b.textContent = text
+      b.style.cssText = primary
+        ? [
+            'padding:7px 18px',
+            'border-radius:8px',
+            'border:1px solid rgba(45,212,191,0.55)',
+            'background:rgba(45,212,191,0.16)',
+            'color:#7fe8d4',
+            'font-size:12.5px',
+            'font-weight:600',
+            'cursor:pointer',
+            'transition:all .15s',
+          ].join(';')
+        : [
+            'padding:7px 18px',
+            'border-radius:8px',
+            'border:1px solid rgba(120,140,140,0.3)',
+            'background:transparent',
+            'color:#9fb3b3',
+            'font-size:12.5px',
+            'cursor:pointer',
+            'transition:all .15s',
+          ].join(';')
+      b.addEventListener('mouseenter', () => {
+        b.style.background = primary ? 'rgba(45,212,191,0.26)' : 'rgba(255,255,255,0.06)'
+      })
+      b.addEventListener('mouseleave', () => {
+        b.style.background = primary ? 'rgba(45,212,191,0.16)' : 'transparent'
+      })
+      return b
+    }
+
+    const cancel = mkBtn('取消', false)
+    const ok = mkBtn('确定', true)
+    row.appendChild(cancel)
+    row.appendChild(ok)
+
+    card.appendChild(head)
+    card.appendChild(body)
+    card.appendChild(row)
+    mask.appendChild(card)
+
+    const close = (val) => {
+      mask.style.opacity = '0'
+      card.style.transform = 'translateY(6px) scale(.985)'
+      setTimeout(() => mask.remove(), 160)
+      document.removeEventListener('keydown', onKey)
+      resolve(val)
+    }
+    const onKey = (e) => {
+      if (e.key === 'Escape') close(false)
+      if (e.key === 'Enter') close(true)
+    }
+
+    cancel.addEventListener('click', () => close(false))
+    ok.addEventListener('click', () => close(true))
+    mask.addEventListener('click', (e) => {
+      if (e.target === mask) close(false)
+    })
+    document.addEventListener('keydown', onKey)
+
+    document.body.appendChild(mask)
+    requestAnimationFrame(() => {
+      mask.style.opacity = '1'
+      card.style.transform = 'translateY(0) scale(1)'
+    })
+    ok.focus()
+  })
+}
+
 async function mountTierSwitcher() {
   if (document.getElementById('lt-tier-switcher')) return true
   let status = null
@@ -204,9 +339,7 @@ async function mountTierSwitcher() {
     }
     btn.addEventListener('click', async () => {
       if (btn.dataset.active) return
-      const ok = window.confirm(
-        `切换到「${m.short || m.name}」？\n${m.label || ''}\n${m.installed ? '本地已下载，直接切换。' : '本地还没有这个模型，会开始下载。'}`,
-      )
+      const ok = await showTierConfirm(m)
       if (!ok) return
       const origin = btn.textContent
       btn.textContent = '切换中…'
