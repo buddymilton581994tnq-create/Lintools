@@ -126,3 +126,18 @@ npm run dist:win
 ### 性能
 
 10549 条下 `matchSlangGlossary` 单次 1.84 毫秒（50 次平均）。
+## 本地模型三档
+
+安装包不带模型，首次打开时检测显存和内存，弹框让用户选一档。
+
+| 档位 | 模型 | 体积 | 显存建议 |
+| --- | --- | --- | --- |
+| 低配 | ds4f-mini（DeepSeek R1 蒸馏 1.5B） | 约 1.0 GB | 2 GB 即可 |
+| 中配 | ds4f-7b（DeepSeek R1 蒸馏 7B） | 约 4.5 GB | 建议 8 GB |
+| 高配 | ds4f-14b（DeepSeek R1 蒸馏 14B） | 约 9.0 GB | 建议 12 GB |
+
+推荐规则在 `electron/llm.cjs` 的 `recommendTier(vramGb, ramGb)`：显存 11GB 以上，或 8GB 配 32GB 内存走高配；6GB 显存或 16GB 内存走中配；其余走低配。选择权在用户手上，弹框里的推荐项只是默认选中。
+
+选完写进 `settings.json` 的 `modelTier` 和 `modelId`，之后不再询问。要换档位在设置里重新选，或者手动改 `%APPDATA%\lin-toolbox\ai\ai.json` 的 `modelId`。
+
+模型下载地址走 hf-mirror.com，失败回落 huggingface.co。
