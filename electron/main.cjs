@@ -194,23 +194,24 @@ async function ensureModelTier() {
     '',
     '安装包不自带模型，首次使用会按你选的档位下载，之后可以随时在设置里更换。',
     '',
-    `低配 1.5B    约 1.0 GB   2GB 显存即可${mark('low')}`,
-    `中配 7B      约 4.5 GB   建议 8GB 显存${mark('mid')}`,
-    `高配 14B     约 9.0 GB   建议 12GB 显存${mark('high')}`,
+    `兼容 1.5B   约 1.0 GB   2GB 显存即可${mark('compat')}`,
+    `低配 3B     约 1.9 GB   3GB 显存起${mark('low')}`,
+    `中配 7B     约 4.5 GB   6GB 显存起${mark('mid')}`,
+    `高配 14B    约 9.0 GB   9GB 显存起，建议 12GB${mark('high')}`,
     '',
     '档位越高，词库没覆盖的句子翻译越准，但下载更大、占用更多。',
   ].join('\n')
 
-  let response = idx
+  let response = { compat: 0, low: 1, mid: 2, high: 3 }[recTier] ?? 0
   try {
     const picked = await dialog.showMessageBox(win, {
       type: 'question',
       title: '选择本地模型档位',
       message: '请选择本地模型规格',
       detail,
-      buttons: ['低配 1.5B', '中配 7B', '高配 14B'],
-      defaultId: idx,
-      cancelId: idx,
+      buttons: ['兼容 1.5B', '低配 3B', '中配 7B', '高配 14B'],
+      defaultId: response,
+      cancelId: response,
       noLink: true,
     })
     response = picked.response
@@ -218,9 +219,9 @@ async function ensureModelTier() {
     /* 弹窗失败就用推荐档位 */
   }
 
-  const ids = ['ds4f-mini', 'ds4f-7b', 'ds4f-14b']
-  const tiers = ['low', 'mid', 'high']
-  const pick = Math.max(0, Math.min(2, Number(response) || 0))
+  const ids = ['ds4f-mini', 'qwen25-3b', 'ds4f-7b', 'ds4f-14b']
+  const tiers = ['compat', 'low', 'mid', 'high']
+  const pick = Math.max(0, Math.min(3, Number(response) || 0))
   writeSettings({ modelTier: tiers[pick], modelId: ids[pick] })
   try {
     if (engine) engine.writeConfig({ modelId: ids[pick] })

@@ -68,21 +68,43 @@ function urlsFor(repo, file) {
 const MODELS = [
   {
     id: 'ds4f-mini',
-    tier: 'low',
-    tierName: '低配',
+    tier: 'compat',
+    tierName: '兼容',
     name: 'DeepSeek R1 蒸馏 1.5B',
-    short: '低配 1.5B',
-    label: '轻量 1.5B（约 1 GB）',
-    note: '2GB 显存就能跑，词库命中率高时够用，自由句子偏弱',
+    short: '兼容 1.5B',
+    label: '兼容档 1.5B（约 1.0 GB）',
+    note: '2GB 显存可跑，老机器与核显也能用，翻译质量依赖词库命中',
     bytes: Math.round(1.04 * 1024 ** 3),
     template: 'deepseek',
-    ctxSize: 8192,
+    ctxSize: 4096,
     vramHint: '2GB 显存即可',
-    minVramGb: 0,
+    minVramGb: 2,
+    params: { temperature: 0.3, topP: 0.9, repeatPenalty: 1.18, ctxSize: 4096 },
     files: [
       {
         file: 'ds4f-mini-q4_k_m.gguf',
         urls: urlsFor('unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF', 'DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf'),
+      },
+    ],
+  },
+  {
+    id: 'qwen25-3b',
+    tier: 'low',
+    tierName: '低配',
+    name: 'Qwen2.5 3B',
+    short: '低配 3B',
+    label: '低配 3B（约 1.9 GB）',
+    note: '3 到 4GB 显存可用，比兼容档稳，长句不容易跑偏',
+    bytes: Math.round(1.9 * 1024 ** 3),
+    template: 'native',
+    ctxSize: 8192,
+    vramHint: '3GB 显存起',
+    minVramGb: 3,
+    params: { temperature: 0.35, topP: 0.9, repeatPenalty: 1.15, ctxSize: 8192 },
+    files: [
+      {
+        file: 'qwen25-3b-q4_k_m.gguf',
+        urls: urlsFor('Qwen/Qwen2.5-3B-Instruct-GGUF', 'qwen2.5-3b-instruct-q4_k_m.gguf'),
       },
     ],
   },
@@ -92,13 +114,14 @@ const MODELS = [
     tierName: '中配',
     name: 'DeepSeek R1 蒸馏 7B',
     short: '中配 7B',
-    label: '标准 7B（约 4.5 GB）',
-    note: '建议 8GB 显存，词库没覆盖的句子也能翻得像样',
+    label: '中配 7B（约 4.5 GB）',
+    note: '6GB 显存起，词库没覆盖的句子也能翻得像样',
     bytes: Math.round(4.5 * 1024 ** 3),
     template: 'deepseek',
     ctxSize: 8192,
-    vramHint: '建议 8GB 显存',
+    vramHint: '6GB 显存起',
     minVramGb: 6,
+    params: { temperature: 0.4, topP: 0.9, repeatPenalty: 1.12, ctxSize: 8192 },
     files: [
       {
         file: 'ds4f-7b-q4_k_m.gguf',
@@ -112,13 +135,14 @@ const MODELS = [
     tierName: '高配',
     name: 'DeepSeek R1 蒸馏 14B',
     short: '高配 14B',
-    label: '高配 14B（约 9 GB）',
-    note: '建议 12GB 显存，长句与生僻词处理最好',
+    label: '高配 14B（约 9.0 GB）',
+    note: '9GB 显存起，建议 12GB，长句与生僻词处理最好',
     bytes: Math.round(9 * 1024 ** 3),
     template: 'deepseek',
     ctxSize: 8192,
-    vramHint: '建议 12GB 显存',
-    minVramGb: 10,
+    vramHint: '9GB 显存起，建议 12GB',
+    minVramGb: 9,
+    params: { temperature: 0.4, topP: 0.92, repeatPenalty: 1.1, ctxSize: 8192 },
     files: [
       {
         file: 'ds4f-14b-q4_k_m.gguf',
@@ -134,10 +158,10 @@ const MODELS = [
  */
 function recommendTier(vramGb, ramGb) {
   const v = Number(vramGb) || 0
-  const r = Number(ramGb) || 0
-  if (v >= 11 || (v >= 8 && r >= 32)) return 'high'
-  if (v >= 6 || r >= 16) return 'mid'
-  return 'low'
+  if (v >= 10) return 'high'
+  if (v >= 6) return 'mid'
+  if (v >= 3) return 'low'
+  return 'compat'
 }
 
 const RUNTIME_TAG = 'b12189'
@@ -563,7 +587,14 @@ class LocalModelEngine {
 
   ensureReady(modelId) {
     if (this.busy) return this.busy
-    if (modelId && modelId !== this.config.modelId) this.writeConfig({ modelId })
+    if (modelId && modelId !== this.config.modelId) {
+      // 换档时把这档调好的推理参数一并套上。
+      // 小模型温度低、重复惩罚高，大模型可以放宽一点，共用一套会互相拖累。
+      const patch = { modelId }
+      const target = modelById(modelId)
+      if (target && target.params) Object.assign(patch, target.params)
+      this.writeConfig(patch)
+    }
     this.busy = this._ensure().finally(() => {
       this.busy = null
     })
