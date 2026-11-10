@@ -433,14 +433,36 @@ const CONTEXT_SENSITIVE = {
   },
 }
 
+// 界面上的 R18 开关状态。开着说明用户本来就是奔着成人内容去的，
+// 多义词没有明确上下文时偏向人体义；关着则偏向字面义。
+let _r18Mode = false
+function setR18Mode(on) {
+  _r18Mode = !!on
+}
+function isR18Mode() {
+  return _r18Mode
+}
+
 function resolveContextual(term, entry, input) {
   const rule = CONTEXT_SENSITIVE[String(term).trim()]
   if (!rule) return { en: entry.en, cat: entry.cat, label: entry.label }
-  if (rule.flower.test(input)) {
+  const hasFlower = rule.flower.test(input)
+  const hasBody = rule.body.test(input)
+  if (hasFlower && !hasBody) {
     return { en: rule.flowerEn, cat: rule.flowerCat, label: '菊花（花卉）' }
   }
-  // 人体语境，或没有明确线索时按人物绘画的默认义
-  return { en: entry.en, cat: entry.cat, label: entry.label }
+  if (hasBody && !hasFlower) {
+    return { en: entry.en, cat: entry.cat, label: entry.label }
+  }
+  // 两边都没有线索，或者两边都有，就用 R18 开关兜底
+  if (hasFlower && hasBody) {
+    return _r18Mode
+      ? { en: entry.en, cat: entry.cat, label: entry.label }
+      : { en: rule.flowerEn, cat: rule.flowerCat, label: '菊花（花卉）' }
+  }
+  return _r18Mode
+    ? { en: entry.en, cat: entry.cat, label: entry.label }
+    : { en: rule.flowerEn, cat: rule.flowerCat, label: '菊花（花卉）' }
 }
 
 // 单独出现时算裸色词的 tag，只在句子没别的内容时保留
@@ -1410,6 +1432,8 @@ module.exports = {
   translateWithGlossary,
   detectInputContext,
   decomposeUnknownCn,
+  setR18Mode,
+  isR18Mode,
   UniversalTagTranslator,
   getUniversalTranslator,
 }

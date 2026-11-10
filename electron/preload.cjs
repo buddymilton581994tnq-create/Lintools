@@ -512,3 +512,27 @@ if (document.readyState === 'loading') {
   keepTierSwitcher()
 }
 setInterval(keepTierSwitcher, 3000)
+
+// ---------------------------------------------------------------------------
+// R18 开关采集
+// 这个开关只是前端的局部状态，后端翻译多义词时需要它来兜底
+// （菊花：开着按人体义，关着按花卉义），所以从 DOM 上盯一下。
+// ---------------------------------------------------------------------------
+
+function watchR18Switch() {
+  const boxes = document.querySelectorAll('input[type="checkbox"]')
+  for (const box of boxes) {
+    if (box.dataset.ltR18Bound) continue
+    const label = box.closest('label') || box.parentElement
+    const text = label ? label.textContent || '' : ''
+    if (!/R18/i.test(text)) continue
+    box.dataset.ltR18Bound = '1'
+    const push = () => {
+      ipcRenderer.invoke('settings:set-r18', !!box.checked).catch(() => {})
+    }
+    push()
+    box.addEventListener('change', push)
+  }
+}
+
+setInterval(watchR18Switch, 2000)

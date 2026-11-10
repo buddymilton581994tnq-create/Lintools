@@ -552,6 +552,18 @@ class LocalModelEngine {
   }
 
   /**
+   * 找一台已经下好的模型。
+   * 删掉下载任务之后要切回一个能用的档位，否则界面会停在「当前 低配 3B · 未部署」这种状态。
+   */
+  pickInstalledModel() {
+    for (const x of MODELS) {
+      const ok = x.files.every((f) => fileSize(path.join(this.modelsDir, f.file)) > 64 * 1024 * 1024)
+      if (ok) return { id: x.id, tier: x.tier, name: x.name }
+    }
+    return null
+  }
+
+  /**
    * 退出程序时重置模型运行参数并清理临时缓存文件
    */
   /**

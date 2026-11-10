@@ -203,6 +203,16 @@ async function checkPendingDownload() {
 
   if (response === 1) {
     engine.discardPartialDownload(st.modelId)
+    // 放弃下载之后切回本机已有的模型，别停在「未部署」状态
+    const fallback = engine.pickInstalledModel()
+    if (fallback) {
+      writeSettings({ modelTier: fallback.tier, modelId: fallback.id })
+      try {
+        engine.writeConfig({ modelId: fallback.id })
+      } catch {
+        /* ignore */
+      }
+    }
     return false
   }
 
@@ -497,6 +507,12 @@ async function handleCloseRequest() {
     if (response === 2) {
       try {
         engine.discardPartialDownload(pending.modelId)
+        // 删完之后不能还挂着一个没部署的档位，切回本机已有的模型
+        const fallback = engine.pickInstalledModel()
+        if (fallback) {
+          writeSettings({ modelTier: fallback.tier, modelId: fallback.id })
+          engine.writeConfig({ modelId: fallback.id })
+        }
       } catch {
         /* ignore */
       }
@@ -646,6 +662,16 @@ function registerIpc() {
   // 下载中关窗口：界面自绘弹窗把选择送回来（0 取消 / 1 保留进度 / 2 删除）
   ipcMain.handle('app:download-close-answer', (_e, choice) => {
     if (typeof downloadCloseResolve === 'function') downloadCloseResolve(Number(choice) || 0)
+  })
+
+  // 界面上的 R18 开关：翻译时用来给多义词兜底（菊花 → 花卉还是肛门）
+  ipcMain.handle('settings:set-r18', (_e, on) => {
+    writeSettings({ r18: !!on })
+    try {
+      require('./corpus.cjs').setR18Mode(!!on)
+    } catch {
+      /* ignore */
+    }
   })
 
   // ComfyUI 与硬件探测
@@ -1283,6 +1309,11 @@ app.whenReady().then(async () => {
     // ComfyUI 保持关闭，需用户进入工作流模式后手动点击启动
   })
 
+  try {
+    require('./corpus.cjs').setR18Mode(!!readSettings().r18)
+  } catch {
+    /* ignore */
+  }
   // 上次下载没下完的先问一句，接着下就不用再走首次引导
   const resumed = await checkPendingDownload()
   if (!resumed) await ensureModelTier()
