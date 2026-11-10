@@ -960,7 +960,7 @@ export default function Home() {
     })
   }
 
-  const useResultAsRef = async (item: HistoryItem) => {
+  const applyHistoryAsRef = async (item: HistoryItem) => {
     try {
       const resp = await fetch(item.imageData)
       const blob = await resp.blob()
@@ -2031,7 +2031,7 @@ export default function Home() {
                     <Download className="h-3.5 w-3.5" /> 下载图片
                   </button>
                   <button
-                    onClick={() => useResultAsRef(currentImage)}
+                    onClick={() => applyHistoryAsRef(currentImage)}
                     disabled={locked}
                     className="flex items-center justify-center gap-1.5 rounded-md border border-zinc-700 px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-teal-500/50 hover:text-teal-200 focus-visible:outline-2 focus-visible:outline-teal-400 disabled:opacity-50"
                     title="将此图设为参考图"
