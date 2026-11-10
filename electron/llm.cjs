@@ -817,9 +817,21 @@ class LocalModelEngine {
     } catch (e) {
       if (gpu) {
         this.killProc()
+        // 显存装不下（例如 8GB 卡跑 14B）时，别直接退回纯 CPU 那种龟速方案，
+        // 先逐级减少 GPU 层数，把溢出部分留在内存，速度还够用。
+        for (const ngl of [40, 28, 20, 12, 6]) {
+          try {
+            await this._spawn(true, ngl)
+            this.config = { ...this.config, runtime: 'vulkan', ngl }
+            this.writeConfig({})
+            return this.getStatus()
+          } catch {
+            this.killProc()
+          }
+        }
         try {
           await this._spawn(false)
-          this.config = { ...this.config, runtime: 'cpu' }
+          this.config = { ...this.config, runtime: 'cpu', ngl: 0 }
           this.writeConfig({})
           return this.getStatus()
         } catch {
@@ -910,7 +922,7 @@ class LocalModelEngine {
     }
   }
 
-  async _spawn(gpu) {
+  async _spawn(gpu, nglOverride) {
     const exe = this.serverExe
     const model = this.modelPath
     const m = modelById(this.config.modelId)
@@ -920,6 +932,12 @@ class LocalModelEngine {
     const port = await freePort()
     this.port = port
     const ctxSize = String(m.ctxSize || this.config.ctxSize || 8192)
+    // 显存装不下整份权重时，nglOverride 会把部分层留在 CPU；
+    // 没有覆盖值就复用上次跑通的层数，避免每次启动都重新试一遍。
+    const savedNgl = Number(this.config.ngl) || 0
+    const nglValue = gpu
+      ? String(nglOverride && nglOverride > 0 ? nglOverride : savedNgl > 0 && savedNgl < 99 ? savedNgl : 99)
+      : '0'
 
     const args = [
       '-m',
@@ -935,7 +953,7 @@ class LocalModelEngine {
       '--cache-ram',
       '0',
       '-ngl',
-      gpu ? '99' : '0',
+      nglValue,
       '--jinja',
       '--reasoning',
       'off',
