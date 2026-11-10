@@ -3,7 +3,7 @@ const { app, BrowserWindow, Tray, Menu, shell, ipcMain, nativeImage, dialog } = 
 const path = require('path')
 const fs = require('fs')
 const { spawn } = require('child_process')
-const { LocalModelEngine, recommendTier } = require('./llm.cjs')
+const { LocalModelEngine, recommendTier, MODELS: LLM_MODELS } = require('./llm.cjs')
 const comfy = require('./comfyui.cjs')
 const res = require('./resilience.cjs')
 const { Archiver } = require('./archive.cjs')
@@ -85,7 +85,7 @@ function createSplash() {
     backgroundColor: '#07050f',
     icon: path.join(__dirname, 'icon.ico'),
     show: true,
-    webPreferences: { contextIsolation: true },
+    webPreferences: { contextIsolation: true, preload: path.join(__dirname, 'splash-preload.cjs') },
   })
   splash.loadFile(path.join(__dirname, 'splash.html'))
   splash.on('closed', () => {
@@ -241,48 +241,65 @@ async function ensureModelTier() {
   const vram = best ? Number(best.vramGb) || 0 : 0
   const ram = Number(hw.totalRamGb) || 0
   const recTier = recommendTier(vram, ram)
-  const idx = { low: 0, mid: 1, high: 2 }[recTier] ?? 0
 
-  const mark = (t) => (t === recTier ? '   ← 推荐' : '')
-  const detail = [
-    `检测到：${best ? best.name : '未检测到独立显卡'}，显存 ${vram}GB，内存 ${ram}GB`,
-    '',
-    '安装包不自带模型，首次使用会按你选的档位下载，之后可以随时在设置里更换。',
-    '',
-    `兼容 1.5B   约 1.0 GB   2GB 显存即可${mark('compat')}`,
-    `低配 3B     约 1.9 GB   3GB 显存起${mark('low')}`,
-    `中配 7B     约 4.5 GB   6GB 显存起${mark('mid')}`,
-    `高配 14B    约 9.0 GB   9GB 显存起，建议 12GB${mark('high')}`,
-    '',
-    '档位越高，词库没覆盖的句子翻译越准，但下载更大、占用更多。',
-  ].join('\n')
-
-  let response = { compat: 0, low: 1, mid: 2, high: 3 }[recTier] ?? 0
+  const catalog = (LLM_MODELS || []).map((x) => ({
+    id: x.id,
+    tier: x.tier,
+    tierName: x.tierName,
+    name: x.name,
+    bytes: x.bytes,
+    vramHint: x.vramHint || '',
+  }))
+  const hardware = best
+    ? '检测到 ' + best.name + ' · 显存 ' + vram + 'GB · 内存 ' + ram + 'GB'
+    : '未检测到独立显卡 · 内存 ' + ram + 'GB'
+  const pickedId = await askModelTierOnSplash({ catalog, recommend: recTier, hardware })
+  const target =
+    (LLM_MODELS || []).find((x) => x.id === pickedId) ||
+    (LLM_MODELS || []).find((x) => x.tier === recTier) ||
+    (LLM_MODELS || [])[0]
+  if (!target) return
+  writeSettings({ modelTier: target.tier, modelId: target.id })
   try {
-    const picked = await dialog.showMessageBox(win, {
-      type: 'question',
-      title: '选择本地模型档位',
-      message: '请选择本地模型规格',
-      detail,
-      buttons: ['兼容 1.5B', '低配 3B', '中配 7B', '高配 14B'],
-      defaultId: response,
-      cancelId: response,
-      noLink: true,
-    })
-    response = picked.response
-  } catch {
-    /* 弹窗失败就用推荐档位 */
-  }
-
-  const ids = ['ds4f-mini', 'qwen25-3b', 'ds4f-7b', 'ds4f-14b']
-  const tiers = ['compat', 'low', 'mid', 'high']
-  const pick = Math.max(0, Math.min(3, Number(response) || 0))
-  writeSettings({ modelTier: tiers[pick], modelId: ids[pick] })
-  try {
-    if (engine) engine.writeConfig({ modelId: ids[pick] })
+    if (engine) engine.writeConfig({ modelId: target.id })
   } catch {
     /* ignore */
   }
+}
+
+// 选择面板画在开屏动画窗口里，这里是等用户点完
+let splashPickerResolve = null
+
+function waitSplashReady() {
+  return new Promise((resolve) => {
+    if (!splash || splash.isDestroyed()) return resolve()
+    if (splash.webContents.isLoading()) splash.webContents.once('did-finish-load', () => resolve())
+    else resolve()
+  })
+}
+
+function askModelTierOnSplash(data) {
+  return new Promise((resolve) => {
+    let settled = false
+    const finish = (v) => {
+      if (settled) return
+      settled = true
+      splashPickerResolve = null
+      resolve(v)
+    }
+    splashPickerResolve = finish
+    waitSplashReady()
+      .then(() => {
+        if (splash && !splash.isDestroyed()) {
+          splash.webContents.send('splash:show-picker', data)
+        } else {
+          finish(null)
+        }
+      })
+      .catch(() => finish(null))
+    // 开屏窗口要是没起来，别把启动卡死
+    setTimeout(() => finish(null), 90000)
+  })
 }
 
 /** 启动时就拉模型，拉起来（或兜底超时）才放主窗口出来 */
@@ -662,6 +679,11 @@ function registerIpc() {
   // 下载中关窗口：界面自绘弹窗把选择送回来（0 取消 / 1 保留进度 / 2 删除）
   ipcMain.handle('app:download-close-answer', (_e, choice) => {
     if (typeof downloadCloseResolve === 'function') downloadCloseResolve(Number(choice) || 0)
+  })
+
+  // 开屏动画里的模型选择面板把选中的档位送回来
+  ipcMain.on('splash:model-choice', (_e, id) => {
+    if (typeof splashPickerResolve === 'function') splashPickerResolve(String(id))
   })
 
   // 界面上的 R18 开关：翻译时用来给多义词兜底（菊花 → 花卉还是肛门）
