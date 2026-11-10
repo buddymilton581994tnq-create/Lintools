@@ -497,6 +497,7 @@ async function mountTierSwitcher() {
     const btn = document.createElement('button')
     btn.textContent = m.short || m.name || m.id
     btn.title = m.note || ''
+    btn.dataset.modelId = m.id
     btn.style.cssText = m.active ? TIER_STYLE.active : TIER_STYLE.idle
     btn.addEventListener('mouseenter', () => {
       if (!btn.dataset.active) btn.style.background = 'rgba(255,255,255,0.06)'
@@ -531,6 +532,47 @@ async function mountTierSwitcher() {
   anchor.parentElement.insertBefore(wrap, anchor)
   return true
 }
+
+/**
+ * 模型或安装状态变了，前端各个组件的局部状态不会自己刷新，
+ * 表现为设置里切换了模型，主页还写着「尚未部署本地模型」。
+ * 这里统一处理：先同步顶栏高亮，再让页面重读一次状态。
+ */
+let lastModelKey = ''
+
+function applyModelKey(key, modelId) {
+  if (!lastModelKey) {
+    lastModelKey = key
+    return false
+  }
+  if (lastModelKey === key) return false
+  lastModelKey = key
+  const wrap = document.getElementById('lt-tier-switcher')
+  if (wrap) {
+    for (const btn of wrap.children) {
+      if (!btn.dataset || !btn.dataset.modelId) continue
+      const on = btn.dataset.modelId === modelId
+      btn.dataset.active = on ? '1' : ''
+      btn.disabled = on
+      btn.style.cssText = on ? TIER_STYLE.active : TIER_STYLE.idle
+    }
+  }
+  return true
+}
+
+ipcRenderer.on('ai:status', (_e, s) => {
+  if (!s) return
+  const key = String(s.modelId || '') + '|' + (s.installed ? '1' : '0') + '|' + (s.state || '')
+  const modelChanged = applyModelKey(key, s.modelId)
+  // 换了模型或刚下完，页面里的旧状态会误导人，刷新一次最干净
+  if (modelChanged && !document.getElementById('lt-tier-busy')) {
+    const bar = document.getElementById('lt-tier-switcher')
+    if (bar) bar.id = 'lt-tier-busy'
+    setTimeout(() => {
+      location.reload()
+    }, 700)
+  }
+})
 
 // React 渲染是异步的，而且状态变化会重渲染顶栏把注入的节点冲掉，
 // 所以低频轮询保活：没了就补回去，在就什么都不做。

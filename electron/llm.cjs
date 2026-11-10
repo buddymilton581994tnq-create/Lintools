@@ -669,6 +669,10 @@ class LocalModelEngine {
       const patch = { modelId }
       const target = modelById(modelId)
       if (target && target.params) Object.assign(patch, target.params)
+      // 旧模型进程必须先停掉。否则 start() 看到 state 已是 ready、进程还活着，
+      // 会直接返回，新模型永远不会被拉起来。
+      if (this.proc && !this.proc.killed) this.killProc()
+      this.setState('stopped')
       this.writeConfig(patch)
     }
     this.busy = this._ensure().finally(() => {
