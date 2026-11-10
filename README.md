@@ -129,20 +129,32 @@ npm run dist:win
 
 ## 本地模型四档
 
-安装包不带模型，首次打开时检测显存和内存，弹框让用户选一档。每档的推理参数单独调过。
+安装包不带模型，首次打开时检测显存和内存，在开屏动画里让用户选一档。四个档位全部是 Qwen2.5 Instruct，非推理的指令模型，不会产生思考过程污染上下文。
 
-| 档位 | 模型 | 体积 | 显存 | 温度 | 上下文 | 重复惩罚 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 兼容 | ds4f-mini（DeepSeek R1 蒸馏 1.5B） | 1.0 GB | 2 GB | 0.30 | 4096 | 1.18 |
-| 低配 | qwen25-3b（Qwen2.5 3B Instruct） | 1.9 GB | 3 GB | 0.35 | 8192 | 1.15 |
-| 中配 | ds4f-7b（DeepSeek R1 蒸馏 7B） | 4.5 GB | 6 GB | 0.40 | 8192 | 1.12 |
-| 高配 | ds4f-14b（DeepSeek R1 蒸馏 14B） | 9.0 GB | 9 GB | 0.40 | 8192 | 1.10 |
+| 档位 | 模型 | 体积 | 显存 | 温度 | 上下文 |
+| --- | --- | --- | --- | --- | --- |
+| 兼容 | Qwen2.5 1.5B Instruct | 0.92 GB | 2 GB | 0.30 | 4096 |
+| 低配 | Qwen2.5 3B Instruct | 1.90 GB | 3 GB | 0.35 | 8192 |
+| 中配 | Qwen2.5 7B Instruct | 4.36 GB | 6 GB | 0.40 | 8192 |
+| 高配 | Qwen2.5 14B Instruct | 8.37 GB | 9 GB | 0.40 | 8192 |
 
-小模型上下文压到 4096 省显存，重复惩罚调高压复读；大模型放宽温度和惩罚，允许更自然的用词。切换档位时 ensureReady 会把该档参数一并写进配置。
+早前用的是 DeepSeek R1 蒸馏系列，那是推理模型，思考链会污染上下文、输出也慢，已全部移除，包括 
+othink.jinja 压制模板和 _ensureNoThinkTemplate 方法。
 
-推荐规则在 electron/llm.cjs 的 
-ecommendTier(vramGb, ramGb)：显存 10GB 以上走高配，6GB 走中配，3GB 走低配，其余走兼容档。选择权在用户手上，弹框里的推荐项只是默认选中。
+**显存不够时自动降级。** 8GB 卡跑 14B 会按 40、28、20、12、6 逐级降低 -ngl，把装不下的层甩到内存。实测 -ngl 20 能在 14 秒内起来，生成 2 到 4 秒一句。
 
-选完写进 settings.json 的 modelTier 和 modelId，之后不再询问。
+## 实测结果
 
-模型下载走 hf-mirror.com，失败回落 huggingface.co。
+同一组中文输入，四个档位的输出（模型直译，不走词库）。
+
+| 输入 | 1.5B | 3B | 7B | 14B |
+| --- | --- | --- | --- | --- |
+| 血腥的战斗场面 | sanguinary_fight_scene | bloody,battle场面 | gory battle scenes | blood, combat, violence |
+| 半透明的裙摆 | transparent裙摆 | 原样中文 | semi透明skirt摆 | translucent_skirt |
+| 银发红瞳的吸血鬼 | sanguine-red-eyed vampire | silver-haired,red-eyed,vampire | silver_haired_red-eyed_vampire | silver_hair, red_eyes, vampire |
+| 一个女孩在樱花树下 | girl樱花树下 | 原样中文 | sakura tree, girl | girl, cherry_blossoms, outdoors |
+| 猫耳女仆在咖啡厅 | cat_ears maid cafe | 中文 | cat_ears maid cafe | catgirl,maid,cafe |
+
+结论是 14B 最稳、7B 次之、1.5B 方向对但常混中文、3B 反而最差（倾向保留中文不翻）。
+
+模型输出的混中文 tag 会被 sanitizeCompiledTags 剥掉中文、保留英文部分，例如 semi透明skirt摆 会变成 semi skirt。
