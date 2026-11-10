@@ -123,3 +123,121 @@ contextBridge.exposeInMainWorld('lintools', {
     vcInstall: () => ipcRenderer.invoke('sys:vc-install'),
   },
 })
+
+// ---------------------------------------------------------------------------
+// 模型档位切换条
+// 界面是打包后的 React 产物，改不了组件，所以在这里往顶栏注入一条。
+// 只做展示和切换，不碰业务逻辑，出问题删掉这一段就能回到原样。
+// ---------------------------------------------------------------------------
+
+const TIER_STYLE = {
+  wrap: [
+    'display:inline-flex',
+    'align-items:center',
+    'gap:4px',
+    'margin-right:10px',
+    'padding:3px 5px',
+    'border-radius:9px',
+    'border:1px solid rgba(45,212,191,0.35)',
+    'background:rgba(8,18,18,0.9)',
+    'font:11px/1 system-ui,-apple-system,sans-serif',
+    'user-select:none',
+  ].join(';'),
+  idle: [
+    'padding:4px 9px',
+    'border-radius:6px',
+    'border:1px solid transparent',
+    'background:transparent',
+    'color:#8fa3a3',
+    'cursor:pointer',
+    'font-size:11px',
+    'transition:all .15s',
+  ].join(';'),
+  active: [
+    'padding:4px 9px',
+    'border-radius:6px',
+    'border:1px solid rgba(45,212,191,0.55)',
+    'background:rgba(45,212,191,0.16)',
+    'color:#7fe8d4',
+    'cursor:default',
+    'font-size:11px',
+    'font-weight:600',
+  ].join(';'),
+}
+
+async function mountTierSwitcher() {
+  if (document.getElementById('lt-tier-switcher')) return true
+  let status = null
+  try {
+    status = await ipcRenderer.invoke('ai:status')
+  } catch {
+    return false
+  }
+  if (!status || !Array.isArray(status.catalog) || !status.catalog.length) return false
+
+  // 锚到「设置」按钮前面，位置和右上角那排按钮齐平
+  const anchor = Array.from(document.querySelectorAll('button')).find(
+    (b) => (b.textContent || '').trim() === '设置',
+  )
+  if (!anchor || !anchor.parentElement) return false
+
+  const wrap = document.createElement('div')
+  wrap.id = 'lt-tier-switcher'
+  wrap.style.cssText = TIER_STYLE.wrap
+  wrap.title = '本机模型档位，点一下切换会按档位重新部署'
+
+  for (const m of status.catalog) {
+    const btn = document.createElement('button')
+    btn.textContent = m.short || m.name || m.id
+    btn.title = m.note || ''
+    btn.style.cssText = m.active ? TIER_STYLE.active : TIER_STYLE.idle
+    btn.addEventListener('mouseenter', () => {
+      if (!btn.dataset.active) btn.style.background = 'rgba(255,255,255,0.06)'
+    })
+    btn.addEventListener('mouseleave', () => {
+      if (!btn.dataset.active) btn.style.background = 'transparent'
+    })
+    if (m.active) {
+      btn.dataset.active = '1'
+      btn.disabled = true
+      btn.title = `${m.label || m.name} · 当前运行中`
+    }
+    btn.addEventListener('click', async () => {
+      if (btn.dataset.active) return
+      const ok = window.confirm(
+        `切换到「${m.short || m.name}」？\n${m.label || ''}\n${m.installed ? '本地已下载，直接切换。' : '本地还没有这个模型，会开始下载。'}`,
+      )
+      if (!ok) return
+      const origin = btn.textContent
+      btn.textContent = '切换中…'
+      btn.disabled = true
+      try {
+        await ipcRenderer.invoke('ai:install', m.id)
+      } catch (e) {
+        /* 失败保持原样，状态由主进程推送 */
+      }
+      btn.textContent = origin
+      btn.disabled = false
+      location.reload()
+    })
+    wrap.appendChild(btn)
+  }
+
+  anchor.parentElement.insertBefore(wrap, anchor)
+  return true
+}
+
+// React 渲染是异步的，而且状态变化会重渲染顶栏把注入的节点冲掉，
+// 所以低频轮询保活：没了就补回去，在就什么都不做。
+function keepTierSwitcher() {
+  if (!document.getElementById('lt-tier-switcher')) {
+    mountTierSwitcher().catch(() => {})
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', keepTierSwitcher, { once: true })
+} else {
+  keepTierSwitcher()
+}
+setInterval(keepTierSwitcher, 3000)
