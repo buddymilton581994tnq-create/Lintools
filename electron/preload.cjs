@@ -167,6 +167,43 @@ const TIER_STYLE = {
   ].join(';'),
 }
 
+// 弹窗右上角的叉号。所有自绘弹窗只认这个和明确的选择按钮，
+// 按 Esc、点遮罩都不会关，避免手上滑一下就把确认框点没了。
+function makeCloseX(onClose) {
+  const b = document.createElement('button')
+  b.type = 'button'
+  b.textContent = '×'
+  b.setAttribute('aria-label', '关闭')
+  b.style.cssText = [
+    'position:absolute',
+    'top:10px',
+    'right:12px',
+    'width:24px',
+    'height:24px',
+    'line-height:22px',
+    'padding:0',
+    'border-radius:7px',
+    'border:1px solid transparent',
+    'background:transparent',
+    'color:#6d8080',
+    'font-size:17px',
+    'cursor:pointer',
+    'transition:all .15s',
+  ].join(';')
+  b.addEventListener('mouseenter', () => {
+    b.style.color = '#e6f2f1'
+    b.style.background = 'rgba(239,68,68,0.15)'
+    b.style.borderColor = 'rgba(239,68,68,0.35)'
+  })
+  b.addEventListener('mouseleave', () => {
+    b.style.color = '#6d8080'
+    b.style.background = 'transparent'
+    b.style.borderColor = 'transparent'
+  })
+  b.addEventListener('click', onClose)
+  return b
+}
+
 /**
  * 和整体 UI 一套视觉的确认框。
  * window.confirm 是系统原生窗口，白底方角，和深色界面完全不搭，所以自己画一个。
@@ -283,17 +320,15 @@ function showTierConfirm(model) {
       mask.style.opacity = '0'
       card.style.transform = 'translateY(6px) scale(.985)'
       setTimeout(() => mask.remove(), 160)
-      document.removeEventListener('keydown', onKey)
       resolve(val)
     }
-    const onKey = (e) => {
-      if (e.key === 'Escape') close(false)
-      if (e.key === 'Enter') close(true)
-    }
+
+    // 只留叉号一个退出途径，按 Esc 不关
+    card.style.position = 'relative'
+    card.appendChild(makeCloseX(() => close(false)))
 
     cancel.addEventListener('click', () => close(false))
     ok.addEventListener('click', () => close(true))
-    document.addEventListener('keydown', onKey)
 
     document.body.appendChild(mask)
     requestAnimationFrame(() => {
@@ -399,17 +434,16 @@ function showDownloadCloseDialog(data) {
       mask.style.opacity = '0'
       card.style.transform = 'translateY(6px) scale(.985)'
       setTimeout(() => mask.remove(), 160)
-      document.removeEventListener('keydown', onKey)
       resolve(val)
     }
-    const onKey = (e) => {
-      if (e.key === 'Escape') close(0)
-    }
+
+    // 只留叉号一个退出途径，按 Esc 不关
+    card.style.position = 'relative'
+    card.appendChild(makeCloseX(() => close(0)))
 
     cancel.addEventListener('click', () => close(0))
     keep.addEventListener('click', () => close(1))
     drop.addEventListener('click', () => close(2))
-    document.addEventListener('keydown', onKey)
 
     row.appendChild(cancel)
     row.appendChild(keep)
