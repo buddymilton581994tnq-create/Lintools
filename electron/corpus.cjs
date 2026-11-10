@@ -11,6 +11,41 @@
 const fs = require('fs')
 const path = require('path')
 
+// 人体解剖与敏感部位保底词表。
+// 外部词库缺这些词时，剩下的话会交给模型自由翻译，
+// 模型容易把「肛门」理解成「门」、「乳头」理解成「头」，输出 door / head。
+// 这几组词不依赖 external JSON，永久内建，且优先级高于词库同名条目。
+const ANATOMY_SAFEGUARD = [
+  { cat: '人体解剖', label: '乳头', terms: ['乳头', '奶头', '凸点'], en: 'nipples' },
+  { cat: '人体解剖', label: '乳晕', terms: ['乳晕'], en: 'areolae' },
+  { cat: '人体解剖', label: '乳房', terms: ['乳房', '胸部', '胸'], en: 'breasts' },
+  { cat: '人体解剖', label: '巨乳', terms: ['巨乳', '大胸', '丰满胸部'], en: 'large breasts' },
+  { cat: '人体解剖', label: '贫乳', terms: ['贫乳', '平胸', '小胸'], en: 'flat chest' },
+  { cat: '人体解剖', label: '乳沟', terms: ['乳沟', '事业线'], en: 'cleavage' },
+  { cat: '人体解剖', label: '肛门', terms: ['肛门', '菊花', '后穴'], en: 'anus' },
+  { cat: '人体解剖', label: '臀部', terms: ['臀部', '屁股', '翘臀', '美臀'], en: 'ass' },
+  { cat: '人体解剖', label: '阴部', terms: ['阴部', '私处', '下体', '阴户'], en: 'pussy' },
+  { cat: '人体解剖', label: '大腿', terms: ['大腿', '大腿内侧'], en: 'thighs' },
+  { cat: '人体解剖', label: '小腿', terms: ['小腿'], en: 'calves' },
+  { cat: '人体解剖', label: '脚趾', terms: ['脚趾', '足趾'], en: 'toes' },
+  { cat: '人体解剖', label: '脚底', terms: ['脚底', '足底', '脚掌'], en: 'soles' },
+  { cat: '人体解剖', label: '腋下', terms: ['腋下', '腋窝'], en: 'armpits' },
+  { cat: '人体解剖', label: '肚脐', terms: ['肚脐', '脐'], en: 'navel' },
+  { cat: '人体解剖', label: '锁骨', terms: ['锁骨'], en: 'collarbone' },
+  { cat: '人体解剖', label: '舌头', terms: ['舌头', '舌'], en: 'tongue' },
+  { cat: '人体解剖', label: '口水', terms: ['口水', '唾液', '涎'], en: 'saliva' },
+  { cat: '人体解剖', label: '汗水', terms: ['汗水', '汗珠', '流汗'], en: 'sweat' },
+  { cat: '人体解剖', label: '泪水', terms: ['泪水', '眼泪'], en: 'tears' },
+  { cat: '人体解剖', label: '后背', terms: ['后背', '背部'], en: 'back' },
+  { cat: '人体解剖', label: '颈脖', terms: ['脖子', '颈脖', '颈部'], en: 'neck' },
+]
+
+function mergeAnatomySafeguard(lib) {
+  // 无条件放在最前面。词库里可能有同名词条但意思完全不同
+  // （比如「菊花」在花卉分类里是 chrysanthemum），保底表要先命中。
+  return ANATOMY_SAFEGUARD.concat(lib)
+}
+
 let _cachedLib = null
 let _cachedAt = 0
 let _cachedMtime = 0
@@ -58,7 +93,7 @@ function loadLibrary(customDirs = []) {
       }
       const raw = JSON.parse(fs.readFileSync(bestPath, 'utf8'))
       if (Array.isArray(raw) && raw.length > 0) {
-        _cachedLib = raw
+        _cachedLib = mergeAnatomySafeguard(raw)
         _cachedAt = now
         _cachedMtime = bestMtime
         return _cachedLib
@@ -68,7 +103,7 @@ function loadLibrary(customDirs = []) {
     }
   }
 
-  _cachedLib = []
+  _cachedLib = mergeAnatomySafeguard([])
   return _cachedLib
 }
 
@@ -281,6 +316,32 @@ const AMBIGUOUS_SINGLE_CHARS = new Set(['人', '女', '男', '猫', '狗', '鸟'
 /**
  * 扫描用户输入，按「最长词优先 + 区间覆盖消歧」匹配百科词条
  */
+/**
+ * 多义词上下文消歧。
+ * 「菊花」在口语里指肛门，字面义是花卉，单靠词表裁定必然有一边闹笑话，
+ * 所以按输入里出现的旁证词判断：先看植物语境，再看人体语境，
+ * 都没有线索时按本软件的人物绘画定位走人体义。
+ * 以后遇到同类词（比如「肉丝」指丝袜还是菜），照这个结构往里加即可。
+ */
+const CONTEXT_SENSITIVE = {
+  菊花: {
+    flower: /花束|一束|一朵|一枝|一盆|花店|花园|花田|盆栽|插花|花瓣|花艺|鲜花|盛开|凋谢|绽放|花丛|花瓶|赏花|采花|种花|花香|花蕊|花语|菊展|黄色花瓣/,
+    body: /露|裸|胸|臀|腿|股|后庭|插入|掰|内裤|耻|肛|趴|翘|揉|舔|拍打/,
+    flowerEn: 'chrysanthemum, layered yellow petals, autumn flower',
+    flowerCat: '花卉与植物',
+  },
+}
+
+function resolveContextual(term, entry, input) {
+  const rule = CONTEXT_SENSITIVE[String(term).trim()]
+  if (!rule) return { en: entry.en, cat: entry.cat, label: entry.label }
+  if (rule.flower.test(input)) {
+    return { en: rule.flowerEn, cat: rule.flowerCat, label: '菊花（花卉）' }
+  }
+  // 人体语境，或没有明确线索时按人物绘画的默认义
+  return { en: entry.en, cat: entry.cat, label: entry.label }
+}
+
 function matchSlangGlossary(userText, customDirs = []) {
   const raw = String(userText || '').trim()
   if (!raw) return []
@@ -296,8 +357,11 @@ function matchSlangGlossary(userText, customDirs = []) {
       const tl = String(t).trim().toLowerCase()
       if (!tl) continue
 
-      // 单字词或纯英文短词需要边界检查，避免在复合词内部误触发
-      if (tl.length === 1 && AMBIGUOUS_SINGLE_CHARS.has(tl)) {
+      // 单字词一律要求前后有边界。
+      // 中文没有词分隔符，单字一旦允许内部命中就会截胡：
+      // 「肛门」命中「门」→ door，「乳头」命中「头」→ head。
+      // 原来只对 AMBIGUOUS_SINGLE_CHARS 名单里的字做检查，名单外的单字仍然会误触发。
+      if (tl.length === 1) {
         // 如果整个输入只是这个单字，或者前后是标点/空格才算命中
         const esc = tl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
         const re = new RegExp(`(?:^|[\\s,，。、；;！!？?])${esc}(?:$|[\\s,，。、；;！!？?])`)
@@ -326,8 +390,12 @@ function matchSlangGlossary(userText, customDirs = []) {
     }
   }
 
-  // 按匹配长度降序排列（长词优先覆盖短词），同长度按出现位置升序
-  candidates.sort((a, b) => b.len - a.len || a.start - b.start)
+  // 按匹配长度降序排列（长词优先覆盖短词），同长度按出现位置升序。
+  // 人体解剖保底词条排在最前，避免被词库里的同形异义词（菊花 = 花卉）抢走。
+  for (const c of candidates) {
+    c.pri = c.entry.cat === '人体解剖' ? 1 : 0
+  }
+  candidates.sort((a, b) => b.pri - a.pri || b.len - a.len || a.start - b.start)
 
   const covered = new Uint8Array(input.length)
   const hits = []
@@ -344,12 +412,13 @@ function matchSlangGlossary(userText, customDirs = []) {
 
     for (let i = c.start; i < c.end; i++) covered[i] = 1
     seenEn.add(c.entry.en)
+    const resolved = resolveContextual(c.term, c.entry, input)
     hits.push({
-      cat: c.entry.cat,
-      label: c.entry.label,
+      cat: resolved.cat,
+      label: resolved.label,
       matchedTerm: c.term,
       terms: c.entry.terms,
-      en: c.entry.en,
+      en: resolved.en,
       pos: c.start,
     })
   }
