@@ -5,7 +5,7 @@ const fs = require('fs')
 const { LocalModelEngine } = require('./llm.cjs')
 
 const dataDir = process.argv[2] || path.join(require('os').tmpdir(), 'lintools-ai-test')
-const modelId = process.argv[3] || 'ds4f-mini'
+const modelId = process.argv[3] || 'qwen25-3b'
 
 let last = -10
 const engine = new LocalModelEngine({

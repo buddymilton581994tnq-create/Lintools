@@ -1,6 +1,6 @@
 'use strict'
 /**
- * 本地 DeepSeek 引擎（内部代号 ds4f）
+ * 本地推理引擎（Qwen2.5 指令模型，四档规格）
  *
  * 核心机制：
  *  1. 零思考模板 + 单槽位 8192 上下文 + 禁用 8GB 冗余 RAM 缓存，杜绝推理卡死与内存溢出掉线。
@@ -67,23 +67,23 @@ function urlsFor(repo, file) {
 
 const MODELS = [
   {
-    id: 'ds4f-mini',
+    id: 'qwen25-1.5b',
     tier: 'compat',
     tierName: '兼容',
-    name: 'DeepSeek R1 蒸馏 1.5B',
+    name: 'Qwen2.5 1.5B Instruct',
     short: '兼容 1.5B',
-    label: '兼容档 1.5B（约 1.0 GB）',
-    note: '2GB 显存可跑，老机器与核显也能用，翻译质量依赖词库命中',
-    bytes: Math.round(1.04 * 1024 ** 3),
-    template: 'deepseek',
+    label: '兼容档 1.5B（约 0.96 GB）',
+    note: '2GB 显存可跑，老机器与核显也能用，指令模型不产生思考过程',
+    bytes: 986048768,
+    template: 'native',
     ctxSize: 4096,
     vramHint: '2GB 显存即可',
     minVramGb: 2,
-    params: { temperature: 0.3, topP: 0.9, repeatPenalty: 1.18, ctxSize: 4096 },
+    params: { temperature: 0.3, topP: 0.9, repeatPenalty: 1.15, ctxSize: 4096 },
     files: [
       {
-        file: 'ds4f-mini-q4_k_m.gguf',
-        urls: urlsFor('unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF', 'DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf'),
+        file: 'qwen25-1.5b-q4_k_m.gguf',
+        urls: urlsFor('bartowski/Qwen2.5-1.5B-Instruct-GGUF', 'Qwen2.5-1.5B-Instruct-Q4_K_M.gguf'),
       },
     ],
   },
@@ -91,7 +91,7 @@ const MODELS = [
     id: 'qwen25-3b',
     tier: 'low',
     tierName: '低配',
-    name: 'Qwen2.5 3B',
+    name: 'Qwen2.5 3B Instruct',
     short: '低配 3B',
     label: '低配 3B（约 1.9 GB）',
     note: '3 到 4GB 显存可用，比兼容档稳，长句不容易跑偏',
@@ -100,7 +100,7 @@ const MODELS = [
     ctxSize: 8192,
     vramHint: '3GB 显存起',
     minVramGb: 3,
-    params: { temperature: 0.35, topP: 0.9, repeatPenalty: 1.15, ctxSize: 8192 },
+    params: { temperature: 0.35, topP: 0.9, repeatPenalty: 1.12, ctxSize: 8192 },
     files: [
       {
         file: 'qwen25-3b-q4_k_m.gguf',
@@ -109,44 +109,44 @@ const MODELS = [
     ],
   },
   {
-    id: 'ds4f-7b',
+    id: 'qwen25-7b',
     tier: 'mid',
     tierName: '中配',
-    name: 'DeepSeek R1 蒸馏 7B',
+    name: 'Qwen2.5 7B Instruct',
     short: '中配 7B',
-    label: '中配 7B（约 4.5 GB）',
+    label: '中配 7B（约 4.4 GB）',
     note: '6GB 显存起，词库没覆盖的句子也能翻得像样',
-    bytes: Math.round(4.5 * 1024 ** 3),
-    template: 'deepseek',
+    bytes: 4683074240,
+    template: 'native',
     ctxSize: 8192,
     vramHint: '6GB 显存起',
     minVramGb: 6,
-    params: { temperature: 0.4, topP: 0.9, repeatPenalty: 1.12, ctxSize: 8192 },
+    params: { temperature: 0.4, topP: 0.9, repeatPenalty: 1.1, ctxSize: 8192 },
     files: [
       {
-        file: 'ds4f-7b-q4_k_m.gguf',
-        urls: urlsFor('unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF', 'DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf'),
+        file: 'qwen25-7b-q4_k_m.gguf',
+        urls: urlsFor('bartowski/Qwen2.5-7B-Instruct-GGUF', 'Qwen2.5-7B-Instruct-Q4_K_M.gguf'),
       },
     ],
   },
   {
-    id: 'ds4f-14b',
+    id: 'qwen25-14b',
     tier: 'high',
     tierName: '高配',
-    name: 'DeepSeek R1 蒸馏 14B',
+    name: 'Qwen2.5 14B Instruct',
     short: '高配 14B',
-    label: '高配 14B（约 9.0 GB）',
+    label: '高配 14B（约 8.4 GB）',
     note: '9GB 显存起，建议 12GB，长句与生僻词处理最好',
-    bytes: Math.round(9 * 1024 ** 3),
-    template: 'deepseek',
+    bytes: 8988110976,
+    template: 'native',
     ctxSize: 8192,
     vramHint: '9GB 显存起，建议 12GB',
     minVramGb: 9,
-    params: { temperature: 0.4, topP: 0.92, repeatPenalty: 1.1, ctxSize: 8192 },
+    params: { temperature: 0.4, topP: 0.92, repeatPenalty: 1.08, ctxSize: 8192 },
     files: [
       {
-        file: 'ds4f-14b-q4_k_m.gguf',
-        urls: urlsFor('unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF', 'DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf'),
+        file: 'qwen25-14b-q4_k_m.gguf',
+        urls: urlsFor('bartowski/Qwen2.5-14B-Instruct-GGUF', 'Qwen2.5-14B-Instruct-Q4_K_M.gguf'),
       },
     ],
   },
@@ -178,10 +178,8 @@ const RUNTIMES = {
   },
 }
 
-const NO_THINK_JINJA = `{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{% set ns = namespace(system_prompt='') %}{%- for message in messages %}{%- if message['role'] == 'system' %}{% set ns.system_prompt = message['content'] %}{%- endif %}{%- endfor %}{{bos_token}}{%- for message in messages %}{%- if message['role'] == 'user' %}{{'<｜User｜>' + (ns.system_prompt + '\\n\\n' if ns.system_prompt else '') + message['content']}}{% set ns.system_prompt = '' %}{%- endif %}{%- if message['role'] == 'assistant' and message['content'] is not none %}{{'<｜Assistant｜><think>\\n</think>\\n\\n' + message['content'] + '<｜end▁of▁sentence｜>'}}{%- endif %}{%- endfor -%}{% if add_generation_prompt %}{{'<｜Assistant｜><think>\\n</think>\\n\\n'}}{% endif %}`
-
 const DEFAULT_CONFIG = {
-  modelId: 'ds4f-mini',
+  modelId: 'qwen25-3b',
   runtime: 'auto',
   port: 0,
   reasoningBudget: 0,
@@ -215,7 +213,15 @@ function sanitizeCompiledTags(raw) {
     if (junk.test(t)) continue
     // 首字母大写的单个词基本是句子残渣，booru tag 都是小写
     if (/^[A-Z][a-z]+$/.test(t)) continue
-    if (/[\u4e00-\u9fff]/.test(t)) continue
+    if (/[\u4e00-\u9fff]/.test(t)) {
+      // 模型常吐「transparent裙摆」「semi透明skirt摆」这种混中文的 tag，
+      // 整条丢掉太浪费，把中文剥掉、留下的英文部分还能用
+      const en = t.replace(/[\u4e00-\u9fff]+/g, ' ').replace(/[_\s]+/g, ' ').trim()
+      if (en && /[a-z]{2}/i.test(en) && en.length <= 40) {
+        if (!out.some((x) => x.toLowerCase() === en.toLowerCase())) out.push(en)
+      }
+      continue
+    }
     if (!/[a-z]/i.test(t)) continue
     if (out.some((x) => x.toLowerCase() === t.toLowerCase())) continue
     out.push(t)
@@ -383,7 +389,6 @@ class LocalModelEngine {
     this.dataDir = opts.dataDir
     this.resourcesDir = opts.resourcesDir || ''
     this.configPath = path.join(opts.dataDir, 'ai.json')
-    this.templatePath = path.join(opts.dataDir, 'nothink.jinja')
     this.onProgress = opts.onProgress || (() => {})
     this.onStatus = opts.onStatus || (() => {})
     this.onLog = opts.onLog || (() => {})
@@ -912,16 +917,6 @@ class LocalModelEngine {
     if (this.healthTimer.unref) this.healthTimer.unref()
   }
 
-  _ensureNoThinkTemplate() {
-    try {
-      fs.mkdirSync(this.dataDir, { recursive: true })
-      fs.writeFileSync(this.templatePath, NO_THINK_JINJA, 'utf8')
-      return this.templatePath
-    } catch {
-      return null
-    }
-  }
-
   async _spawn(gpu, nglOverride) {
     const exe = this.serverExe
     const model = this.modelPath
@@ -961,11 +956,8 @@ class LocalModelEngine {
       '0',
       '--no-webui',
     ]
-    // DeepSeek 蒸馏版会自己吐思考块，得用压制模板
-    if (m.template !== 'native') {
-      const tplFile = this._ensureNoThinkTemplate()
-      if (tplFile) args.push('--chat-template-file', tplFile)
-    }
+    // 现在四个档位都是 Qwen2.5 指令模型，GGUF 自带 ChatML 模板，
+    // 不再需要压制思考块，--jinja 直接读模型内嵌的就行
 
     this.onProgress({ phase: 'start', label: '正在启动本地模型', percent: 0.5 })
     const proc = spawn(exe, args, { windowsHide: true, cwd: path.dirname(exe) })
