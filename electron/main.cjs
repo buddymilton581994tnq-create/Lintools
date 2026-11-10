@@ -169,9 +169,54 @@ function createEngine() {
 }
 
 /**
- * 首次启动：装包不带模型，让用户按自己机器选一档。
- * 检测显存和内存给出推荐，但选择权在用户手上，随时可以在设置里换。
+ * 上次下载没走完（崩溃、强杀、断网退出）时，进来先问一句要不要接着下。
+ * 进度记在 ai/download-state.json，.part 文件还在就能续传。
  */
+async function checkPendingDownload() {
+  if (!engine || typeof engine.readDownloadState !== 'function') return false
+  const st = engine.readDownloadState()
+  if (!st) return false
+
+  const doneGb = (st.bytesOnDisk / 1024 ** 3).toFixed(2)
+  const totalGb = st.total ? (st.total / 1024 ** 3).toFixed(2) : ''
+  let response = 0
+  try {
+    const picked = await dialog.showMessageBox(win, {
+      type: 'question',
+      title: '发现未完成的下载',
+      message: '上次的模型还没有下完',
+      detail: [
+        `模型：${st.modelName || st.modelId}`,
+        totalGb ? `进度：${doneGb} GB / ${totalGb} GB` : `已下载：${doneGb} GB`,
+        '',
+        '继续的话从断点接着下，不会重新开始。',
+      ].join('\n'),
+      buttons: ['继续下载', '放弃并删除'],
+      defaultId: 0,
+      cancelId: 1,
+      noLink: true,
+    })
+    response = picked.response
+  } catch {
+    /* 弹窗失败按继续处理 */
+  }
+
+  if (response === 1) {
+    engine.discardPartialDownload(st.modelId)
+    return false
+  }
+
+  // 记下档位，避免接着又被首次引导问一遍
+  const target = (require('./llm.cjs').MODELS || []).find((x) => x.id === st.modelId)
+  writeSettings({ modelTier: target ? target.tier : 'mid', modelId: st.modelId })
+  try {
+    engine.writeConfig({ modelId: st.modelId })
+  } catch {
+    /* ignore */
+  }
+  engine.ensureReady(st.modelId).catch(() => {})
+  return true
+}
 async function ensureModelTier() {
   const s = readSettings()
   if (s.modelTier) return
@@ -406,7 +451,50 @@ function createWindow() {
 // 关闭询问：卡片画在软件自己的界面里，这里只负责收答案
 // ---------------------------------------------------------------------------
 
-function handleCloseRequest() {
+async function handleCloseRequest() {
+  // 模型正在下载：退出前让用户决定进度怎么处理
+  let pending = null
+  try {
+    pending = engine && engine.readDownloadState ? engine.readDownloadState() : null
+  } catch {
+    pending = null
+  }
+  if (pending) {
+    let response = 1
+    try {
+      const picked = await dialog.showMessageBox(win, {
+        type: 'warning',
+        title: '模型正在下载',
+        message: '本地模型还没下完',
+        detail: [
+          `模型：${pending.modelName || pending.modelId}`,
+          `已下载：${(pending.bytesOnDisk / 1024 ** 3).toFixed(2)} GB`,
+          '',
+          '保留下载进度的话，下次打开会从断点继续，不用从头再来。',
+        ].join('\n'),
+        buttons: ['取消', '保留下载进度并退出', '删除下载任务并退出'],
+        defaultId: 1,
+        cancelId: 0,
+        noLink: true,
+      })
+      response = picked.response
+    } catch {
+      /* 弹窗失败按保留处理 */
+    }
+    if (response === 0) return
+    if (response === 2) {
+      try {
+        engine.discardPartialDownload(pending.modelId)
+      } catch {
+        /* ignore */
+      }
+      quitApp(false)
+      return
+    }
+    quitApp(true)
+    return
+  }
+
   const action = readSettings().closeAction || 'ask'
   if (action === 'tray') return hideToTray()
   if (action === 'quit') return quitApp()
@@ -470,12 +558,12 @@ function cleanAppCache() {
   }
 }
 
-function quitApp() {
+function quitApp(keepDownloads = false) {
   quitting = true
   try {
     if (trainer) trainer.stop()
     if (engine) {
-      if (typeof engine.resetAndClean === 'function') engine.resetAndClean()
+      if (typeof engine.resetAndClean === 'function') engine.resetAndClean({ keepDownloads })
       else if (typeof engine.stop === 'function') engine.stop()
       else if (typeof engine.killProc === 'function') engine.killProc()
     }
@@ -483,7 +571,7 @@ function quitApp() {
   } catch {
     /* ignore */
   }
-  cleanAppCache()
+  cleanAppCache(keepDownloads)
   if (tray) {
     tray.destroy()
     tray = null
@@ -1178,7 +1266,9 @@ app.whenReady().then(async () => {
     // ComfyUI 保持关闭，需用户进入工作流模式后手动点击启动
   })
 
-  await ensureModelTier()
+  // 上次下载没下完的先问一句，接着下就不用再走首次引导
+  const resumed = await checkPendingDownload()
+  if (!resumed) await ensureModelTier()
   bootModel()
 
   app.on('activate', () => {

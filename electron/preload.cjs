@@ -142,6 +142,8 @@ const TIER_STYLE = {
     'background:rgba(8,18,18,0.9)',
     'font:11px/1 system-ui,-apple-system,sans-serif',
     'user-select:none',
+    'position:relative',
+    'z-index:2147482000',
   ].join(';'),
   idle: [
     'padding:4px 9px',
@@ -291,9 +293,6 @@ function showTierConfirm(model) {
 
     cancel.addEventListener('click', () => close(false))
     ok.addEventListener('click', () => close(true))
-    mask.addEventListener('click', (e) => {
-      if (e.target === mask) close(false)
-    })
     document.addEventListener('keydown', onKey)
 
     document.body.appendChild(mask)

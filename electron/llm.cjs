@@ -497,12 +497,74 @@ class LocalModelEngine {
     return this.config
   }
 
+  // -------------------------------------------------------------------------
+  // 下载进度落盘
+  // 程序崩掉或者被强杀时，.part 文件还在，但没人知道它在等哪个模型。
+  // 这里把「正在下载什么、下到哪了」写进一个小文件，下次启动能认出来。
+  // -------------------------------------------------------------------------
+
+  get downloadStatePath() {
+    return path.join(this.dataDir, 'download-state.json')
+  }
+
+  readDownloadState() {
+    try {
+      const raw = fs.readFileSync(this.downloadStatePath, 'utf8')
+      const info = JSON.parse(raw)
+      if (!info || !info.modelId || !info.file) return null
+      const part = path.join(this.modelsDir, `${info.file}.part`)
+      const rest = fileSize(part)
+      if (rest <= 0) return null
+      return { ...info, bytesOnDisk: rest }
+    } catch {
+      return null
+    }
+  }
+
+  writeDownloadState(info) {
+    try {
+      fs.mkdirSync(this.dataDir, { recursive: true })
+      fs.writeFileSync(this.downloadStatePath, JSON.stringify(info, null, 2), 'utf8')
+    } catch {
+      /* 落盘失败不影响下载本身 */
+    }
+  }
+
+  clearDownloadState() {
+    try {
+      fs.rmSync(this.downloadStatePath, { force: true })
+    } catch {
+      /* ignore */
+    }
+  }
+
+  /** 删掉未下完的分块，用户选择「删除下载任务」时调用 */
+  discardPartialDownload(modelId) {
+    const m = modelById(modelId || this.config.modelId)
+    try {
+      for (const f of m.files) {
+        fs.rmSync(path.join(this.modelsDir, `${f.file}.part`), { force: true })
+      }
+    } catch {
+      /* ignore */
+    }
+    this.clearDownloadState()
+  }
+
   /**
    * 退出程序时重置模型运行参数并清理临时缓存文件
    */
-  resetAndClean() {
+  /**
+   * 退出前收拾干净。
+   * opts.keepDownloads 为 true 时保留未下完的 .part，下次启动能续传。
+   * 另外必须保住 modelId：之前整份重置成 DEFAULT_CONFIG，
+   * 用户选的档位一退出就丢，下次又跑回兼容档。
+   */
+  resetAndClean(opts = {}) {
+    const keepDownloads = !!opts.keepDownloads
+    const keepId = this.config.modelId
     this.stop()
-    this.config = { ...DEFAULT_CONFIG }
+    this.config = { ...DEFAULT_CONFIG, modelId: keepId }
     try {
       fs.mkdirSync(this.dataDir, { recursive: true })
       fs.writeFileSync(this.configPath, JSON.stringify(this.config, null, 2), 'utf8')
@@ -521,6 +583,8 @@ class LocalModelEngine {
             if (/cache|tmp|temp|slot/i.test(entry.name)) rmrf(full)
             else cleanPartFiles(full)
           } else if (/\.(part|tmp|log|cache)$/i.test(entry.name)) {
+            // 保留下载进度时 .part 一个都不动
+            if (keepDownloads && /\.part$/i.test(entry.name)) continue
             rmrf(full)
           }
         }
@@ -694,12 +758,28 @@ class LocalModelEngine {
       const push = this.throttle()
       this.setState('preparing')
       this.speedMark = null
+      // 下载前先记账，崩溃后下次启动能认出这是在下的哪个模型
+      this.writeDownloadState({
+        modelId: m.id,
+        modelName: m.name,
+        file: f.file,
+        startedAt: Date.now(),
+        bytes: fileSize(`${dest}.part`),
+      })
       let lastErr = null
       for (const url of f.urls || [f.url]) {
         try {
-          await fetchToFile(url, dest, (got, total) =>
-            push({ phase: 'model', label: `正在下载 ${m.name}`, ...this.rate(got, total) }),
-          )
+          await fetchToFile(url, dest, (got, total) => {
+            push({ phase: 'model', label: `正在下载 ${m.name}`, ...this.rate(got, total) })
+            this.writeDownloadState({
+              modelId: m.id,
+              modelName: m.name,
+              file: f.file,
+              startedAt: Date.now(),
+              bytes: got,
+              total,
+            })
+          })
           lastErr = null
           break
         } catch (e) {
@@ -708,6 +788,7 @@ class LocalModelEngine {
       }
       if (lastErr) throw new Error('模型下载失败，请检查网络后重试')
     }
+    this.clearDownloadState()
   }
 
   async start() {
