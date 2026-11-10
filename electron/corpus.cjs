@@ -548,26 +548,46 @@ function matchSlangGlossary(userText, customDirs = []) {  const raw = String(use
  */
 function detectInputContext(text) {
   const t = String(text || '').toLowerCase()
+
+  // 关键词表覆盖不了所有专有名词（「卓尔」「提夫林」都不在里面），
+  // 所以先让词库命中一次，用命中的分类来补判语境。
+  let catText = ''
+  try {
+    const hits = matchSlangGlossary(text, [])
+    catText = hits.map((h) => String(h.cat || '')).join(' ')
+  } catch {
+    /* 匹配失败就退回纯关键词判断 */
+  }
+
   const isCharacter =
-    /女|男|人|娘|姐|妹|哥|弟|少|萝|正太|骑士|巫|仙|神|魔|妖|精灵|天使|偶像|学生|护士|女仆|新娘|公主|王|武士|侠|刺客|研究|宇航|舞|模特|肖像|立绘|头像|自拍|girl|boy|woman|man|lady|portrait/.test(t)
+    /女|男|人|娘|姐|妹|哥|弟|少|萝|正太|骑士|巫|仙|神|魔|妖|精灵|天使|偶像|学生|护士|女仆|新娘|公主|王|武士|侠|刺客|研究|宇航|舞|模特|肖像|立绘|头像|自拍|girl|boy|woman|man|lady|portrait/.test(t) ||
+    /人物与|职业与身份|幻想种族|神话体系|二次元身体|身材与解剖/.test(catText)
   const isOriental =
-    /汉服|古风|国风|旗袍|中式|唐|宋|明|魏晋|敦煌|水墨|工笔|仙侠|武侠|道士|剑客|江湖|青绿|故宫|江南|长安|苗|和服|浴衣|巫女|神社|京都|浮世绘|茶道|建盏|苏绣|园林|山海经|麒麟|苍龙/.test(t)
+    /汉服|古风|国风|旗袍|中式|唐|宋|明|魏晋|敦煌|水墨|工笔|仙侠|武侠|道士|剑客|江湖|青绿|故宫|江南|长安|苗|和服|浴衣|巫女|神社|京都|浮世绘|茶道|建盏|苏绣|园林|山海经|麒麟|苍龙/.test(t) ||
+    /中国历代与东方|和风|东方传统/.test(catText)
   const isAcgCute =
-    /二次元|动漫|日系|萝莉|猫娘|狐娘|兔娘|犬娘|狼娘|jk|水手服|洛丽塔|地雷|量产|天使界隈|女仆|偶像|手办|盲盒|像素|平涂|赛璐璐|原画|轻小说|anime|manga|chibi/.test(t)
+    /二次元|动漫|日系|萝莉|猫娘|狐娘|兔娘|犬娘|狼娘|jk|水手服|洛丽塔|地雷|量产|天使界隈|女仆|偶像|手办|盲盒|像素|平涂|赛璐璐|原画|轻小说|anime|manga|chibi/.test(t) ||
+    /二次元|亚文化|萌系/.test(catText)
   const isGothicDark =
-    /哥特|暗黑|吸血鬼|恶魔|修女|魔女|女巫|病娇|废墟|教堂|黑纱|骷髅|血|诅咒|克苏鲁|诡异|怪谈|夜魔|暗夜|gothic|dark/.test(t)
+    /哥特|暗黑|吸血鬼|恶魔|修女|魔女|女巫|病娇|废墟|教堂|黑纱|骷髅|血|诅咒|克苏鲁|诡异|怪谈|夜魔|暗夜|gothic|dark/.test(t) ||
+    /哥特|暗黑|恐怖|猎奇/.test(catText)
   const isSciFi =
-    /赛博|机甲|科幻|太空|宇宙|未来|机械|义体|黑客|高达|霓虹|全息|废土|蒸汽朋克|飞船|宇航|实验室|空间站|漫游车|战机|潜艇|对撞机|cyberpunk|mecha|scifi/.test(t)
+    /赛博|机甲|科幻|太空|宇宙|未来|机械|义体|黑客|高达|霓虹|全息|废土|蒸汽朋克|飞船|宇航|实验室|空间站|漫游车|战机|潜艇|对撞机|cyberpunk|mecha|scifi/.test(t) ||
+    /机甲|赛博|科幻|太空|未来/.test(catText)
   const isWesternFantasy =
-    /奇幻|魔法|精灵|龙|骑士|古堡|宫廷|洛可可|维多利亚|巴洛克|神话|女武神|独角兽|狮鹫|德鲁伊|圣剑|塔罗|炼金|奥术|北欧|古希腊|古埃及|fantasy|magic|knight/.test(t)
+    /奇幻|魔法|精灵|龙|骑士|古堡|宫廷|洛可可|维多利亚|巴洛克|神话|女武神|独角兽|狮鹫|德鲁伊|圣剑|塔罗|炼金|奥术|北欧|古希腊|古埃及|fantasy|magic|knight|卓尔|黑暗精灵|提夫林|半精灵|兽人|矮人|地精|drow|tiefling/.test(t) ||
+    /幻想种族|神话体系|西幻|精灵|龙族/.test(catText)
   const isLandscapeArch =
-    /风景|山|海|森林|雪山|沙漠|湖|河|草原|峡谷|冰川|极光|星空|云海|建筑|大桥|城市|街景|古镇|庭院|园林|教堂|美术馆|天文台|日食|彩虹|火烧云|雾凇|landscape|architecture/.test(t)
+    /风景|山|海|森林|雪山|沙漠|湖|河|草原|峡谷|冰川|极光|星空|云海|建筑|大桥|城市|街景|古镇|庭院|园林|教堂|美术馆|天文台|日食|彩虹|火烧云|雾凇|landscape|architecture/.test(t) ||
+    /建筑|地貌|场景与环境|地标|风物/.test(catText)
   const isStillLifeFood =
-    /美食|食物|甜点|蛋糕|面包|咖啡|茶|点心|料理|水果|静物|香水|花瓶|器物|瓷器|水晶|钟表|陀飞轮|书籍|邮票|唱片|food|still life/.test(t)
+    /美食|食物|甜点|蛋糕|面包|咖啡|茶|点心|料理|水果|静物|香水|花瓶|器物|瓷器|水晶|钟表|陀飞轮|书籍|邮票|唱片|food|still life/.test(t) ||
+    /美食|静物|器物|陈设/.test(catText)
   const isPhotography =
     /写实|摄影|照片|胶片|相机|人像摄影|街拍|纪实|微距|长曝光|特写|棚拍|时尚大片|杂志|photorealistic|photo|camera|film/.test(t)
   const isStageMusic =
-    /舞台|演唱会|音乐厅|交响|乐团|摇滚|爵士|歌剧|芭蕾|走秀|T台|乐器|钢琴|小提琴|吉他|古筝|琵琶|戏剧|concert|stage/.test(t)
+    /舞台|演唱会|音乐厅|交响|乐团|摇滚|爵士|歌剧|芭蕾|走秀|T台|乐器|钢琴|小提琴|吉他|古筝|琵琶|戏剧|concert|stage/.test(t) ||
+    /乐器|舞台|演出/.test(catText)
 
   // 判断是否为纯风景/静物/建筑（不含人物）
   const isNonHumanScene = !isCharacter && (isLandscapeArch || isStillLifeFood)
@@ -607,6 +627,15 @@ function pickContextOptions(lib, cats, userText, excludedSet, count = 6, randomi
   const pool = lib.filter((x) => cats.includes(x.cat))
   const text = String(userText || '').toLowerCase()
   const ctx = detectInputContext(text)
+  // 输入命中的词条分类，推荐时优先挑同分类的
+  const hitCats = new Set()
+  try {
+    for (const h of matchSlangGlossary(text, [])) {
+      if (h.cat) hitCats.add(String(h.cat))
+    }
+  } catch {
+    /* ignore */
+  }
   const isGenericInput =
     !ctx.isOriental &&
     !ctx.isAcgCute &&
@@ -626,6 +655,10 @@ function pickContextOptions(lib, cats, userText, excludedSet, count = 6, randomi
     // 用户已经明确写在输入里的词不再重复出现在推荐栏
     const alreadyInInput = item.terms.some((t) => t && t.length >= 2 && text.includes(String(t).toLowerCase()))
     if (alreadyInInput) score -= 50
+
+    // 命中词条所在分类的推荐优先。输入「卓尔」时它是幻想种族，
+    // 同分类的精灵、兽人、龙裔比双马尾、公主切更贴题。
+    if (hitCats.size && hitCats.has(String(item.cat))) score += 8
 
     const blob = `${item.cat} ${item.label} ${item.terms.join(' ')} ${item.en}`.toLowerCase()
     if (ctx.isOriental && /汉服|古风|唐|宋|明|敦煌|水墨|工笔|中式|和服|京都|古典|青绿|旗袍|茶|园林|飞檐|山海经/.test(blob)) score += 6
@@ -796,12 +829,46 @@ function buildFallbackOrMergeFields(userText, requestedNames = [], excludedTerms
     orderedGroups = [...CATEGORY_TO_DIM]
   }
 
+  // 输入命中哪个分类，对应的维度就排到前面。
+  // 输入「晚礼服」时第一个维度不该是人物，输入「废墟」时不该先问发型。
+  {
+    let hitCats = new Set()
+    try {
+      for (const h of matchSlangGlossary(userText, customDirs)) {
+        if (h.cat) hitCats.add(String(h.cat))
+      }
+    } catch {
+      /* ignore */
+    }
+    if (hitCats.size) {
+      const baseOrder = orderedGroups.map((g) => g)
+      orderedGroups = baseOrder
+        .map((g, i) => ({
+          g,
+          hit: g.cats.some((c) => hitCats.has(c)) ? 0 : 1,
+          i,
+        }))
+        .sort((a, b) => a.hit - b.hit || a.i - b.i)
+        .map((x) => x.g)
+    }
+  }
+
   const targetCount = ctx.isNonHumanScene ? 5 : 8
+  // 输入已经命中具体分类时（比如「卓尔」命中幻想种族），不再塞每组固定的代表词，
+  // 否则「俏皮高扎双马尾 / 触角呆毛 / 公主切」会永远是前三项。
+  let hitCats = new Set()
+  try {
+    for (const h of matchSlangGlossary(userText, customDirs)) {
+      if (h.cat) hitCats.add(String(h.cat))
+    }
+  } catch {
+    /* ignore */
+  }
+  const hasSpecificCat = hitCats.size > 0
   const result = []
   for (const g of orderedGroups.slice(0, targetCount)) {
     let opts = []
-    if (!ctx.isGeneric || ['人物', '少女', '少年', '女孩', '男孩', '女生', '男生', '女人', '男人'].some((w) => String(userText || '').includes(w))) {
-      // 先取 3 个本类目高口碑代表词，再取 3 个语境动态词，既保证每个分类一目了然又兼顾多样性
+    if (!hasSpecificCat) {
       opts = pickPreferred(lib, g.cats, g.preferred, excludedSet, 3)
     }
     const ctxOpts = pickContextOptions(lib, g.cats, userText, excludedSet, 6, true).filter(
