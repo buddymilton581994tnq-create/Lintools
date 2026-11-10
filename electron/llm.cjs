@@ -1095,17 +1095,34 @@ class LocalModelEngine {
       // "Color Binding: Never leave colors floating" 这种句子。
       if (finalUnknownCn.length > 0) {
         const glossHint = [...hits.map((h) => `${h.matchedTerm}=${h.en}`), ...rootDecomposedEn].join('; ')
+        // 小模型只给规则会翻车，实测 1.5B 从「一半混中文」变成「全部正确」，
+        // 差别就在这几条示例。示例要覆盖常见品类，但别写得太像用户输入，
+        // 否则模型会照着抄。
         const systemRules = [
-          'You are a Danbooru tag compiler.',
-          'Turn the Chinese description into English booru tags joined by ", ".',
+          'You translate Chinese into English Danbooru tags.',
+          'Examples:',
+          'Chinese: 红衣的女孩',
+          'Tags: 1girl, red dress, solo',
+          'Chinese: 血腥的战场',
+          'Tags: blood, gore, battlefield, combat',
+          'Chinese: 半透明的薄纱',
+          'Tags: see-through, translucent fabric, sheer',
+          'Chinese: 白发红眼的吸血鬼',
+          'Tags: white hair, red eyes, vampire, pale skin',
+          'Chinese: 猫耳女仆在咖啡厅',
+          'Tags: cat ears, maid, cafe, solo',
+          'Chinese: 精灵弓箭手',
+          'Tags: elf, archer, bow, pointed ears',
+          'Rules:',
+          'Output English tags separated by commas, all lowercase.',
+          'Never output Chinese characters, sentences, explanations, rule text, or numbering.',
+          'Do not copy the examples verbatim; translate what the user wrote.',
           'Order: quality/style, subject, action, face/hair/outfit, environment, lighting.',
           'Bind each color to the part it belongs to. Name the material. Describe hand contact.',
           'For body parts use anatomical terms: nipples, areolae, breasts, cleavage, anus, ass, thighs, calves, soles, navel, collarbone, armpits.',
           'Never translate a Chinese word character by character, and never turn a body part into a daily object.',
           'Convert negations into positive descriptions.',
-          'Never output Chinese, explanations, rule text, or numbering.',
-          'Reply with the tag line only.',
-        ].join(' ')
+        ].join('\n')
         const userLine = glossHint
           ? `Chinese: ${finalUnknownCn}\nReuse these tags as-is: ${glossHint}`
           : `Chinese: ${finalUnknownCn}`

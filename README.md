@@ -143,18 +143,27 @@ othink.jinja 压制模板和 _ensureNoThinkTemplate 方法。
 
 **显存不够时自动降级。** 8GB 卡跑 14B 会按 40、28、20、12、6 逐级降低 -ngl，把装不下的层甩到内存。实测 -ngl 20 能在 14 秒内起来，生成 2 到 4 秒一句。
 
-## 实测结果
+## 实测结果（few-shot 之后，走模型直译）
 
-同一组中文输入，四个档位的输出（模型直译，不走词库）。
+指令里给了六条中英对照示例再给规则。原来只给规则，小模型执行率很低。
 
 | 输入 | 1.5B | 3B | 7B | 14B |
 | --- | --- | --- | --- | --- |
-| 血腥的战斗场面 | sanguinary_fight_scene | bloody,battle场面 | gory battle scenes | blood, combat, violence |
-| 半透明的裙摆 | transparent裙摆 | 原样中文 | semi透明skirt摆 | translucent_skirt |
-| 银发红瞳的吸血鬼 | sanguine-red-eyed vampire | silver-haired,red-eyed,vampire | silver_haired_red-eyed_vampire | silver_hair, red_eyes, vampire |
-| 一个女孩在樱花树下 | girl樱花树下 | 原样中文 | sakura tree, girl | girl, cherry_blossoms, outdoors |
-| 猫耳女仆在咖啡厅 | cat_ears maid cafe | 中文 | cat_ears maid cafe | catgirl,maid,cafe |
+| 卓尔 | elf, sorcerer, fairy | solitary, lone | elf | zhuoer |
+| 血腥的战斗场面 | blood, gore, combat, battle | blood, gore, battle scene, combat | blood, gore, combat, battlefield | blood, combat, violence |
+| 半透明的裙摆 | see-through skirt, translucent skirt | see-through, skirt, translucent fabric | see-through skirt | translucent_skirt |
+| 银发红瞳的吸血鬼 | silver hair, red eyes, vampire | silver hair, red eyes, vampire | white hair, red eyes, vampire | silver_hair, red_eyes, vampire |
+| 一个女孩在樱花树下 | girl, sakura tree, solo | girl, sakura tree, solo | girl, sakura tree, solo | girl, cherry_blossoms, outdoors |
+| 猫耳女仆在咖啡厅 | cat ears, maid, cafe, solo | cat ears, maid, cafe, solo | cat ears, maid, cafe, solo | catgirl,maid,cafe |
+| 废弃工厂里的机械 | 废弃 factory, mechanical, industrial | abandoned factory, machinery, industrial | abandoned factory, machinery | 未测 |
 
-结论是 14B 最稳、7B 次之、1.5B 方向对但常混中文、3B 反而最差（倾向保留中文不翻）。
+速度分别是 50-140ms、80-130ms、2-3s、2-4s（14B 在 8GB 卡上要 -ngl 20 降级跑）。
 
-模型输出的混中文 tag 会被 sanitizeCompiledTags 剥掉中文、保留英文部分，例如 semi透明skirt摆 会变成 semi skirt。
+**7B 没有换成 8B。** 试过 Meta-Llama-3.1-8B-Instruct，同样 few-shot 下六项对六项，
+但「银发红瞳」翻成了 londe hair，而 Qwen 7B 给的是 white hair，更准。所以保持 7B。
+
+## few-shot 为什么有效
+
+小模型对规则的执行率很低，给十条规则它记住两条。给示例它会照着结构套用。
+示例刻意和用户输入写得不一样（示例写「白发红眼」，用户输入是「银发红瞳」），
+再加一条「不要照抄示例」，避免直接复制粘贴。
