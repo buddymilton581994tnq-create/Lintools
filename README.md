@@ -92,3 +92,37 @@ npm run dist:win
 - `UPSTREAM_UNPLACED` 是另外 235 条未能定位到组件的文本，多为独立协议段落
 
 这份文件不参与任何组件渲染，只作为回填素材。需要还原线上完整文案时，按行号在对应组件里补回即可。
+## 词库与翻译质量
+
+`electron/corpus-library.json` 现在 10563 条，`electron/master_index.json` 12674 条。
+
+数据来源是四个基站的官方中文对照表（[Yellow-Rush/zh_CN-Tags](https://github.com/Yellow-Rush/zh_CN-Tags) 下的 danbooru、gelbooru、yande、sankakucomplex），合计解析出 5760 条新词，其余靠手工补。
+
+### 手工补的几类
+
+- 颜色 × 部位，12 色 × 10 部位，「黑色长发」「红瞳」这类现拼组合词库里不会有
+- 颜色 × 服装，12 色 × 20 种服装，「红色连衣裙」这类
+- 动作词，举剑、拔剑、冲锋、跪地、比心、遮嘴、捧脸等 40 余条
+- 场景、道具、职业、种族、乐器、动物、食物各补了一批
+
+### 实测修掉的错译
+
+用 130 条真实描述跑过三轮，修掉这些：
+
+| 症状 | 原因 | 修法 |
+| --- | --- | --- |
+| 肛门 → door | 词库有单字「门」，在「肛门」内部命中 | 单字一律要求前后边界 |
+| 乳头 → head | 同上，「头」 | 同上 |
+| 菊花 → anus（花卉语境） | 多义词一刀切 | 加 CONTEXT_SENSITIVE 按旁证词判断 |
+| 短裙 → dress | 混在「连衣裙」词条里 | 拆出 miniskirt |
+| 举枪 → sword | 和举剑合用一条词条 | 拆出 holding gun up |
+| 膝盖 → kneepits | 词条写错 | 改 knees |
+| 红色 → red long upper shan | 机翻残渣 | 8 条颜色词条全改 |
+| X色衬衫 → X upper shan | 同上 | 16 条清理 |
+| 光影排在最前 | 分类名同时含「画风」和「光线」 | 光影优先判定 |
+| 裸色 black / white 混进输出 | 颜色词条单独命中 | 加 PURE_COLOR_TAGS 拦截 |
+| 喝咖啡 → 茶杯 | 词条映射错 | 改 holding coffee cup |
+
+### 性能
+
+10549 条下 `matchSlangGlossary` 单次 1.84 毫秒（50 次平均）。

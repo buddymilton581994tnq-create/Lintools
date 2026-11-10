@@ -711,7 +711,7 @@
    "秋叶原女仆"
   ],
   "label": "萌系荷叶边女仆",
-  "en": "cute Akihabara frilly maid outfit, puffed short sleeves, heart-cutout apron, lace maid headband"
+  "en": "cat ears, cat tail, cute Akihabara frilly maid outfit, puffed short sleeves, heart-cutout apron, lace maid headband"
  },
  {
   "cat": "职业与身份设定",
@@ -2304,7 +2304,6 @@
   "terms": [
    "连衣裙",
    "长裙",
-   "短裙",
    "洋装"
   ],
   "label": "优雅连衣裙",
@@ -2853,7 +2852,7 @@
    "端着精致骨瓷茶杯"
   ],
   "label": "喝咖啡",
-  "en": "holding a porcelain teacup"
+  "en": "holding coffee cup, drinking coffee"
  },
  {
   "cat": "表情眼神与肢体动态扩充",
@@ -10752,7 +10751,7 @@
    "膝盖"
   ],
   "label": "膝盖",
-  "en": "kneepits"
+  "en": "knees"
  },
  {
   "cat": "表情与肢体动作",
@@ -26636,7 +26635,7 @@
    "橙色上杉"
   ],
   "label": "橙色上杉",
-  "en": "orange upper shan"
+  "en": "orange shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26644,7 +26643,7 @@
    "红色上杉"
   ],
   "label": "红色上杉",
-  "en": "red upper shan"
+  "en": "red shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26652,7 +26651,7 @@
    "绿色上杉"
   ],
   "label": "绿色上杉",
-  "en": "green upper shan"
+  "en": "green shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26660,7 +26659,7 @@
    "蓝色上杉"
   ],
   "label": "蓝色上杉",
-  "en": "blue upper shan"
+  "en": "blue shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26668,7 +26667,7 @@
    "粉色上杉"
   ],
   "label": "粉色上杉",
-  "en": "pink upper shan"
+  "en": "pink shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26676,7 +26675,7 @@
    "黄色上杉"
   ],
   "label": "黄色上杉",
-  "en": "yellow upper shan"
+  "en": "yellow shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26684,7 +26683,7 @@
    "白色上杉"
   ],
   "label": "白色上杉",
-  "en": "white upper shan"
+  "en": "white shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26692,7 +26691,7 @@
    "淡蓝上杉"
   ],
   "label": "淡蓝上杉",
-  "en": "light blue upper shan"
+  "en": "light blue shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26700,7 +26699,7 @@
    "浅绿上杉"
   ],
   "label": "浅绿上杉",
-  "en": "light green upper shan"
+  "en": "light green shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26708,7 +26707,7 @@
    "浅红上杉"
   ],
   "label": "浅红上杉",
-  "en": "light red upper shan"
+  "en": "light red shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26716,7 +26715,7 @@
    "青蓝上杉"
   ],
   "label": "青蓝上杉",
-  "en": "cyan blue upper shan"
+  "en": "cyan blue shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26724,7 +26723,7 @@
    "浅紫上杉"
   ],
   "label": "浅紫上杉",
-  "en": "light purple upper shan"
+  "en": "light purple shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26732,7 +26731,7 @@
    "黑蓝上杉"
   ],
   "label": "黑蓝上杉",
-  "en": "black with blue upper shan"
+  "en": "black with blue shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26740,7 +26739,7 @@
    "橙白上杉"
   ],
   "label": "橙白上杉",
-  "en": "white with orange upper shan"
+  "en": "white with orange shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26748,7 +26747,7 @@
    "粉黑上杉"
   ],
   "label": "粉黑上杉",
-  "en": "pink with black upper shan"
+  "en": "pink with black shirt"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26756,7 +26755,7 @@
    "橙色"
   ],
   "label": "橙色",
-  "en": "orange long upper shan"
+  "en": "orange"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26764,7 +26763,7 @@
    "红色"
   ],
   "label": "红色",
-  "en": "red long upper shan"
+  "en": "red"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26772,7 +26771,7 @@
    "绿色"
   ],
   "label": "绿色",
-  "en": "green long upper shan"
+  "en": "green"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26780,7 +26779,7 @@
    "蓝色"
   ],
   "label": "蓝色",
-  "en": "blue long upper shan"
+  "en": "blue"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26788,7 +26787,7 @@
    "粉色"
   ],
   "label": "粉色",
-  "en": "pink long upper shan"
+  "en": "pink"
  },
  {
   "cat": "服装与穿搭细节",
@@ -26796,7 +26795,7 @@
    "黄色"
   ],
   "label": "黄色",
-  "en": "yellow long upper shan"
+  "en": "yellow"
  },
  {
   "cat": "服装与穿搭细节",
@@ -33152,7 +33151,7 @@
   "terms": [
    "萌系荷叶边女仆"
   ],
-  "en": "cute Akihabara frilly maid outfit, puffed short sleeves, heart-cutout apron, lace maid headband"
+  "en": "cat ears, cat tail, cute Akihabara frilly maid outfit, puffed short sleeves, heart-cutout apron, lace maid headband"
  },
  {
   "cat": "服饰与穿搭细节",
@@ -41656,7 +41655,7 @@
   "terms": [
    "水蓝色"
   ],
-  "en": "aqua theme"
+  "en": "aqua"
  },
  {
   "cat": "常见名词直译基底",
@@ -43328,7 +43327,7 @@
   "terms": [
    "黑色主题"
   ],
-  "en": "black theme"
+  "en": "black"
  },
  {
   "cat": "常见名词直译基底",
@@ -44720,7 +44719,7 @@
   "terms": [
    "棕色主题"
   ],
-  "en": "brown theme"
+  "en": "brown"
  },
  {
   "cat": "常见名词直译基底",
@@ -50664,7 +50663,7 @@
   "terms": [
    "绿色主题"
   ],
-  "en": "green theme"
+  "en": "green"
  },
  {
   "cat": "常见名词直译基底",
@@ -50896,7 +50895,7 @@
   "terms": [
    "灰色"
   ],
-  "en": "grey theme"
+  "en": "grey"
  },
  {
   "cat": "常见名词直译基底",
@@ -58144,7 +58143,7 @@
   "terms": [
    "粉色主题"
   ],
-  "en": "pink theme"
+  "en": "pink"
  },
  {
   "cat": "常见名词直译基底",
@@ -59392,7 +59391,7 @@
   "terms": [
    "紫色"
   ],
-  "en": "purple theme"
+  "en": "purple"
  },
  {
   "cat": "常见名词直译基底",
@@ -60144,7 +60143,7 @@
   "terms": [
    "红色主题"
   ],
-  "en": "red theme"
+  "en": "red"
  },
  {
   "cat": "常见名词直译基底",
@@ -67008,7 +67007,7 @@
   "terms": [
    "白色主题"
   ],
-  "en": "white theme"
+  "en": "white"
  },
  {
   "cat": "常见名词直译基底",
@@ -67600,7 +67599,7 @@
   "terms": [
    "黄色主题"
   ],
-  "en": "yellow theme"
+  "en": "yellow"
  },
  {
   "cat": "常见名词直译基底",
@@ -69176,7 +69175,7 @@
   "terms": [
    "表情"
   ],
-  "en": "facial expressions"
+  "en": "scared expression, frightened, wide eyes"
  },
  {
   "cat": "常见名词直译基底",
@@ -74024,7 +74023,7 @@
   "terms": [
    "复古风格"
   ],
-  "en": "retro arfstyle"
+  "en": "retro aesthetic"
  },
  {
   "cat": "常见名词直译基底",
@@ -84939,5 +84938,563 @@
    "银色手套"
   ],
   "en": "silver gloves"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "短裙",
+  "terms": [
+   "短裙"
+  ],
+  "en": "miniskirt"
+ },
+ {
+  "cat": "构图与镜头视角",
+  "label": "看镜头",
+  "terms": [
+   "看镜头",
+   "正视镜头"
+  ],
+  "en": "looking at viewer, eye contact"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "街头",
+  "terms": [
+   "街头",
+   "街上"
+  ],
+  "en": "street, city street"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "夜景",
+  "terms": [
+   "夜景"
+  ],
+  "en": "night, night sky"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "庭院",
+  "terms": [
+   "庭院"
+  ],
+  "en": "courtyard, garden"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "湖边",
+  "terms": [
+   "湖边"
+  ],
+  "en": "lakeside"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "祭典",
+  "terms": [
+   "庙会"
+  ],
+  "en": "festival, festival stalls"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "黑色蕾丝",
+  "terms": [
+   "黑色蕾丝"
+  ],
+  "en": "black lace"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "白色蕾丝",
+  "terms": [
+   "白色蕾丝"
+  ],
+  "en": "white lace"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "黑色蕾丝连衣裙",
+  "terms": [
+   "黑色蕾丝连衣裙"
+  ],
+  "en": "black lace dress"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "白色蕾丝连衣裙",
+  "terms": [
+   "白色蕾丝连衣裙"
+  ],
+  "en": "white lace dress"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "蕾丝连衣裙",
+  "terms": [
+   "蕾丝连衣裙"
+  ],
+  "en": "lace dress"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "亚麻色头发",
+  "terms": [
+   "亚麻色头发",
+   "亚麻色长发"
+  ],
+  "en": "flaxen hair, ash blonde hair"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "油腻大叔",
+  "terms": [
+   "油腻大叔",
+   "中年大叔"
+  ],
+  "en": "middle-aged man, bara, stubble"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "微胖",
+  "terms": [
+   "微胖"
+  ],
+  "en": "chubby, soft body"
+ },
+ {
+  "cat": "幻想种族与生物",
+  "label": "仙女",
+  "terms": [
+   "仙女",
+   "仙子"
+  ],
+  "en": "fairy, ethereal aura, flowing dress"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "古风",
+  "terms": [
+   "古风"
+  ],
+  "en": "traditional Chinese style, ancient aesthetic"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "端茶",
+  "terms": [
+   "端茶",
+   "递茶"
+  ],
+  "en": "holding teacup, serving tea"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "战斗姿态",
+  "terms": [
+   "战斗姿势"
+  ],
+  "en": "fighting stance, combat pose"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "裙摆",
+  "terms": [
+   "裙摆"
+  ],
+  "en": "skirt hem, flowing skirt"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "血腥",
+  "terms": [
+   "血腥",
+   "血"
+  ],
+  "en": "blood, gore, blood splatter"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "战斗场面",
+  "terms": [
+   "战斗场面",
+   "战场"
+  ],
+  "en": "battlefield, combat scene"
+ },
+ {
+  "cat": "构图与镜头视角",
+  "label": "两人",
+  "terms": [
+   "两人",
+   "两个人",
+   "二人"
+  ],
+  "en": "2girls, multiple girls"
+ },
+ {
+  "cat": "构图与镜头视角",
+  "label": "三人",
+  "terms": [
+   "三人",
+   "三个人"
+  ],
+  "en": "3girls, multiple girls"
+ },
+ {
+  "cat": "幻想种族与生物",
+  "label": "恶魔角",
+  "terms": [
+   "恶魔角",
+   "恶魔之角"
+  ],
+  "en": "demon horns"
+ },
+ {
+  "cat": "职业与身份设定",
+  "label": "上班族",
+  "terms": [
+   "上班族",
+   "白领"
+  ],
+  "en": "office worker, business suit"
+ },
+ {
+  "cat": "光线色调与画风构图扩充",
+  "label": "黎明",
+  "terms": [
+   "黎明",
+   "清晨"
+  ],
+  "en": "dawn, morning light"
+ },
+ {
+  "cat": "人体解剖",
+  "label": "被遮挡",
+  "terms": [
+   "被遮挡",
+   "遮盖"
+  ],
+  "en": "covered"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "蜷缩",
+  "terms": [
+   "蜷缩"
+  ],
+  "en": "curled up, fetal position"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "伞下",
+  "terms": [
+   "伞下"
+  ],
+  "en": "under umbrella, holding umbrella"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "银色",
+  "terms": [
+   "银色"
+  ],
+  "en": "silver"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "金色",
+  "terms": [
+   "金色"
+  ],
+  "en": "gold"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "深蓝色",
+  "terms": [
+   "深蓝色"
+  ],
+  "en": "navy blue"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "浅蓝色",
+  "terms": [
+   "浅蓝色"
+  ],
+  "en": "light blue"
+ },
+ {
+  "cat": "服饰与穿搭细节",
+  "label": "实验服",
+  "terms": [
+   "实验服"
+  ],
+  "en": "lab coat, white coat"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "工厂",
+  "terms": [
+   "工厂"
+  ],
+  "en": "factory, industrial machinery"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "废弃",
+  "terms": [
+   "废弃"
+  ],
+  "en": "abandoned, ruined"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "霓虹",
+  "terms": [
+   "霓虹"
+  ],
+  "en": "neon lights"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "铠甲",
+  "terms": [
+   "铠甲"
+  ],
+  "en": "armor, plate armor"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "碧眼",
+  "terms": [
+   "碧眼"
+  ],
+  "en": "aqua eyes"
+ },
+ {
+  "cat": "光线色调与画风构图扩充",
+  "label": "古老",
+  "terms": [
+   "古老"
+  ],
+  "en": "ancient, weathered"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "举枪",
+  "terms": [
+   "举枪",
+   "举着手枪"
+  ],
+  "en": "holding gun up, aiming gun"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "捧脸",
+  "terms": [
+   "捧脸",
+   "双手捧脸"
+  ],
+  "en": "hands on own cheeks, holding face with both hands"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "遮嘴",
+  "terms": [
+   "遮嘴",
+   "捂住嘴巴"
+  ],
+  "en": "hand over mouth"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "抱膝",
+  "terms": [
+   "抱膝",
+   "抱着膝盖"
+  ],
+  "en": "hugging own knees, knees to chest"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "插兜",
+  "terms": [
+   "插兜"
+  ],
+  "en": "hands in pockets"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "踮脚",
+  "terms": [
+   "踮脚"
+  ],
+  "en": "on tiptoes"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "画画",
+  "terms": [
+   "绘画动作"
+  ],
+  "en": "painting, holding paintbrush"
+ },
+ {
+  "cat": "人体解剖",
+  "label": "膝窝",
+  "terms": [
+   "膝窝",
+   "膝内侧"
+  ],
+  "en": "kneepits"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "角落",
+  "terms": [
+   "角落"
+  ],
+  "en": "corner, corner of room"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "地板",
+  "terms": [
+   "地面"
+  ],
+  "en": "floor"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "金发碧眼",
+  "terms": [
+   "金发碧眼"
+  ],
+  "en": "blonde hair, blue eyes"
+ },
+ {
+  "cat": "表情与肢体动作",
+  "label": "背靠背",
+  "terms": [
+   "背靠背"
+  ],
+  "en": "back-to-back"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "橘猫",
+  "terms": [
+   "橘色猫"
+  ],
+  "en": "orange cat, ginger cat"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "长毛猫",
+  "terms": [
+   "长毛猫"
+  ],
+  "en": "long-haired cat, fluffy fur"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "短毛猫",
+  "terms": [
+   "短毛猫"
+  ],
+  "en": "short-haired cat"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "小猫",
+  "terms": [
+   "小猫咪"
+  ],
+  "en": "kitten, small cat"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "狗狗",
+  "terms": [
+   "狗狗"
+  ],
+  "en": "dog, puppy"
+ },
+ {
+  "cat": "职业与身份设定",
+  "label": "老爷爷",
+  "terms": [
+   "老爷爷",
+   "老爷爷们"
+  ],
+  "en": "old man, elderly, white beard"
+ },
+ {
+  "cat": "职业与身份设定",
+  "label": "老奶奶",
+  "terms": [
+   "老奶奶"
+  ],
+  "en": "old woman, elderly"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "长椅",
+  "terms": [
+   "长椅"
+  ],
+  "en": "bench, park bench"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "长毛猫趴着",
+  "terms": [
+   "长毛猫趴着"
+  ],
+  "en": "fluffy long-haired cat lying down"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "晒太阳",
+  "terms": [
+   "晒太阳"
+  ],
+  "en": "sunbathing, basking in sunlight"
+ },
+ {
+  "cat": "场景与环境道具",
+  "label": "办公桌",
+  "terms": [
+   "办公桌"
+  ],
+  "en": "desk, office desk"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "元气",
+  "terms": [
+   "元气",
+   "元气少女"
+  ],
+  "en": "energetic, cheerful"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "长发女性",
+  "terms": [
+   "长发女性"
+  ],
+  "en": "long-haired woman"
+ },
+ {
+  "cat": "人物与外貌特征",
+  "label": "短发动漫少女",
+  "terms": [
+   "短发动漫少女"
+  ],
+  "en": "short-haired anime girl"
  }
 ]

@@ -65,7 +65,8 @@ const ANIME_SAFEGUARD = [
   { cat: '服饰与穿搭细节', label: '渔网袜', terms: ['渔网袜'], en: 'fishnet pantyhose' },
   { cat: '表情与肢体动作', label: '歪头', terms: ['歪头'], en: 'head tilt' },
   // 动作词：词库只有静态姿势，这些手部与位移动作基本全缺
-  { cat: '表情与肢体动作', label: '举剑', terms: ['举剑', '举刀', '举枪'], en: 'holding sword up, raised weapon' },
+  { cat: '表情与肢体动作', label: '举剑', terms: ['举剑', '举刀'], en: 'holding sword up, raised weapon' },
+  { cat: '表情与肢体动作', label: '举枪', terms: ['举枪', '举着手枪'], en: 'holding gun up, aiming gun' },
   { cat: '表情与肢体动作', label: '挥剑', terms: ['挥剑', '挥刀', '斩击'], en: 'swinging sword, sword slash' },
   { cat: '表情与肢体动作', label: '拔剑', terms: ['拔剑', '拔刀'], en: 'drawing sword' },
   { cat: '表情与肢体动作', label: '持剑', terms: ['持剑', '握剑', '拿着剑'], en: 'holding sword, gripping sword hilt' },
@@ -442,8 +443,14 @@ function resolveContextual(term, entry, input) {
   return { en: entry.en, cat: entry.cat, label: entry.label }
 }
 
-function matchSlangGlossary(userText, customDirs = []) {
-  const raw = String(userText || '').trim()
+// 单独出现时算裸色词的 tag，只在句子没别的内容时保留
+const PURE_COLOR_TAGS = new Set([
+  'black', 'white', 'red', 'blue', 'green', 'purple', 'pink', 'orange',
+  'yellow', 'brown', 'grey', 'gray', 'silver', 'gold', 'aqua', 'cyan',
+  'navy blue', 'light blue', 'dark red', 'light pink',
+])
+
+function matchSlangGlossary(userText, customDirs = []) {  const raw = String(userText || '').trim()
   if (!raw) return []
   const input = raw.toLowerCase()
   const lib = loadLibrary(customDirs)
@@ -525,6 +532,14 @@ function matchSlangGlossary(userText, customDirs = []) {
 
   // 按在用户输入中的出现顺序返回，保证提示词主次自然
   hits.sort((a, b) => a.pos - b.pos)
+
+  // 裸色词单独出现是准则明令禁止的（颜色必须绑在材质或部位上）。
+  // 用户只写「红色」两个字时保留，句子里还有别的内容时丢掉它，
+  // 让组合词（红色连衣裙 → red dress）或模型去补。
+  if (hits.length > 1) {
+    const kept = hits.filter((h) => !PURE_COLOR_TAGS.has(String(h.en).trim().toLowerCase()))
+    if (kept.length) return kept
+  }
   return hits
 }
 
@@ -942,12 +957,14 @@ function decomposeUnknownCn(remText) {
 function classifyPromptSlot(phrase, catHint = '') {
   const p = phrase.toLowerCase()
   if (catHint) {
-    if (/画风|美术|中国画|3D渲染|画布|画师|二游|排版|光学画质/.test(catHint)) return 1
-    if (/人物与亚文化|幻想种族|职业与身份|神话体系/.test(catHint)) return 2
-    if (/构图|相机|分镜|摄影流派|人体姿势|微动作|手部精细动作|日常动作/.test(catHint)) return 3
-    if (/服饰|服装|袜类|裙型|发型|发色|眼瞳|身材|身体|面料/.test(catHint)) return 4
-    if (/建筑|地貌|节庆|风物|地标|太空|空间|机甲|乐器|花卉|动物|陈设|器物|炼金|航空|生态|美食|烘焙/.test(catHint)) return 5
+    // 光影最优先判定：「光线色调与画风构图扩充」这个分类名同时含「画风」和「光线」，
+    // 先按画风走会把 soft lighting 排到最前面，必须提前拦掉。
     if (/布光|色彩|配色|光线|光影|天象|灯光|粒子/.test(catHint)) return 6
+    if (/画风|美术|中国画|3D渲染|画布|画师|二游|排版|光学画质/.test(catHint)) return 1
+    if (/人物与亚文化|幻想种族|职业与身份|神话体系|颜色与部位/.test(catHint)) return 2
+    if (/构图|相机|分镜|摄影流派|人体姿势|微动作|手部精细动作|日常动作|表情与肢体/.test(catHint)) return 3
+    if (/服饰|服装|袜类|裙型|发型|发色|眼瞳|身材|身体|面料/.test(catHint)) return 4
+    if (/建筑|地貌|节庆|风物|地标|太空|空间|机甲|乐器|花卉|动物|陈设|器物|炼金|航空|生态|美食|烘焙|场景与环境/.test(catHint)) return 5
   }
   if (/\b(masterpiece|best quality|watercolor|impasto|cel shading|oil painting|ink wash|sketch|lineart|pixel art|3d render|photorealistic|anime style|art style|brushstrokes)\b/.test(p)) return 1
   if (/\b(1girl|1boy|2girls|2boys|solo|girl|boy|woman|man|lady|idol|knight|priest|miko|femboy|otoko no ko|gyaru|ojou-sama|goddess|witch|swordsman|figure)\b/.test(p)) return 2
